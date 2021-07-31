@@ -1,0 +1,68 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP C
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP Conn_01x04
+D Connector 01x04
+K connector
+F ~
+$ENDCMP
+#
+$CMP D
+D Diode, small symbol
+K diode
+F ~
+$ENDCMP
+#
+$CMP LDO_SOT23
+D Voltage regulator, SOT23 package
+$ENDCMP
+#
+$CMP Logo
+D Generic Logo
+$ENDCMP
+#
+$CMP Pro-Micro
+D SparkFun Arduino Pro Micro
+$ENDCMP
+#
+$CMP R
+D Resistor
+K R resistor
+F ~
+$ENDCMP
+#
+$CMP STM32F042F6Px
+D ARM Cortex-M0 MCU, 32KB flash, 6KB RAM, 48MHz, 2-3.6V, 16 GPIO, TSSOP-20
+K ARM Cortex-M0 STM32F0 STM32F0x2
+F http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00105814.pdf
+$ENDCMP
+#
+$CMP STM32L452RET6
+D ARM Cortex-M4 MCU, 256KB flash, 160KB RAM, 80MHz, 1.71-3.6V, 52 GPIO, LQFP-64
+K ARM Cortex-M4 STM32L4 STM32L4x2
+F http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340549.pdf
+$ENDCMP
+#
+$CMP STM32L452RETx
+D ARM Cortex-M4 MCU, 512KB flash, 160KB RAM, 80MHz, 1.71-3.6V, 52 GPIO, LQFP-64
+K ARM Cortex-M4 STM32L4 STM32L4x2
+F http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340549.pdf
+$ENDCMP
+#
+$CMP SW_Push
+D Push button switch, generic, two pins
+K switch normally-open pushbutton push-button
+F ~
+$ENDCMP
+#
+$CMP USB4085-GF-A_REVA
+D USB-C connector
+K USB-C
+$ENDCMP
+#
+#End Doc Library

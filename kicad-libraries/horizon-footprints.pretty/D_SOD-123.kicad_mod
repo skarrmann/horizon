@@ -1,10 +1,10 @@
-(module D_SOD-123 (layer F.Cu) (tedit 6105A2F7)
+(module D_SOD-123 (layer F.Cu) (tedit 61193BBA)
   (descr "Diode SOD-123")
   (tags "diode, SOD-123")
   (fp_text reference REF** (at 0 0) (layer F.SilkS)
     (effects (font (size 0.75 0.75) (thickness 0.15)))
   )
-  (fp_text value D_SOD-123 (at 0 1.778) (layer F.Fab) hide
+  (fp_text value D_SOD-123 (at 0 0) (layer F.Fab) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_line (start 2.5 -1) (end -2.5 -1) (layer F.CrtYd) (width 0.1))

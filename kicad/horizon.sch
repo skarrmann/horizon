@@ -52,7 +52,7 @@ U 1 1 60FE9DE1
 P 2050 1700
 F 0 "D2" V 2096 1632 50  0000 R CNN
 F 1 "D" V 2005 1632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2050 1700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2050 1700 50  0001 C CNN
 F 3 "~" V 2050 1700 50  0001 C CNN
 	1    2050 1700
 	0    -1   -1   0   
@@ -65,7 +65,7 @@ U 1 1 60FCED10
 P 1200 1700
 F 0 "D1" V 1246 1632 50  0000 R CNN
 F 1 "D" V 1155 1632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 1200 1700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 1200 1700 50  0001 C CNN
 F 3 "~" V 1200 1700 50  0001 C CNN
 	1    1200 1700
 	0    -1   -1   0   
@@ -104,7 +104,7 @@ U 1 1 60F4CDBE
 P 3750 1700
 F 0 "D4" V 3796 1632 50  0000 R CNN
 F 1 "D" V 3705 1632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 3750 1700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 3750 1700 50  0001 C CNN
 F 3 "~" V 3750 1700 50  0001 C CNN
 	1    3750 1700
 	0    -1   -1   0   
@@ -117,7 +117,7 @@ U 1 1 60F4CDC6
 P 2900 1700
 F 0 "D3" V 2946 1632 50  0000 R CNN
 F 1 "D" V 2855 1632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2900 1700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2900 1700 50  0001 C CNN
 F 3 "~" V 2900 1700 50  0001 C CNN
 	1    2900 1700
 	0    -1   -1   0   
@@ -156,7 +156,7 @@ U 1 1 60F561E0
 P 5450 1700
 F 0 "D6" V 5496 1632 50  0000 R CNN
 F 1 "D" V 5405 1632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 5450 1700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 5450 1700 50  0001 C CNN
 F 3 "~" V 5450 1700 50  0001 C CNN
 	1    5450 1700
 	0    -1   -1   0   
@@ -169,7 +169,7 @@ U 1 1 60F561E8
 P 4600 1700
 F 0 "D5" V 4646 1632 50  0000 R CNN
 F 1 "D" V 4555 1632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 4600 1700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 4600 1700 50  0001 C CNN
 F 3 "~" V 4600 1700 50  0001 C CNN
 	1    4600 1700
 	0    -1   -1   0   
@@ -223,7 +223,7 @@ U 1 1 60F7E9F3
 P 2050 2500
 F 0 "D8" V 2096 2432 50  0000 R CNN
 F 1 "D" V 2005 2432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2050 2500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2050 2500 50  0001 C CNN
 F 3 "~" V 2050 2500 50  0001 C CNN
 	1    2050 2500
 	0    -1   -1   0   
@@ -236,7 +236,7 @@ U 1 1 60F7E9FA
 P 1200 2500
 F 0 "D7" V 1246 2432 50  0000 R CNN
 F 1 "D" V 1155 2432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 1200 2500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 1200 2500 50  0001 C CNN
 F 3 "~" V 1200 2500 50  0001 C CNN
 	1    1200 2500
 	0    -1   -1   0   
@@ -271,7 +271,7 @@ U 1 1 60F7EA0F
 P 3750 2500
 F 0 "D10" V 3796 2432 50  0000 R CNN
 F 1 "D" V 3705 2432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 3750 2500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 3750 2500 50  0001 C CNN
 F 3 "~" V 3750 2500 50  0001 C CNN
 	1    3750 2500
 	0    -1   -1   0   
@@ -284,7 +284,7 @@ U 1 1 60F7EA16
 P 2900 2500
 F 0 "D9" V 2946 2432 50  0000 R CNN
 F 1 "D" V 2855 2432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2900 2500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2900 2500 50  0001 C CNN
 F 3 "~" V 2900 2500 50  0001 C CNN
 	1    2900 2500
 	0    -1   -1   0   
@@ -319,7 +319,7 @@ U 1 1 60F7EA2B
 P 5450 2500
 F 0 "D12" V 5496 2432 50  0000 R CNN
 F 1 "D" V 5405 2432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 5450 2500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 5450 2500 50  0001 C CNN
 F 3 "~" V 5450 2500 50  0001 C CNN
 	1    5450 2500
 	0    -1   -1   0   
@@ -332,7 +332,7 @@ U 1 1 60F7EA32
 P 4600 2500
 F 0 "D11" V 4646 2432 50  0000 R CNN
 F 1 "D" V 4555 2432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 4600 2500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 4600 2500 50  0001 C CNN
 F 3 "~" V 4600 2500 50  0001 C CNN
 	1    4600 2500
 	0    -1   -1   0   
@@ -386,7 +386,7 @@ U 1 1 61085B3F
 P 2050 3300
 F 0 "D14" V 2096 3232 50  0000 R CNN
 F 1 "D" V 2005 3232 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2050 3300 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2050 3300 50  0001 C CNN
 F 3 "~" V 2050 3300 50  0001 C CNN
 	1    2050 3300
 	0    -1   -1   0   
@@ -399,7 +399,7 @@ U 1 1 61085B46
 P 1200 3300
 F 0 "D13" V 1246 3232 50  0000 R CNN
 F 1 "D" V 1155 3232 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 1200 3300 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 1200 3300 50  0001 C CNN
 F 3 "~" V 1200 3300 50  0001 C CNN
 	1    1200 3300
 	0    -1   -1   0   
@@ -434,7 +434,7 @@ U 1 1 61085B5B
 P 3750 3300
 F 0 "D16" V 3796 3232 50  0000 R CNN
 F 1 "D" V 3705 3232 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 3750 3300 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 3750 3300 50  0001 C CNN
 F 3 "~" V 3750 3300 50  0001 C CNN
 	1    3750 3300
 	0    -1   -1   0   
@@ -447,7 +447,7 @@ U 1 1 61085B62
 P 2900 3300
 F 0 "D15" V 2946 3232 50  0000 R CNN
 F 1 "D" V 2855 3232 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2900 3300 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2900 3300 50  0001 C CNN
 F 3 "~" V 2900 3300 50  0001 C CNN
 	1    2900 3300
 	0    -1   -1   0   
@@ -482,7 +482,7 @@ U 1 1 61085B77
 P 5450 3300
 F 0 "D18" V 5496 3232 50  0000 R CNN
 F 1 "D" V 5405 3232 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 5450 3300 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 5450 3300 50  0001 C CNN
 F 3 "~" V 5450 3300 50  0001 C CNN
 	1    5450 3300
 	0    -1   -1   0   
@@ -495,7 +495,7 @@ U 1 1 61085B7E
 P 4600 3300
 F 0 "D17" V 4646 3232 50  0000 R CNN
 F 1 "D" V 4555 3232 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 4600 3300 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 4600 3300 50  0001 C CNN
 F 3 "~" V 4600 3300 50  0001 C CNN
 	1    4600 3300
 	0    -1   -1   0   
@@ -549,7 +549,7 @@ U 1 1 61085B9F
 P 2050 4100
 F 0 "D20" V 2096 4032 50  0000 R CNN
 F 1 "D" V 2005 4032 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2050 4100 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2050 4100 50  0001 C CNN
 F 3 "~" V 2050 4100 50  0001 C CNN
 	1    2050 4100
 	0    -1   -1   0   
@@ -562,7 +562,7 @@ U 1 1 61085BA6
 P 1200 4100
 F 0 "D19" V 1246 4032 50  0000 R CNN
 F 1 "D" V 1155 4032 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 1200 4100 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 1200 4100 50  0001 C CNN
 F 3 "~" V 1200 4100 50  0001 C CNN
 	1    1200 4100
 	0    -1   -1   0   
@@ -597,7 +597,7 @@ U 1 1 61085BBB
 P 3750 4100
 F 0 "D22" V 3796 4032 50  0000 R CNN
 F 1 "D" V 3705 4032 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 3750 4100 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 3750 4100 50  0001 C CNN
 F 3 "~" V 3750 4100 50  0001 C CNN
 	1    3750 4100
 	0    -1   -1   0   
@@ -610,7 +610,7 @@ U 1 1 61085BC2
 P 2900 4100
 F 0 "D21" V 2946 4032 50  0000 R CNN
 F 1 "D" V 2855 4032 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2900 4100 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2900 4100 50  0001 C CNN
 F 3 "~" V 2900 4100 50  0001 C CNN
 	1    2900 4100
 	0    -1   -1   0   
@@ -645,7 +645,7 @@ U 1 1 61085BD7
 P 5450 4100
 F 0 "D24" V 5496 4032 50  0000 R CNN
 F 1 "D" V 5405 4032 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 5450 4100 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 5450 4100 50  0001 C CNN
 F 3 "~" V 5450 4100 50  0001 C CNN
 	1    5450 4100
 	0    -1   -1   0   
@@ -658,7 +658,7 @@ U 1 1 61085BDE
 P 4600 4100
 F 0 "D23" V 4646 4032 50  0000 R CNN
 F 1 "D" V 4555 4032 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 4600 4100 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 4600 4100 50  0001 C CNN
 F 3 "~" V 4600 4100 50  0001 C CNN
 	1    4600 4100
 	0    -1   -1   0   
@@ -712,7 +712,7 @@ U 1 1 610F2BBC
 P 2050 4900
 F 0 "D26" V 2096 4832 50  0000 R CNN
 F 1 "D" V 2005 4832 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2050 4900 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2050 4900 50  0001 C CNN
 F 3 "~" V 2050 4900 50  0001 C CNN
 	1    2050 4900
 	0    -1   -1   0   
@@ -725,7 +725,7 @@ U 1 1 610F2BC3
 P 1200 4900
 F 0 "D25" V 1246 4832 50  0000 R CNN
 F 1 "D" V 1155 4832 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 1200 4900 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 1200 4900 50  0001 C CNN
 F 3 "~" V 1200 4900 50  0001 C CNN
 	1    1200 4900
 	0    -1   -1   0   
@@ -760,7 +760,7 @@ U 1 1 610F2BD8
 P 3750 4900
 F 0 "D28" V 3796 4832 50  0000 R CNN
 F 1 "D" V 3705 4832 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 3750 4900 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 3750 4900 50  0001 C CNN
 F 3 "~" V 3750 4900 50  0001 C CNN
 	1    3750 4900
 	0    -1   -1   0   
@@ -773,7 +773,7 @@ U 1 1 610F2BDF
 P 2900 4900
 F 0 "D27" V 2946 4832 50  0000 R CNN
 F 1 "D" V 2855 4832 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2900 4900 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2900 4900 50  0001 C CNN
 F 3 "~" V 2900 4900 50  0001 C CNN
 	1    2900 4900
 	0    -1   -1   0   
@@ -808,7 +808,7 @@ U 1 1 610F2BF4
 P 5450 4900
 F 0 "D30" V 5496 4832 50  0000 R CNN
 F 1 "D" V 5405 4832 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 5450 4900 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 5450 4900 50  0001 C CNN
 F 3 "~" V 5450 4900 50  0001 C CNN
 	1    5450 4900
 	0    -1   -1   0   
@@ -821,7 +821,7 @@ U 1 1 610F2BFB
 P 4600 4900
 F 0 "D29" V 4646 4832 50  0000 R CNN
 F 1 "D" V 4555 4832 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 4600 4900 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 4600 4900 50  0001 C CNN
 F 3 "~" V 4600 4900 50  0001 C CNN
 	1    4600 4900
 	0    -1   -1   0   
@@ -875,7 +875,7 @@ U 1 1 610F2C1C
 P 2050 5700
 F 0 "D32" V 2096 5632 50  0000 R CNN
 F 1 "D" V 2005 5632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2050 5700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2050 5700 50  0001 C CNN
 F 3 "~" V 2050 5700 50  0001 C CNN
 	1    2050 5700
 	0    -1   -1   0   
@@ -888,7 +888,7 @@ U 1 1 610F2C23
 P 1200 5700
 F 0 "D31" V 1246 5632 50  0000 R CNN
 F 1 "D" V 1155 5632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 1200 5700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 1200 5700 50  0001 C CNN
 F 3 "~" V 1200 5700 50  0001 C CNN
 	1    1200 5700
 	0    -1   -1   0   
@@ -923,7 +923,7 @@ U 1 1 610F2C38
 P 3750 5700
 F 0 "D34" V 3796 5632 50  0000 R CNN
 F 1 "D" V 3705 5632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 3750 5700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 3750 5700 50  0001 C CNN
 F 3 "~" V 3750 5700 50  0001 C CNN
 	1    3750 5700
 	0    -1   -1   0   
@@ -936,7 +936,7 @@ U 1 1 610F2C3F
 P 2900 5700
 F 0 "D33" V 2946 5632 50  0000 R CNN
 F 1 "D" V 2855 5632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2900 5700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2900 5700 50  0001 C CNN
 F 3 "~" V 2900 5700 50  0001 C CNN
 	1    2900 5700
 	0    -1   -1   0   
@@ -971,7 +971,7 @@ U 1 1 610F2C54
 P 5450 5700
 F 0 "D36" V 5496 5632 50  0000 R CNN
 F 1 "D" V 5405 5632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 5450 5700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 5450 5700 50  0001 C CNN
 F 3 "~" V 5450 5700 50  0001 C CNN
 	1    5450 5700
 	0    -1   -1   0   
@@ -984,7 +984,7 @@ U 1 1 610F2C5B
 P 4600 5700
 F 0 "D35" V 4646 5632 50  0000 R CNN
 F 1 "D" V 4555 5632 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 4600 5700 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 4600 5700 50  0001 C CNN
 F 3 "~" V 4600 5700 50  0001 C CNN
 	1    4600 5700
 	0    -1   -1   0   
@@ -1038,7 +1038,7 @@ U 1 1 610F2C7C
 P 2050 6500
 F 0 "D38" V 2096 6432 50  0000 R CNN
 F 1 "D" V 2005 6432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2050 6500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2050 6500 50  0001 C CNN
 F 3 "~" V 2050 6500 50  0001 C CNN
 	1    2050 6500
 	0    -1   -1   0   
@@ -1051,7 +1051,7 @@ U 1 1 610F2C83
 P 1200 6500
 F 0 "D37" V 1246 6432 50  0000 R CNN
 F 1 "D" V 1155 6432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 1200 6500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 1200 6500 50  0001 C CNN
 F 3 "~" V 1200 6500 50  0001 C CNN
 	1    1200 6500
 	0    -1   -1   0   
@@ -1086,7 +1086,7 @@ U 1 1 610F2C98
 P 3750 6500
 F 0 "D40" V 3796 6432 50  0000 R CNN
 F 1 "D" V 3705 6432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 3750 6500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 3750 6500 50  0001 C CNN
 F 3 "~" V 3750 6500 50  0001 C CNN
 	1    3750 6500
 	0    -1   -1   0   
@@ -1099,7 +1099,7 @@ U 1 1 610F2C9F
 P 2900 6500
 F 0 "D39" V 2946 6432 50  0000 R CNN
 F 1 "D" V 2855 6432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 2900 6500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 2900 6500 50  0001 C CNN
 F 3 "~" V 2900 6500 50  0001 C CNN
 	1    2900 6500
 	0    -1   -1   0   
@@ -1134,7 +1134,7 @@ U 1 1 610F2CB4
 P 5450 6500
 F 0 "D42" V 5496 6432 50  0000 R CNN
 F 1 "D" V 5405 6432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 5450 6500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 5450 6500 50  0001 C CNN
 F 3 "~" V 5450 6500 50  0001 C CNN
 	1    5450 6500
 	0    -1   -1   0   
@@ -1147,7 +1147,7 @@ U 1 1 610F2CBB
 P 4600 6500
 F 0 "D41" V 4646 6432 50  0000 R CNN
 F 1 "D" V 4555 6432 50  0000 R CNN
-F 2 "horizon-footprints:D_SOD-323" V 4600 6500 50  0001 C CNN
+F 2 "horizon-footprints:D_SOD-123" V 4600 6500 50  0001 C CNN
 F 3 "~" V 4600 6500 50  0001 C CNN
 	1    4600 6500
 	0    -1   -1   0   
@@ -1319,34 +1319,6 @@ Wire Wire Line
 	7350 1700 7350 1800
 Connection ~ 7350 1800
 NoConn ~ 9250 1500
-NoConn ~ 7850 1600
-NoConn ~ 7850 1500
-Text GLabel 9250 2500 2    50   Input ~ 0
-ROW1
-Text GLabel 9250 2600 2    50   Input ~ 0
-ROW2
-Text GLabel 7850 2200 0    50   Input ~ 0
-ROW3
-Text GLabel 7850 2600 0    50   Input ~ 0
-ROW7
-Text GLabel 9250 2400 2    50   Input ~ 0
-COL6
-Text GLabel 9250 2300 2    50   Input ~ 0
-COL5
-Text GLabel 9250 2200 2    50   Input ~ 0
-COL4
-Text GLabel 9250 2100 2    50   Input ~ 0
-COL3
-Text GLabel 9250 2000 2    50   Input ~ 0
-COL2
-Text GLabel 9250 1900 2    50   Input ~ 0
-COL1
-Text GLabel 7850 2500 0    50   Input ~ 0
-ROW6
-Text GLabel 7850 2400 0    50   Input ~ 0
-ROW5
-Text GLabel 7850 2300 0    50   Input ~ 0
-ROW4
 $Comp
 L horizon-components:SW_Push TSW1
 U 1 1 60FA8D3C
@@ -1369,18 +1341,6 @@ Wire Wire Line
 Wire Wire Line
 	10050 1200 10050 1550
 Connection ~ 10050 1550
-$Comp
-L horizon-components:Pro-Micro U1
-U 1 1 60FAFA60
-P 8550 2050
-F 0 "U1" H 8550 2887 60  0000 C CNN
-F 1 "PRO-MICRO" H 8550 2781 60  0000 C CNN
-F 2 "horizon-footprints:Pro-Micro" V 9600 -450 60  0001 C CNN
-F 3 "" V 9600 -450 60  0001 C CNN
-	1    8550 2050
-	1    0    0    -1  
-$EndComp
-NoConn ~ 7850 2100
 $Comp
 L horizon-components:Conn_01x04 J1
 U 1 1 6102700A
@@ -1456,96 +1416,11 @@ F 3 "" H 8500 5950 50  0001 C CNN
 	1    8500 6000
 	1    0    0    -1  
 $EndComp
-$Comp
-L horizon-components:R R1
-U 1 1 6118A4DA
-P 9100 3300
-F 0 "R1" H 9159 3346 50  0000 L CNN
-F 1 "R" H 9159 3255 50  0000 L CNN
-F 2 "horizon-footprints:R_0805" H 9100 3300 50  0001 C CNN
-F 3 "~" H 9100 3300 50  0001 C CNN
-	1    9100 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L horizon-components:R R2
-U 1 1 6118B939
-P 9550 3300
-F 0 "R2" H 9609 3346 50  0000 L CNN
-F 1 "R" H 9609 3255 50  0000 L CNN
-F 2 "horizon-footprints:R_0805" H 9550 3300 50  0001 C CNN
-F 3 "~" H 9550 3300 50  0001 C CNN
-	1    9550 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0106
-U 1 1 611B426C
-P 9100 3200
-F 0 "#PWR0106" H 9100 3050 50  0001 C CNN
-F 1 "VCC" H 9117 3373 50  0000 C CNN
-F 2 "" H 9100 3200 50  0001 C CNN
-F 3 "" H 9100 3200 50  0001 C CNN
-	1    9100 3200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0107
-U 1 1 611B9C2E
-P 9550 3200
-F 0 "#PWR0107" H 9550 3050 50  0001 C CNN
-F 1 "VCC" H 9567 3373 50  0000 C CNN
-F 2 "" H 9550 3200 50  0001 C CNN
-F 3 "" H 9550 3200 50  0001 C CNN
-	1    9550 3200
-	1    0    0    -1  
-$EndComp
 Text GLabel 7850 3400 0    50   Input ~ 0
 SCL
 Text GLabel 7850 3500 0    50   Input ~ 0
 SDA
-Text GLabel 9100 3400 3    50   Input ~ 0
-SCL
-Text GLabel 9550 3400 3    50   Input ~ 0
-SDA
-NoConn ~ 9000 4750
-NoConn ~ 8500 4750
-$Comp
-L horizon-components:Hole_Pad H9
-U 1 1 61159A4A
-P 9000 4650
-F 0 "H9" H 9100 4699 50  0000 L CNN
-F 1 "Hole_Pad" H 9100 4608 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 9000 4650 50  0001 C CNN
-F 3 "~" H 9000 4650 50  0001 C CNN
-	1    9000 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L horizon-components:Hole_Pad H8
-U 1 1 61159A44
-P 8500 4650
-F 0 "H8" H 8600 4699 50  0000 L CNN
-F 1 "Hole_Pad" H 8600 4608 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 8500 4650 50  0001 C CNN
-F 3 "~" H 8500 4650 50  0001 C CNN
-	1    8500 4650
-	1    0    0    -1  
-$EndComp
-NoConn ~ 8000 4750
-NoConn ~ 9500 4250
 NoConn ~ 9000 4250
-$Comp
-L horizon-components:Hole_Pad H5
-U 1 1 610FA1A5
-P 9500 4150
-F 0 "H5" H 9600 4199 50  0000 L CNN
-F 1 "Hole_Pad" H 9600 4108 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 9500 4150 50  0001 C CNN
-F 3 "~" H 9500 4150 50  0001 C CNN
-	1    9500 4150
-	1    0    0    -1  
-$EndComp
 $Comp
 L horizon-components:Hole_Pad H4
 U 1 1 610E42CD
@@ -1593,99 +1468,92 @@ F 3 "~" H 8000 4150 50  0001 C CNN
 	1    8000 4150
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7500 4750
 $Comp
-L horizon-components:Hole_Pad H7
-U 1 1 61159A3E
-P 8000 4650
-F 0 "H7" H 8100 4699 50  0000 L CNN
-F 1 "Hole_Pad" H 8100 4608 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 8000 4650 50  0001 C CNN
-F 3 "~" H 8000 4650 50  0001 C CNN
-	1    8000 4650
+L horizon-components:Pro-Micro U1
+U 1 1 60FAFA60
+P 8550 2050
+F 0 "U1" H 8550 2887 60  0000 C CNN
+F 1 "PRO-MICRO" H 8550 2781 60  0000 C CNN
+F 2 "horizon-footprints:Pro-Micro" V 9600 -450 60  0001 C CNN
+F 3 "" V 9600 -450 60  0001 C CNN
+	1    8550 2050
 	1    0    0    -1  
 $EndComp
+Text GLabel 7850 2100 0    50   Input ~ 0
+COL1
+Text GLabel 7850 2200 0    50   Input ~ 0
+COL2
+Text GLabel 7850 2300 0    50   Input ~ 0
+COL3
+Text GLabel 7850 2500 0    50   Input ~ 0
+COL5
+Text GLabel 7850 2600 0    50   Input ~ 0
+COL6
+NoConn ~ 7850 1500
+NoConn ~ 7850 1600
+Text GLabel 9250 2100 2    50   Input ~ 0
+ROW3
+Text GLabel 9250 2000 2    50   Input ~ 0
+ROW1
+Text GLabel 9250 2400 2    50   Input ~ 0
+ROW4
+Text GLabel 9250 2200 2    50   Input ~ 0
+ROW5
+Text GLabel 9250 2500 2    50   Input ~ 0
+ROW6
+Text GLabel 9250 2600 2    50   Input ~ 0
+ROW7
+Text GLabel 9250 2300 2    50   Input ~ 0
+ROW2
+Text GLabel 7850 2400 0    50   Input ~ 0
+COL4
+NoConn ~ 9250 1900
 $Comp
 L horizon-components:Hole_Pad H6
-U 1 1 61159A38
-P 7500 4650
-F 0 "H6" H 7600 4699 50  0000 L CNN
-F 1 "Hole_Pad" H 7600 4608 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 7500 4650 50  0001 C CNN
-F 3 "~" H 7500 4650 50  0001 C CNN
-	1    7500 4650
+U 1 1 6146CAE9
+P 8000 4600
+F 0 "H6" H 8100 4649 50  0000 L CNN
+F 1 "Hole_Pad" H 8100 4558 50  0000 L CNN
+F 2 "horizon-footprints:MountingHole_M2" H 8000 4600 50  0001 C CNN
+F 3 "~" H 8000 4600 50  0001 C CNN
+	1    8000 4600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9500 4750
 $Comp
-L horizon-components:Hole_Pad H10
-U 1 1 611453B0
-P 9500 4650
-F 0 "H10" H 9600 4699 50  0000 L CNN
-F 1 "Hole_Pad" H 9600 4608 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 9500 4650 50  0001 C CNN
-F 3 "~" H 9500 4650 50  0001 C CNN
-	1    9500 4650
+L horizon-components:Hole_Pad H5
+U 1 1 6146CAE3
+P 7500 4600
+F 0 "H5" H 7600 4649 50  0000 L CNN
+F 1 "Hole_Pad" H 7600 4558 50  0000 L CNN
+F 2 "horizon-footprints:MountingHole_M2" H 7500 4600 50  0001 C CNN
+F 3 "~" H 7500 4600 50  0001 C CNN
+	1    7500 4600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7500 5250
+NoConn ~ 7500 4700
+NoConn ~ 8000 4700
+NoConn ~ 8500 4700
 $Comp
-L horizon-components:Hole_Pad H11
-U 1 1 611AA407
-P 7500 5150
-F 0 "H11" H 7600 5199 50  0000 L CNN
-F 1 "Hole_Pad" H 7600 5108 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 7500 5150 50  0001 C CNN
-F 3 "~" H 7500 5150 50  0001 C CNN
-	1    7500 5150
+L horizon-components:Hole_Pad H7
+U 1 1 6146CADA
+P 8500 4600
+F 0 "H7" H 8600 4649 50  0000 L CNN
+F 1 "Hole_Pad" H 8600 4558 50  0000 L CNN
+F 2 "horizon-footprints:MountingHole_M2" H 8500 4600 50  0001 C CNN
+F 3 "~" H 8500 4600 50  0001 C CNN
+	1    8500 4600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8000 5250
 $Comp
-L horizon-components:Hole_Pad H12
-U 1 1 611AA40E
-P 8000 5150
-F 0 "H12" H 8100 5199 50  0000 L CNN
-F 1 "Hole_Pad" H 8100 5108 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 8000 5150 50  0001 C CNN
-F 3 "~" H 8000 5150 50  0001 C CNN
-	1    8000 5150
+L horizon-components:Hole_Pad H8
+U 1 1 6146CAD4
+P 9000 4600
+F 0 "H8" H 9100 4649 50  0000 L CNN
+F 1 "Hole_Pad" H 9100 4558 50  0000 L CNN
+F 2 "horizon-footprints:MountingHole_M2" H 9000 4600 50  0001 C CNN
+F 3 "~" H 9000 4600 50  0001 C CNN
+	1    9000 4600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8500 5250
-$Comp
-L horizon-components:Hole_Pad H13
-U 1 1 6133F152
-P 8500 5150
-F 0 "H13" H 8600 5199 50  0000 L CNN
-F 1 "Hole_Pad" H 8600 5108 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 8500 5150 50  0001 C CNN
-F 3 "~" H 8500 5150 50  0001 C CNN
-	1    8500 5150
-	1    0    0    -1  
-$EndComp
-NoConn ~ 9000 5250
-$Comp
-L horizon-components:Hole_Pad H14
-U 1 1 6133F159
-P 9000 5150
-F 0 "H14" H 9100 5199 50  0000 L CNN
-F 1 "Hole_Pad" H 9100 5108 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 9000 5150 50  0001 C CNN
-F 3 "~" H 9000 5150 50  0001 C CNN
-	1    9000 5150
-	1    0    0    -1  
-$EndComp
-NoConn ~ 9500 5250
-$Comp
-L horizon-components:Hole_Pad H15
-U 1 1 6134C79E
-P 9500 5150
-F 0 "H15" H 9600 5199 50  0000 L CNN
-F 1 "Hole_Pad" H 9600 5108 50  0000 L CNN
-F 2 "horizon-footprints:MountingHole_M2" H 9500 5150 50  0001 C CNN
-F 3 "~" H 9500 5150 50  0001 C CNN
-	1    9500 5150
-	1    0    0    -1  
-$EndComp
+NoConn ~ 9000 4700
 $EndSCHEMATC

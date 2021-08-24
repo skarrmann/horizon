@@ -1,9 +1,9 @@
-(module D_SOD-323 (layer F.Cu) (tedit 61047274)
+(module D_SOD-323 (layer F.Cu) (tedit 6123181F)
   (descr "SOD-323 Diode")
   (tags "SOD-323, Diode")
   (attr smd)
-  (fp_text reference REF** (at 0 0 270) (layer F.SilkS)
-    (effects (font (size 0.375 0.375) (thickness 0.075)))
+  (fp_text reference REF** (at 0 0) (layer F.SilkS)
+    (effects (font (size 0.5 0.5) (thickness 0.1)))
   )
   (fp_text value D_SOD-323 (at 0 0 270) (layer F.Fab) hide
     (effects (font (size 1 1) (thickness 0.15)))

@@ -563,14 +563,14 @@
   )
 
   (module horizon-footprints:Cutout-SW_Push_6mm (layer F.Cu) (tedit 6123D216) (tstamp 60FAFB7D)
-    (at 209 138.5)
+    (at 209 147 90)
     (descr "Cutout fox 6mmx6mm push button")
     (tags Cutout)
     (path /60FA8D3C)
-    (fp_text reference TSW1 (at 0 0) (layer F.SilkS) hide
+    (fp_text reference TSW1 (at 0 0 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value RESET (at 0 4) (layer F.Fab)
+    (fp_text value RESET (at 0 4 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_circle (center 0 0) (end 2 0) (layer F.Fab) (width 0.1))
@@ -591,10 +591,10 @@
     (fp_line (start 3 3) (end -3 3) (layer F.Fab) (width 0.1))
     (fp_line (start 3 -3) (end 3 3) (layer F.Fab) (width 0.1))
     (fp_line (start 0 -3) (end 3 -3) (layer F.Fab) (width 0.1))
-    (pad "" np_thru_hole circle (at 3.25 -2.25) (size 2 2) (drill 2) (layers *.Cu *.Mask))
-    (pad "" np_thru_hole circle (at 3.25 2.25) (size 2 2) (drill 2) (layers *.Cu *.Mask))
-    (pad "" np_thru_hole circle (at -3.25 -2.25) (size 2 2) (drill 2) (layers *.Cu *.Mask))
-    (pad "" np_thru_hole circle (at -3.25 2.25) (size 2 2) (drill 2) (layers *.Cu *.Mask))
+    (pad "" np_thru_hole circle (at 3.25 -2.25 90) (size 2 2) (drill 2) (layers *.Cu *.Mask))
+    (pad "" np_thru_hole circle (at 3.25 2.25 90) (size 2 2) (drill 2) (layers *.Cu *.Mask))
+    (pad "" np_thru_hole circle (at -3.25 -2.25 90) (size 2 2) (drill 2) (layers *.Cu *.Mask))
+    (pad "" np_thru_hole circle (at -3.25 2.25 90) (size 2 2) (drill 2) (layers *.Cu *.Mask))
   )
 
   (module horizon-footprints:Cutout-Header_1x04_2.54mm (layer F.Cu) (tedit 6123D1D7) (tstamp 60FED767)

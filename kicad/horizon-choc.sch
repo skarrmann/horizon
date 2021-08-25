@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:horizon-cache
+LIBS:horizon-choc-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -97,7 +97,7 @@ U 1 1 610F2CAB
 P 5250 6350
 F 0 "SW42" H 5250 6635 50  0000 C CNN
 F 1 "SW_Push" H 5250 6544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 5250 6550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 5250 6550 50  0001 C CNN
 F 3 "~" H 5250 6550 50  0001 C CNN
 	1    5250 6350
 	1    0    0    -1  
@@ -108,7 +108,7 @@ U 1 1 610F2CA5
 P 4400 6350
 F 0 "SW41" H 4400 6635 50  0000 C CNN
 F 1 "SW_Push" H 4400 6544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 4400 6550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 4400 6550 50  0001 C CNN
 F 3 "~" H 4400 6550 50  0001 C CNN
 	1    4400 6350
 	1    0    0    -1  
@@ -145,7 +145,7 @@ U 1 1 610F2C8F
 P 3550 6350
 F 0 "SW40" H 3550 6635 50  0000 C CNN
 F 1 "SW_Push" H 3550 6544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 3550 6550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 3550 6550 50  0001 C CNN
 F 3 "~" H 3550 6550 50  0001 C CNN
 	1    3550 6350
 	1    0    0    -1  
@@ -156,7 +156,7 @@ U 1 1 610F2C89
 P 2700 6350
 F 0 "SW39" H 2700 6635 50  0000 C CNN
 F 1 "SW_Push" H 2700 6544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 2700 6550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 2700 6550 50  0001 C CNN
 F 3 "~" H 2700 6550 50  0001 C CNN
 	1    2700 6350
 	1    0    0    -1  
@@ -193,7 +193,7 @@ U 1 1 610F2C72
 P 1850 6350
 F 0 "SW38" H 1850 6635 50  0000 C CNN
 F 1 "SW_Push" H 1850 6544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1850 6550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1850 6550 50  0001 C CNN
 F 3 "~" H 1850 6550 50  0001 C CNN
 	1    1850 6350
 	1    0    0    -1  
@@ -204,7 +204,7 @@ U 1 1 610F2C6C
 P 1000 6350
 F 0 "SW37" H 1000 6635 50  0000 C CNN
 F 1 "SW_Push" H 1000 6544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1000 6550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1000 6550 50  0001 C CNN
 F 3 "~" H 1000 6550 50  0001 C CNN
 	1    1000 6350
 	1    0    0    -1  
@@ -269,7 +269,7 @@ U 1 1 610F2BEB
 P 5250 4750
 F 0 "SW30" H 5250 5035 50  0000 C CNN
 F 1 "SW_Push" H 5250 4944 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 5250 4950 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 5250 4950 50  0001 C CNN
 F 3 "~" H 5250 4950 50  0001 C CNN
 	1    5250 4750
 	1    0    0    -1  
@@ -280,7 +280,7 @@ U 1 1 610F2BE5
 P 4400 4750
 F 0 "SW29" H 4400 5035 50  0000 C CNN
 F 1 "SW_Push" H 4400 4944 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 4400 4950 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 4400 4950 50  0001 C CNN
 F 3 "~" H 4400 4950 50  0001 C CNN
 	1    4400 4750
 	1    0    0    -1  
@@ -317,7 +317,7 @@ U 1 1 610F2BCF
 P 3550 4750
 F 0 "SW28" H 3550 5035 50  0000 C CNN
 F 1 "SW_Push" H 3550 4944 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 3550 4950 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 3550 4950 50  0001 C CNN
 F 3 "~" H 3550 4950 50  0001 C CNN
 	1    3550 4750
 	1    0    0    -1  
@@ -328,7 +328,7 @@ U 1 1 610F2BC9
 P 2700 4750
 F 0 "SW27" H 2700 5035 50  0000 C CNN
 F 1 "SW_Push" H 2700 4944 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 2700 4950 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 2700 4950 50  0001 C CNN
 F 3 "~" H 2700 4950 50  0001 C CNN
 	1    2700 4750
 	1    0    0    -1  
@@ -365,7 +365,7 @@ U 1 1 610F2BB2
 P 1850 4750
 F 0 "SW26" H 1850 5035 50  0000 C CNN
 F 1 "SW_Push" H 1850 4944 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1850 4950 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1850 4950 50  0001 C CNN
 F 3 "~" H 1850 4950 50  0001 C CNN
 	1    1850 4750
 	1    0    0    -1  
@@ -376,7 +376,7 @@ U 1 1 610F2BAC
 P 1000 4750
 F 0 "SW25" H 1000 5035 50  0000 C CNN
 F 1 "SW_Push" H 1000 4944 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1000 4950 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1000 4950 50  0001 C CNN
 F 3 "~" H 1000 4950 50  0001 C CNN
 	1    1000 4750
 	1    0    0    -1  
@@ -441,7 +441,7 @@ U 1 1 61085B6E
 P 5250 3150
 F 0 "SW18" H 5250 3435 50  0000 C CNN
 F 1 "SW_Push" H 5250 3344 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 5250 3350 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 5250 3350 50  0001 C CNN
 F 3 "~" H 5250 3350 50  0001 C CNN
 	1    5250 3150
 	1    0    0    -1  
@@ -452,7 +452,7 @@ U 1 1 61085B68
 P 4400 3150
 F 0 "SW17" H 4400 3435 50  0000 C CNN
 F 1 "SW_Push" H 4400 3344 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 4400 3350 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 4400 3350 50  0001 C CNN
 F 3 "~" H 4400 3350 50  0001 C CNN
 	1    4400 3150
 	1    0    0    -1  
@@ -489,7 +489,7 @@ U 1 1 61085B52
 P 3550 3150
 F 0 "SW16" H 3550 3435 50  0000 C CNN
 F 1 "SW_Push" H 3550 3344 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 3550 3350 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 3550 3350 50  0001 C CNN
 F 3 "~" H 3550 3350 50  0001 C CNN
 	1    3550 3150
 	1    0    0    -1  
@@ -500,7 +500,7 @@ U 1 1 61085B4C
 P 2700 3150
 F 0 "SW15" H 2700 3435 50  0000 C CNN
 F 1 "SW_Push" H 2700 3344 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 2700 3350 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 2700 3350 50  0001 C CNN
 F 3 "~" H 2700 3350 50  0001 C CNN
 	1    2700 3150
 	1    0    0    -1  
@@ -537,7 +537,7 @@ U 1 1 61085B35
 P 1850 3150
 F 0 "SW14" H 1850 3435 50  0000 C CNN
 F 1 "SW_Push" H 1850 3344 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1850 3350 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1850 3350 50  0001 C CNN
 F 3 "~" H 1850 3350 50  0001 C CNN
 	1    1850 3150
 	1    0    0    -1  
@@ -548,7 +548,7 @@ U 1 1 61085B2F
 P 1000 3150
 F 0 "SW13" H 1000 3435 50  0000 C CNN
 F 1 "SW_Push" H 1000 3344 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1000 3350 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1000 3350 50  0001 C CNN
 F 3 "~" H 1000 3350 50  0001 C CNN
 	1    1000 3150
 	1    0    0    -1  
@@ -617,7 +617,7 @@ U 1 1 60F561D5
 P 5250 1550
 F 0 "SW6" H 5250 1835 50  0000 C CNN
 F 1 "SW_Push" H 5250 1744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 5250 1750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 5250 1750 50  0001 C CNN
 F 3 "~" H 5250 1750 50  0001 C CNN
 	1    5250 1550
 	1    0    0    -1  
@@ -628,7 +628,7 @@ U 1 1 60F561CF
 P 4400 1550
 F 0 "SW5" H 4400 1835 50  0000 C CNN
 F 1 "SW_Push" H 4400 1744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 4400 1750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 4400 1750 50  0001 C CNN
 F 3 "~" H 4400 1750 50  0001 C CNN
 	1    4400 1550
 	1    0    0    -1  
@@ -669,7 +669,7 @@ U 1 1 60F4CDB3
 P 3550 1550
 F 0 "SW4" H 3550 1835 50  0000 C CNN
 F 1 "SW_Push" H 3550 1744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 3550 1750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 3550 1750 50  0001 C CNN
 F 3 "~" H 3550 1750 50  0001 C CNN
 	1    3550 1550
 	1    0    0    -1  
@@ -680,7 +680,7 @@ U 1 1 60F4CDAD
 P 2700 1550
 F 0 "SW3" H 2700 1835 50  0000 C CNN
 F 1 "SW_Push" H 2700 1744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 2700 1750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 2700 1750 50  0001 C CNN
 F 3 "~" H 2700 1750 50  0001 C CNN
 	1    2700 1550
 	1    0    0    -1  
@@ -723,7 +723,7 @@ U 1 1 60F34ECA
 P 1850 1550
 F 0 "SW2" H 1850 1835 50  0000 C CNN
 F 1 "SW_Push" H 1850 1744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1850 1750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1850 1750 50  0001 C CNN
 F 3 "~" H 1850 1750 50  0001 C CNN
 	1    1850 1550
 	1    0    0    -1  
@@ -734,7 +734,7 @@ U 1 1 60F31390
 P 1000 1550
 F 0 "SW1" H 1000 1835 50  0000 C CNN
 F 1 "SW_Push" H 1000 1744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1000 1750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1000 1750 50  0001 C CNN
 F 3 "~" H 1000 1750 50  0001 C CNN
 	1    1000 1550
 	1    0    0    -1  
@@ -807,7 +807,7 @@ U 1 1 610F2C4B
 P 5250 5550
 F 0 "SW36" H 5250 5835 50  0000 C CNN
 F 1 "SW_Push" H 5250 5744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 5250 5750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 5250 5750 50  0001 C CNN
 F 3 "~" H 5250 5750 50  0001 C CNN
 	1    5250 5550
 	1    0    0    -1  
@@ -818,7 +818,7 @@ U 1 1 610F2C45
 P 4400 5550
 F 0 "SW35" H 4400 5835 50  0000 C CNN
 F 1 "SW_Push" H 4400 5744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 4400 5750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 4400 5750 50  0001 C CNN
 F 3 "~" H 4400 5750 50  0001 C CNN
 	1    4400 5550
 	1    0    0    -1  
@@ -855,7 +855,7 @@ U 1 1 610F2C2F
 P 3550 5550
 F 0 "SW34" H 3550 5835 50  0000 C CNN
 F 1 "SW_Push" H 3550 5744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 3550 5750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 3550 5750 50  0001 C CNN
 F 3 "~" H 3550 5750 50  0001 C CNN
 	1    3550 5550
 	1    0    0    -1  
@@ -866,7 +866,7 @@ U 1 1 610F2C29
 P 2700 5550
 F 0 "SW33" H 2700 5835 50  0000 C CNN
 F 1 "SW_Push" H 2700 5744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 2700 5750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 2700 5750 50  0001 C CNN
 F 3 "~" H 2700 5750 50  0001 C CNN
 	1    2700 5550
 	1    0    0    -1  
@@ -903,7 +903,7 @@ U 1 1 610F2C12
 P 1850 5550
 F 0 "SW32" H 1850 5835 50  0000 C CNN
 F 1 "SW_Push" H 1850 5744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1850 5750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1850 5750 50  0001 C CNN
 F 3 "~" H 1850 5750 50  0001 C CNN
 	1    1850 5550
 	1    0    0    -1  
@@ -914,7 +914,7 @@ U 1 1 610F2C0C
 P 1000 5550
 F 0 "SW31" H 1000 5835 50  0000 C CNN
 F 1 "SW_Push" H 1000 5744 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1000 5750 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1000 5750 50  0001 C CNN
 F 3 "~" H 1000 5750 50  0001 C CNN
 	1    1000 5550
 	1    0    0    -1  
@@ -982,7 +982,7 @@ U 1 1 61085BCE
 P 5250 3950
 F 0 "SW24" H 5250 4235 50  0000 C CNN
 F 1 "SW_Push" H 5250 4144 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 5250 4150 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 5250 4150 50  0001 C CNN
 F 3 "~" H 5250 4150 50  0001 C CNN
 	1    5250 3950
 	1    0    0    -1  
@@ -993,7 +993,7 @@ U 1 1 61085BC8
 P 4400 3950
 F 0 "SW23" H 4400 4235 50  0000 C CNN
 F 1 "SW_Push" H 4400 4144 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 4400 4150 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 4400 4150 50  0001 C CNN
 F 3 "~" H 4400 4150 50  0001 C CNN
 	1    4400 3950
 	1    0    0    -1  
@@ -1030,7 +1030,7 @@ U 1 1 61085BB2
 P 3550 3950
 F 0 "SW22" H 3550 4235 50  0000 C CNN
 F 1 "SW_Push" H 3550 4144 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 3550 4150 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 3550 4150 50  0001 C CNN
 F 3 "~" H 3550 4150 50  0001 C CNN
 	1    3550 3950
 	1    0    0    -1  
@@ -1041,7 +1041,7 @@ U 1 1 61085BAC
 P 2700 3950
 F 0 "SW21" H 2700 4235 50  0000 C CNN
 F 1 "SW_Push" H 2700 4144 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 2700 4150 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 2700 4150 50  0001 C CNN
 F 3 "~" H 2700 4150 50  0001 C CNN
 	1    2700 3950
 	1    0    0    -1  
@@ -1078,7 +1078,7 @@ U 1 1 61085B95
 P 1850 3950
 F 0 "SW20" H 1850 4235 50  0000 C CNN
 F 1 "SW_Push" H 1850 4144 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1850 4150 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1850 4150 50  0001 C CNN
 F 3 "~" H 1850 4150 50  0001 C CNN
 	1    1850 3950
 	1    0    0    -1  
@@ -1089,7 +1089,7 @@ U 1 1 61085B8F
 P 1000 3950
 F 0 "SW19" H 1000 4235 50  0000 C CNN
 F 1 "SW_Push" H 1000 4144 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1000 4150 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1000 4150 50  0001 C CNN
 F 3 "~" H 1000 4150 50  0001 C CNN
 	1    1000 3950
 	1    0    0    -1  
@@ -1158,7 +1158,7 @@ U 1 1 60F7EA22
 P 5250 2350
 F 0 "SW12" H 5250 2635 50  0000 C CNN
 F 1 "SW_Push" H 5250 2544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 5250 2550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 5250 2550 50  0001 C CNN
 F 3 "~" H 5250 2550 50  0001 C CNN
 	1    5250 2350
 	1    0    0    -1  
@@ -1169,7 +1169,7 @@ U 1 1 60F7EA1C
 P 4400 2350
 F 0 "SW11" H 4400 2635 50  0000 C CNN
 F 1 "SW_Push" H 4400 2544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 4400 2550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 4400 2550 50  0001 C CNN
 F 3 "~" H 4400 2550 50  0001 C CNN
 	1    4400 2350
 	1    0    0    -1  
@@ -1206,7 +1206,7 @@ U 1 1 60F7EA06
 P 3550 2350
 F 0 "SW10" H 3550 2635 50  0000 C CNN
 F 1 "SW_Push" H 3550 2544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 3550 2550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 3550 2550 50  0001 C CNN
 F 3 "~" H 3550 2550 50  0001 C CNN
 	1    3550 2350
 	1    0    0    -1  
@@ -1217,7 +1217,7 @@ U 1 1 60F7EA00
 P 2700 2350
 F 0 "SW9" H 2700 2635 50  0000 C CNN
 F 1 "SW_Push" H 2700 2544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 2700 2550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 2700 2550 50  0001 C CNN
 F 3 "~" H 2700 2550 50  0001 C CNN
 	1    2700 2350
 	1    0    0    -1  
@@ -1254,7 +1254,7 @@ U 1 1 60F7E9E9
 P 1850 2350
 F 0 "SW8" H 1850 2635 50  0000 C CNN
 F 1 "SW_Push" H 1850 2544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1850 2550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1850 2550 50  0001 C CNN
 F 3 "~" H 1850 2550 50  0001 C CNN
 	1    1850 2350
 	1    0    0    -1  
@@ -1265,7 +1265,7 @@ U 1 1 60F7E9E3
 P 1000 2350
 F 0 "SW7" H 1000 2635 50  0000 C CNN
 F 1 "SW_Push" H 1000 2544 50  0000 C CNN
-F 2 "horizon-footprints:SW_MX" H 1000 2550 50  0001 C CNN
+F 2 "horizon-footprints:SW_Choc" H 1000 2550 50  0001 C CNN
 F 3 "~" H 1000 2550 50  0001 C CNN
 	1    1000 2350
 	1    0    0    -1  

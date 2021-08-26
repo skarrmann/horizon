@@ -7,7 +7,7 @@ F ~
 $ENDCMP
 #
 $CMP Conn_01x04
-D Connector 01x04
+D Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)
 K connector
 F ~
 $ENDCMP

@@ -1346,42 +1346,42 @@ F 3 "~" H 8050 4900 50  0001 C CNN
 	1    8050 4900
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7800 1800
-Text GLabel 9200 2300 2    50   Input ~ 0
+NoConn ~ 8050 1800
+Text GLabel 9450 2300 2    50   Input ~ 0
 COL4
-Text GLabel 9200 1400 2    50   Input ~ 0
+Text GLabel 9450 1400 2    50   Input ~ 0
 ROW2
-Text GLabel 7800 2500 0    50   Input ~ 0
+Text GLabel 8050 2500 0    50   Input ~ 0
 ROW7
-Text GLabel 7800 2400 0    50   Input ~ 0
+Text GLabel 8050 2400 0    50   Input ~ 0
 ROW6
-Text GLabel 7800 2300 0    50   Input ~ 0
+Text GLabel 8050 2300 0    50   Input ~ 0
 ROW5
-Text GLabel 9200 1500 2    50   Input ~ 0
+Text GLabel 9450 1500 2    50   Input ~ 0
 ROW4
-Text GLabel 7800 2100 0    50   Input ~ 0
+Text GLabel 8050 2100 0    50   Input ~ 0
 ROW1
-Text GLabel 7800 2200 0    50   Input ~ 0
+Text GLabel 8050 2200 0    50   Input ~ 0
 ROW3
-Text GLabel 9200 2500 2    50   Input ~ 0
+Text GLabel 9450 2500 2    50   Input ~ 0
 COL6
-Text GLabel 9200 2400 2    50   Input ~ 0
+Text GLabel 9450 2400 2    50   Input ~ 0
 COL5
-Text GLabel 9200 2200 2    50   Input ~ 0
+Text GLabel 9450 2200 2    50   Input ~ 0
 COL3
-Text GLabel 9200 2100 2    50   Input ~ 0
+Text GLabel 9450 2100 2    50   Input ~ 0
 COL2
-Text GLabel 9200 2000 2    50   Input ~ 0
+Text GLabel 9450 2000 2    50   Input ~ 0
 COL1
 $Comp
 L horizon-components:Pro-Micro U1
 U 1 1 60FAFA60
-P 8500 1950
-F 0 "U1" H 8500 2787 60  0000 C CNN
-F 1 "PRO-MICRO" H 8500 2681 60  0000 C CNN
-F 2 "horizon-footprints:Pro-Micro" V 9550 -550 60  0001 C CNN
-F 3 "" V 9550 -550 60  0001 C CNN
-	1    8500 1950
+P 8750 1950
+F 0 "U1" H 8750 2787 60  0000 C CNN
+F 1 "PRO-MICRO" H 8750 2681 60  0000 C CNN
+F 2 "horizon-footprints:Pro-Micro" V 9800 -550 60  0001 C CNN
+F 3 "" V 9800 -550 60  0001 C CNN
+	1    8750 1950
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1432,128 +1432,128 @@ F 3 "~" H 9050 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 9050 4550
-Text GLabel 8600 3500 0    50   Input ~ 0
+Text GLabel 8450 3450 0    50   Input ~ 0
 SDA
-Text GLabel 8600 3400 0    50   Input ~ 0
+Text GLabel 8450 3350 0    50   Input ~ 0
 SCL
 Wire Wire Line
-	8600 3050 8350 3050
+	8450 3000 8200 3000
 Wire Wire Line
-	8600 3200 8600 3050
+	8450 3150 8450 3000
 Wire Wire Line
-	8150 3300 8600 3300
+	8000 3250 8450 3250
 $Comp
 L power:VCC #PWR0105
 U 1 1 61061E80
-P 8150 3300
-F 0 "#PWR0105" H 8150 3150 50  0001 C CNN
-F 1 "VCC" H 8167 3473 50  0000 C CNN
-F 2 "" H 8150 3300 50  0001 C CNN
-F 3 "" H 8150 3300 50  0001 C CNN
-	1    8150 3300
+P 8000 3250
+F 0 "#PWR0105" H 8000 3100 50  0001 C CNN
+F 1 "VCC" H 8017 3423 50  0000 C CNN
+F 2 "" H 8000 3250 50  0001 C CNN
+F 3 "" H 8000 3250 50  0001 C CNN
+	1    8000 3250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7750 1100 7000 1100
-Wire Wire Line
-	7750 1100 7750 1500
-Wire Wire Line
-	7700 1600 7700 1450
-Wire Wire Line
-	7800 1600 7700 1600
-Wire Wire Line
-	7800 1700 7550 1700
-$Comp
-L power:VCC #PWR0104
-U 1 1 610375EA
-P 7550 1700
-F 0 "#PWR0104" H 7550 1550 50  0001 C CNN
-F 1 "VCC" H 7567 1873 50  0000 C CNN
-F 2 "" H 7550 1700 50  0001 C CNN
-F 3 "" H 7550 1700 50  0001 C CNN
-	1    7550 1700
-	-1   0    0    -1  
-$EndComp
-Text GLabel 9200 1900 2    50   Input ~ 0
+Text GLabel 9450 1900 2    50   Input ~ 0
 SCL
-Text GLabel 9200 1800 2    50   Input ~ 0
+Text GLabel 9450 1800 2    50   Input ~ 0
 SDA
 $Comp
 L power:GND #PWR0103
 U 1 1 6102AE0C
-P 8350 3050
-F 0 "#PWR0103" H 8350 2800 50  0001 C CNN
-F 1 "GND" H 8355 2877 50  0000 C CNN
-F 2 "" H 8350 3050 50  0001 C CNN
-F 3 "" H 8350 3050 50  0001 C CNN
-	1    8350 3050
+P 8200 3000
+F 0 "#PWR0103" H 8200 2750 50  0001 C CNN
+F 1 "GND" H 8205 2827 50  0000 C CNN
+F 2 "" H 8200 3000 50  0001 C CNN
+F 3 "" H 8200 3000 50  0001 C CNN
+	1    8200 3000
 	1    0    0    -1  
 $EndComp
-$Comp
-L horizon-components:Conn_01x04 J1
-U 1 1 6102700A
-P 8800 3300
-F 0 "J1" H 8828 3276 50  0000 L CNN
-F 1 "OLED" H 8828 3185 50  0000 L CNN
-F 2 "horizon-footprints:Header_1x04_2.54mm" H 8800 3300 50  0001 C CNN
-F 3 "~" H 8800 3300 50  0001 C CNN
-	1    8800 3300
-	1    0    0    -1  
-$EndComp
-Connection ~ 7000 1450
+Connection ~ 7000 1600
 Wire Wire Line
-	7000 1100 7000 1450
+	7000 1250 7000 1600
 Wire Wire Line
-	7800 1500 7750 1500
+	7000 1600 7000 1650
 Wire Wire Line
-	7000 1450 7000 1500
-Wire Wire Line
-	7050 1450 7000 1450
-Wire Wire Line
-	7700 1450 7450 1450
+	7050 1600 7000 1600
 $Comp
 L horizon-components:SW_Push TSW1
 U 1 1 60FA8D3C
-P 7250 1450
-F 0 "TSW1" H 7250 1735 50  0000 C CNN
-F 1 "RESET" H 7250 1644 50  0000 C CNN
-F 2 "horizon-footprints:SW_Push_6mm" H 7250 1650 50  0001 C CNN
-F 3 "~" H 7250 1650 50  0001 C CNN
-	1    7250 1450
+P 7250 1600
+F 0 "TSW1" H 7250 1885 50  0000 C CNN
+F 1 "RESET" H 7250 1794 50  0000 C CNN
+F 2 "horizon-footprints:SW_Push_6mm" H 7250 1800 50  0001 C CNN
+F 3 "~" H 7250 1800 50  0001 C CNN
+	1    7250 1600
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 7800 1400
-Connection ~ 9700 1700
+Connection ~ 9950 1700
 Wire Wire Line
-	9700 1600 9700 1700
+	9950 1600 9950 1700
 Wire Wire Line
-	9200 1600 9700 1600
+	9450 1600 9950 1600
 Wire Wire Line
-	9700 1700 9700 1750
+	9950 1700 9950 1750
 Wire Wire Line
-	9200 1700 9700 1700
+	9450 1700 9950 1700
 $Comp
 L power:GND #PWR0102
 U 1 1 60FC2164
-P 9700 1750
-F 0 "#PWR0102" H 9700 1500 50  0001 C CNN
-F 1 "GND" H 9705 1577 50  0000 C CNN
-F 2 "" H 9700 1750 50  0001 C CNN
-F 3 "" H 9700 1750 50  0001 C CNN
-	1    9700 1750
+P 9950 1750
+F 0 "#PWR0102" H 9950 1500 50  0001 C CNN
+F 1 "GND" H 9955 1577 50  0000 C CNN
+F 2 "" H 9950 1750 50  0001 C CNN
+F 3 "" H 9950 1750 50  0001 C CNN
+	1    9950 1750
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 60FB8E05
-P 7000 1500
-F 0 "#PWR0101" H 7000 1250 50  0001 C CNN
-F 1 "GND" H 7005 1327 50  0000 C CNN
-F 2 "" H 7000 1500 50  0001 C CNN
-F 3 "" H 7000 1500 50  0001 C CNN
-	1    7000 1500
+P 7000 1650
+F 0 "#PWR0101" H 7000 1400 50  0001 C CNN
+F 1 "GND" H 7005 1477 50  0000 C CNN
+F 2 "" H 7000 1650 50  0001 C CNN
+F 3 "" H 7000 1650 50  0001 C CNN
+	1    7000 1650
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 7800 1900
-NoConn ~ 7800 2000
+NoConn ~ 8050 1900
+NoConn ~ 8050 2000
+$Comp
+L power:VCC #PWR0104
+U 1 1 610375EA
+P 7600 1850
+F 0 "#PWR0104" H 7600 1700 50  0001 C CNN
+F 1 "VCC" H 7617 2023 50  0000 C CNN
+F 2 "" H 7600 1850 50  0001 C CNN
+F 3 "" H 7600 1850 50  0001 C CNN
+	1    7600 1850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 1500 7450 1250
+Wire Wire Line
+	7450 1250 7000 1250
+Wire Wire Line
+	8050 1700 7700 1700
+Wire Wire Line
+	7700 1700 7700 1850
+Wire Wire Line
+	7700 1850 7600 1850
+Wire Wire Line
+	8050 1600 7450 1600
+Wire Wire Line
+	8050 1500 7450 1500
+$Comp
+L horizon-components:Conn_01x04 J1
+U 1 1 6102700A
+P 8650 3250
+F 0 "J1" H 8650 3450 50  0000 C CNN
+F 1 "OLED" H 8650 2950 50  0000 C CNN
+F 2 "horizon-footprints:Header_1x04_2.54mm" H 8650 3250 50  0001 C CNN
+F 3 "~" H 8650 3250 50  0001 C CNN
+	1    8650 3250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8050 1400
 $EndSCHEMATC

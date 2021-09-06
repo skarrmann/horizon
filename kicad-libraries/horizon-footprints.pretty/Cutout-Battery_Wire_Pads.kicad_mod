@@ -1,0 +1,16 @@
+(module Cutout-Battery_Wire_Pads (layer F.Cu) (tedit 6135BB1A)
+  (descr "Cutout for Wire solder connection")
+  (tags connector)
+  (attr virtual)
+  (fp_text reference REF** (at 0 0) (layer F.SilkS) hide
+    (effects (font (size 0.75 0.75) (thickness 0.15)))
+  )
+  (fp_text value Cutout-Battery_Wire_Pads (at 0 1.75) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start -3.25 -1.5) (end 3.25 -1.5) (layer F.CrtYd) (width 0.1))
+  (fp_line (start -3.25 -1.5) (end -3.25 1.5) (layer F.CrtYd) (width 0.1))
+  (fp_line (start 3.25 1.5) (end 3.25 -1.5) (layer F.CrtYd) (width 0.1))
+  (fp_line (start 3.25 1.5) (end -3.25 1.5) (layer F.CrtYd) (width 0.1))
+  (pad "" np_thru_hole oval (at 0 0) (size 6.6 1.8) (drill oval 6.6 1.8) (layers *.Cu *.Mask))
+)

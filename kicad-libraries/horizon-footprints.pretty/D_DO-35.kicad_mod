@@ -1,10 +1,10 @@
-(module D_DO-35 (layer F.Cu) (tedit 611810A1)
+(module D_DO-35 (layer F.Cu) (tedit 6135B3AD)
   (descr "Diode THT DO-35")
   (tags "diode, THT")
   (fp_text reference REF** (at 0 0) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (fp_text value D_DO-35 (at 0 0) (layer F.Fab) hide
+  (fp_text value D_DO-35 (at 0 1.75) (layer F.Fab) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_line (start -2 -1) (end -2 1) (layer F.Fab) (width 0.1))

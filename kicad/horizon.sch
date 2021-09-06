@@ -960,7 +960,7 @@ Text GLabel 6550 6350 2    50   Input ~ 0
 ROW7
 Text GLabel 6550 5550 2    50   Input ~ 0
 ROW6
-Text GLabel 10400 1200 2    50   Input ~ 0
+Text GLabel 10400 1800 2    50   Input ~ 0
 ROW2
 Text GLabel 10400 2200 2    50   Input ~ 0
 ROW7
@@ -1676,7 +1676,6 @@ Text GLabel 9000 2300 0    50   Input ~ 0
 COL7
 Text GLabel 10400 2300 2    50   Input ~ 0
 ROW8
-NoConn ~ 10400 1800
 Text GLabel 9000 1800 0    50   Input ~ 0
 COL2
 Text GLabel 9000 1900 0    50   Input ~ 0
@@ -1740,9 +1739,5 @@ F 3 "~" H 9700 3150 50  0001 C CNN
 	1    9700 3150
 	1    0    0    -1  
 $EndComp
-Text GLabel 10400 1600 2    50   Input ~ 0
-SDA
-Text GLabel 10400 1700 2    50   Input ~ 0
-SCL
 NoConn ~ 9000 1200
 $EndSCHEMATC

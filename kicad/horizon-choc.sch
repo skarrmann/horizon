@@ -150,10 +150,10 @@ Wire Wire Line
 	7350 5350 7250 5350
 Connection ~ 800  3150
 $Comp
-L horizon-components:SW_Push SW37
+L horizon-components:SW_Push SW39
 U 1 1 61085B8F
 P 1000 3950
-F 0 "SW37" H 1000 4235 50  0000 C CNN
+F 0 "SW39" H 1000 4235 50  0000 C CNN
 F 1 "SW_Push" H 1000 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 1000 4150 50  0001 C CNN
 F 3 "~" H 1000 4150 50  0001 C CNN
@@ -163,10 +163,10 @@ $EndComp
 Wire Wire Line
 	1200 3950 1200 4000
 $Comp
-L horizon-components:D D37
+L horizon-components:D D39
 U 1 1 61085BA6
 P 1200 4100
-F 0 "D37" V 1246 4032 50  0000 R CNN
+F 0 "D39" V 1246 4032 50  0000 R CNN
 F 1 "D" V 1155 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 1200 4100 50  0001 C CNN
 F 3 "~" V 1200 4100 50  0001 C CNN
@@ -259,10 +259,10 @@ F 3 "~" H 1650 2550 50  0001 C CNN
 $EndComp
 Connection ~ 1450 3150
 $Comp
-L horizon-components:SW_Push SW38
+L horizon-components:SW_Push SW40
 U 1 1 6140721B
 P 1650 3950
-F 0 "SW38" H 1650 4235 50  0000 C CNN
+F 0 "SW40" H 1650 4235 50  0000 C CNN
 F 1 "SW_Push" H 1650 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 1650 4150 50  0001 C CNN
 F 3 "~" H 1650 4150 50  0001 C CNN
@@ -272,10 +272,10 @@ $EndComp
 Wire Wire Line
 	1850 3950 1850 4000
 $Comp
-L horizon-components:D D38
+L horizon-components:D D40
 U 1 1 61407222
 P 1850 4100
-F 0 "D38" V 1896 4032 50  0000 R CNN
+F 0 "D40" V 1896 4032 50  0000 R CNN
 F 1 "D" V 1805 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 1850 4100 50  0001 C CNN
 F 3 "~" V 1850 4100 50  0001 C CNN
@@ -368,10 +368,10 @@ F 3 "~" H 2300 2550 50  0001 C CNN
 $EndComp
 Connection ~ 2100 3150
 $Comp
-L horizon-components:SW_Push SW39
+L horizon-components:SW_Push SW41
 U 1 1 6141A3EC
 P 2300 3950
-F 0 "SW39" H 2300 4235 50  0000 C CNN
+F 0 "SW41" H 2300 4235 50  0000 C CNN
 F 1 "SW_Push" H 2300 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 2300 4150 50  0001 C CNN
 F 3 "~" H 2300 4150 50  0001 C CNN
@@ -381,10 +381,10 @@ $EndComp
 Wire Wire Line
 	2500 3950 2500 4000
 $Comp
-L horizon-components:D D39
+L horizon-components:D D41
 U 1 1 6141A3F3
 P 2500 4100
-F 0 "D39" V 2546 4032 50  0000 R CNN
+F 0 "D41" V 2546 4032 50  0000 R CNN
 F 1 "D" V 2455 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 2500 4100 50  0001 C CNN
 F 3 "~" V 2500 4100 50  0001 C CNN
@@ -477,10 +477,10 @@ F 3 "~" H 2950 2550 50  0001 C CNN
 $EndComp
 Connection ~ 2750 3150
 $Comp
-L horizon-components:SW_Push SW40
+L horizon-components:SW_Push SW42
 U 1 1 6141A428
 P 2950 3950
-F 0 "SW40" H 2950 4235 50  0000 C CNN
+F 0 "SW42" H 2950 4235 50  0000 C CNN
 F 1 "SW_Push" H 2950 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 2950 4150 50  0001 C CNN
 F 3 "~" H 2950 4150 50  0001 C CNN
@@ -490,10 +490,10 @@ $EndComp
 Wire Wire Line
 	3150 3950 3150 4000
 $Comp
-L horizon-components:D D40
+L horizon-components:D D42
 U 1 1 6141A42F
 P 3150 4100
-F 0 "D40" V 3196 4032 50  0000 R CNN
+F 0 "D42" V 3196 4032 50  0000 R CNN
 F 1 "D" V 3105 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 3150 4100 50  0001 C CNN
 F 3 "~" V 3150 4100 50  0001 C CNN
@@ -586,10 +586,10 @@ F 3 "~" H 3600 2550 50  0001 C CNN
 $EndComp
 Connection ~ 3400 3150
 $Comp
-L horizon-components:SW_Push SW41
+L horizon-components:SW_Push SW43
 U 1 1 614404CD
 P 3600 3950
-F 0 "SW41" H 3600 4235 50  0000 C CNN
+F 0 "SW43" H 3600 4235 50  0000 C CNN
 F 1 "SW_Push" H 3600 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 3600 4150 50  0001 C CNN
 F 3 "~" H 3600 4150 50  0001 C CNN
@@ -599,10 +599,10 @@ $EndComp
 Wire Wire Line
 	3800 3950 3800 4000
 $Comp
-L horizon-components:D D41
+L horizon-components:D D43
 U 1 1 614404D4
 P 3800 4100
-F 0 "D41" V 3846 4032 50  0000 R CNN
+F 0 "D43" V 3846 4032 50  0000 R CNN
 F 1 "D" V 3755 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 3800 4100 50  0001 C CNN
 F 3 "~" V 3800 4100 50  0001 C CNN
@@ -695,10 +695,10 @@ F 3 "~" H 4250 2550 50  0001 C CNN
 $EndComp
 Connection ~ 4050 3150
 $Comp
-L horizon-components:SW_Push SW42
+L horizon-components:SW_Push SW44
 U 1 1 61440509
 P 4250 3950
-F 0 "SW42" H 4250 4235 50  0000 C CNN
+F 0 "SW44" H 4250 4235 50  0000 C CNN
 F 1 "SW_Push" H 4250 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 4250 4150 50  0001 C CNN
 F 3 "~" H 4250 4150 50  0001 C CNN
@@ -708,10 +708,10 @@ $EndComp
 Wire Wire Line
 	4450 3950 4450 4000
 $Comp
-L horizon-components:D D42
+L horizon-components:D D44
 U 1 1 61440510
 P 4450 4100
-F 0 "D42" V 4496 4032 50  0000 R CNN
+F 0 "D44" V 4496 4032 50  0000 R CNN
 F 1 "D" V 4405 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 4450 4100 50  0001 C CNN
 F 3 "~" V 4450 4100 50  0001 C CNN
@@ -723,10 +723,10 @@ Wire Wire Line
 Text GLabel 4700 1050 1    50   Input ~ 0
 COL7
 $Comp
-L horizon-components:SW_Push SW43
+L horizon-components:SW_Push SW45
 U 1 1 61440545
 P 4900 3950
-F 0 "SW43" H 4900 4235 50  0000 C CNN
+F 0 "SW45" H 4900 4235 50  0000 C CNN
 F 1 "SW_Push" H 4900 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 4900 4150 50  0001 C CNN
 F 3 "~" H 4900 4150 50  0001 C CNN
@@ -736,10 +736,10 @@ $EndComp
 Wire Wire Line
 	5100 3950 5100 4000
 $Comp
-L horizon-components:D D43
+L horizon-components:D D45
 U 1 1 6144054C
 P 5100 4100
-F 0 "D43" V 5146 4032 50  0000 R CNN
+F 0 "D45" V 5146 4032 50  0000 R CNN
 F 1 "D" V 5055 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 5100 4100 50  0001 C CNN
 F 3 "~" V 5100 4100 50  0001 C CNN
@@ -749,10 +749,10 @@ $EndComp
 Text GLabel 5350 1050 1    50   Input ~ 0
 COL8
 $Comp
-L horizon-components:D D31
+L horizon-components:D D33
 U 1 1 6146E4D8
 P 6400 3300
-F 0 "D31" V 6446 3232 50  0000 R CNN
+F 0 "D33" V 6446 3232 50  0000 R CNN
 F 1 "D" V 6355 3232 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 6400 3300 50  0001 C CNN
 F 3 "~" V 6400 3300 50  0001 C CNN
@@ -762,10 +762,10 @@ $EndComp
 Wire Wire Line
 	6400 3150 6400 3200
 $Comp
-L horizon-components:SW_Push SW31
+L horizon-components:SW_Push SW33
 U 1 1 6146E4DF
 P 6200 3150
-F 0 "SW31" H 6200 3435 50  0000 C CNN
+F 0 "SW33" H 6200 3435 50  0000 C CNN
 F 1 "SW_Push" H 6200 3344 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 6200 3350 50  0001 C CNN
 F 3 "~" H 6200 3350 50  0001 C CNN
@@ -832,10 +832,10 @@ F 3 "~" H 6200 2550 50  0001 C CNN
 $EndComp
 Connection ~ 6000 3150
 $Comp
-L horizon-components:SW_Push SW45
+L horizon-components:SW_Push SW47
 U 1 1 6146E506
 P 6200 3950
-F 0 "SW45" H 6200 4235 50  0000 C CNN
+F 0 "SW47" H 6200 4235 50  0000 C CNN
 F 1 "SW_Push" H 6200 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 6200 4150 50  0001 C CNN
 F 3 "~" H 6200 4150 50  0001 C CNN
@@ -845,10 +845,10 @@ $EndComp
 Wire Wire Line
 	6400 3950 6400 4000
 $Comp
-L horizon-components:D D45
+L horizon-components:D D47
 U 1 1 6146E50D
 P 6400 4100
-F 0 "D45" V 6446 4032 50  0000 R CNN
+F 0 "D47" V 6446 4032 50  0000 R CNN
 F 1 "D" V 6355 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 6400 4100 50  0001 C CNN
 F 3 "~" V 6400 4100 50  0001 C CNN
@@ -858,10 +858,10 @@ $EndComp
 Wire Wire Line
 	6000 3150 6000 3950
 $Comp
-L horizon-components:D D32
+L horizon-components:D D34
 U 1 1 6146E514
 P 7050 3300
-F 0 "D32" V 7096 3232 50  0000 R CNN
+F 0 "D34" V 7096 3232 50  0000 R CNN
 F 1 "D" V 7005 3232 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 7050 3300 50  0001 C CNN
 F 3 "~" V 7050 3300 50  0001 C CNN
@@ -871,10 +871,10 @@ $EndComp
 Wire Wire Line
 	7050 3150 7050 3200
 $Comp
-L horizon-components:SW_Push SW32
+L horizon-components:SW_Push SW34
 U 1 1 6146E51B
 P 6850 3150
-F 0 "SW32" H 6850 3435 50  0000 C CNN
+F 0 "SW34" H 6850 3435 50  0000 C CNN
 F 1 "SW_Push" H 6850 3344 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 6850 3350 50  0001 C CNN
 F 3 "~" H 6850 3350 50  0001 C CNN
@@ -941,10 +941,10 @@ F 3 "~" H 6850 2550 50  0001 C CNN
 $EndComp
 Connection ~ 6650 3150
 $Comp
-L horizon-components:SW_Push SW46
+L horizon-components:SW_Push SW48
 U 1 1 6146E542
 P 6850 3950
-F 0 "SW46" H 6850 4235 50  0000 C CNN
+F 0 "SW48" H 6850 4235 50  0000 C CNN
 F 1 "SW_Push" H 6850 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 6850 4150 50  0001 C CNN
 F 3 "~" H 6850 4150 50  0001 C CNN
@@ -954,10 +954,10 @@ $EndComp
 Wire Wire Line
 	7050 3950 7050 4000
 $Comp
-L horizon-components:D D46
+L horizon-components:D D48
 U 1 1 6146E549
 P 7050 4100
-F 0 "D46" V 7096 4032 50  0000 R CNN
+F 0 "D48" V 7096 4032 50  0000 R CNN
 F 1 "D" V 7005 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 7050 4100 50  0001 C CNN
 F 3 "~" V 7050 4100 50  0001 C CNN
@@ -967,10 +967,10 @@ $EndComp
 Wire Wire Line
 	6650 3150 6650 3950
 $Comp
-L horizon-components:D D33
+L horizon-components:D D35
 U 1 1 6146E550
 P 7700 3300
-F 0 "D33" V 7746 3232 50  0000 R CNN
+F 0 "D35" V 7746 3232 50  0000 R CNN
 F 1 "D" V 7655 3232 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 7700 3300 50  0001 C CNN
 F 3 "~" V 7700 3300 50  0001 C CNN
@@ -980,10 +980,10 @@ $EndComp
 Wire Wire Line
 	7700 3150 7700 3200
 $Comp
-L horizon-components:SW_Push SW33
+L horizon-components:SW_Push SW35
 U 1 1 6146E557
 P 7500 3150
-F 0 "SW33" H 7500 3435 50  0000 C CNN
+F 0 "SW35" H 7500 3435 50  0000 C CNN
 F 1 "SW_Push" H 7500 3344 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 7500 3350 50  0001 C CNN
 F 3 "~" H 7500 3350 50  0001 C CNN
@@ -1050,10 +1050,10 @@ F 3 "~" H 7500 2550 50  0001 C CNN
 $EndComp
 Connection ~ 7300 3150
 $Comp
-L horizon-components:SW_Push SW47
+L horizon-components:SW_Push SW49
 U 1 1 6146E57E
 P 7500 3950
-F 0 "SW47" H 7500 4235 50  0000 C CNN
+F 0 "SW49" H 7500 4235 50  0000 C CNN
 F 1 "SW_Push" H 7500 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 7500 4150 50  0001 C CNN
 F 3 "~" H 7500 4150 50  0001 C CNN
@@ -1063,10 +1063,10 @@ $EndComp
 Wire Wire Line
 	7700 3950 7700 4000
 $Comp
-L horizon-components:D D47
+L horizon-components:D D49
 U 1 1 6146E585
 P 7700 4100
-F 0 "D47" V 7746 4032 50  0000 R CNN
+F 0 "D49" V 7746 4032 50  0000 R CNN
 F 1 "D" V 7655 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 7700 4100 50  0001 C CNN
 F 3 "~" V 7700 4100 50  0001 C CNN
@@ -1076,10 +1076,10 @@ $EndComp
 Wire Wire Line
 	7300 3150 7300 3950
 $Comp
-L horizon-components:D D34
+L horizon-components:D D36
 U 1 1 6146E58C
 P 8350 3300
-F 0 "D34" V 8396 3232 50  0000 R CNN
+F 0 "D36" V 8396 3232 50  0000 R CNN
 F 1 "D" V 8305 3232 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 8350 3300 50  0001 C CNN
 F 3 "~" V 8350 3300 50  0001 C CNN
@@ -1089,10 +1089,10 @@ $EndComp
 Wire Wire Line
 	8350 3150 8350 3200
 $Comp
-L horizon-components:SW_Push SW34
+L horizon-components:SW_Push SW36
 U 1 1 6146E593
 P 8150 3150
-F 0 "SW34" H 8150 3435 50  0000 C CNN
+F 0 "SW36" H 8150 3435 50  0000 C CNN
 F 1 "SW_Push" H 8150 3344 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 8150 3350 50  0001 C CNN
 F 3 "~" H 8150 3350 50  0001 C CNN
@@ -1159,10 +1159,10 @@ F 3 "~" H 8150 2550 50  0001 C CNN
 $EndComp
 Connection ~ 7950 3150
 $Comp
-L horizon-components:SW_Push SW48
+L horizon-components:SW_Push SW50
 U 1 1 6146E5BA
 P 8150 3950
-F 0 "SW48" H 8150 4235 50  0000 C CNN
+F 0 "SW50" H 8150 4235 50  0000 C CNN
 F 1 "SW_Push" H 8150 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 8150 4150 50  0001 C CNN
 F 3 "~" H 8150 4150 50  0001 C CNN
@@ -1172,10 +1172,10 @@ $EndComp
 Wire Wire Line
 	8350 3950 8350 4000
 $Comp
-L horizon-components:D D48
+L horizon-components:D D50
 U 1 1 6146E5C1
 P 8350 4100
-F 0 "D48" V 8396 4032 50  0000 R CNN
+F 0 "D50" V 8396 4032 50  0000 R CNN
 F 1 "D" V 8305 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 8350 4100 50  0001 C CNN
 F 3 "~" V 8350 4100 50  0001 C CNN
@@ -1185,10 +1185,10 @@ $EndComp
 Wire Wire Line
 	7950 3150 7950 3950
 $Comp
-L horizon-components:D D35
+L horizon-components:D D37
 U 1 1 6146E5C8
 P 9000 3300
-F 0 "D35" V 9046 3232 50  0000 R CNN
+F 0 "D37" V 9046 3232 50  0000 R CNN
 F 1 "D" V 8955 3232 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 9000 3300 50  0001 C CNN
 F 3 "~" V 9000 3300 50  0001 C CNN
@@ -1198,10 +1198,10 @@ $EndComp
 Wire Wire Line
 	9000 3150 9000 3200
 $Comp
-L horizon-components:SW_Push SW35
+L horizon-components:SW_Push SW37
 U 1 1 6146E5CF
 P 8800 3150
-F 0 "SW35" H 8800 3435 50  0000 C CNN
+F 0 "SW37" H 8800 3435 50  0000 C CNN
 F 1 "SW_Push" H 8800 3344 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 8800 3350 50  0001 C CNN
 F 3 "~" H 8800 3350 50  0001 C CNN
@@ -1268,10 +1268,10 @@ F 3 "~" H 8800 2550 50  0001 C CNN
 $EndComp
 Connection ~ 8600 3150
 $Comp
-L horizon-components:SW_Push SW49
+L horizon-components:SW_Push SW51
 U 1 1 6146E5F6
 P 8800 3950
-F 0 "SW49" H 8800 4235 50  0000 C CNN
+F 0 "SW51" H 8800 4235 50  0000 C CNN
 F 1 "SW_Push" H 8800 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 8800 4150 50  0001 C CNN
 F 3 "~" H 8800 4150 50  0001 C CNN
@@ -1281,10 +1281,10 @@ $EndComp
 Wire Wire Line
 	9000 3950 9000 4000
 $Comp
-L horizon-components:D D49
+L horizon-components:D D51
 U 1 1 6146E5FD
 P 9000 4100
-F 0 "D49" V 9046 4032 50  0000 R CNN
+F 0 "D51" V 9046 4032 50  0000 R CNN
 F 1 "D" V 8955 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 9000 4100 50  0001 C CNN
 F 3 "~" V 9000 4100 50  0001 C CNN
@@ -1294,10 +1294,10 @@ $EndComp
 Wire Wire Line
 	8600 3150 8600 3950
 $Comp
-L horizon-components:D D36
+L horizon-components:D D38
 U 1 1 6146E604
 P 9650 3300
-F 0 "D36" V 9696 3232 50  0000 R CNN
+F 0 "D38" V 9696 3232 50  0000 R CNN
 F 1 "D" V 9605 3232 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 9650 3300 50  0001 C CNN
 F 3 "~" V 9650 3300 50  0001 C CNN
@@ -1307,10 +1307,10 @@ $EndComp
 Wire Wire Line
 	9650 3150 9650 3200
 $Comp
-L horizon-components:SW_Push SW36
+L horizon-components:SW_Push SW38
 U 1 1 6146E60B
 P 9450 3150
-F 0 "SW36" H 9450 3435 50  0000 C CNN
+F 0 "SW38" H 9450 3435 50  0000 C CNN
 F 1 "SW_Push" H 9450 3344 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 9450 3350 50  0001 C CNN
 F 3 "~" H 9450 3350 50  0001 C CNN
@@ -1377,10 +1377,10 @@ F 3 "~" H 9450 2550 50  0001 C CNN
 $EndComp
 Connection ~ 9250 3150
 $Comp
-L horizon-components:SW_Push SW50
+L horizon-components:SW_Push SW52
 U 1 1 6146E632
 P 9450 3950
-F 0 "SW50" H 9450 4235 50  0000 C CNN
+F 0 "SW52" H 9450 4235 50  0000 C CNN
 F 1 "SW_Push" H 9450 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 9450 4150 50  0001 C CNN
 F 3 "~" H 9450 4150 50  0001 C CNN
@@ -1390,10 +1390,10 @@ $EndComp
 Wire Wire Line
 	9650 3950 9650 4000
 $Comp
-L horizon-components:D D50
+L horizon-components:D D52
 U 1 1 6146E639
 P 9650 4100
-F 0 "D50" V 9696 4032 50  0000 R CNN
+F 0 "D52" V 9696 4032 50  0000 R CNN
 F 1 "D" V 9605 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 9650 4100 50  0001 C CNN
 F 3 "~" V 9650 4100 50  0001 C CNN
@@ -1549,10 +1549,10 @@ Wire Wire Line
 	5100 4200 5750 4200
 Connection ~ 5750 4200
 $Comp
-L horizon-components:D D44
+L horizon-components:D D46
 U 1 1 61440588
 P 5750 4100
-F 0 "D44" V 5796 4032 50  0000 R CNN
+F 0 "D46" V 5796 4032 50  0000 R CNN
 F 1 "D" V 5705 4032 50  0000 R CNN
 F 2 "horizon-footprints:D_SOD-123" V 5750 4100 50  0001 C CNN
 F 3 "~" V 5750 4100 50  0001 C CNN
@@ -1562,10 +1562,10 @@ $EndComp
 Wire Wire Line
 	5750 3950 5750 4000
 $Comp
-L horizon-components:SW_Push SW44
+L horizon-components:SW_Push SW46
 U 1 1 61440581
 P 5550 3950
-F 0 "SW44" H 5550 4235 50  0000 C CNN
+F 0 "SW46" H 5550 4235 50  0000 C CNN
 F 1 "SW_Push" H 5550 4144 50  0000 C CNN
 F 2 "horizon-footprints:SW_Choc" H 5550 4150 50  0001 C CNN
 F 3 "~" H 5550 4150 50  0001 C CNN
@@ -1578,45 +1578,13 @@ Wire Wire Line
 	4450 1800 6400 1800
 Wire Wire Line
 	4450 2600 6400 2600
-Text GLabel 7700 5400 0    50   Input ~ 0
-COL1
-Text GLabel 7700 5500 0    50   Input ~ 0
-COL2
-Text GLabel 7700 5600 0    50   Input ~ 0
-COL3
-Text GLabel 7700 5700 0    50   Input ~ 0
-COL4
-Text GLabel 7700 5800 0    50   Input ~ 0
-COL5
-Text GLabel 7700 5900 0    50   Input ~ 0
-COL6
-Text GLabel 7700 6000 0    50   Input ~ 0
-COL7
-Text GLabel 9100 5300 2    50   Input ~ 0
-ROW3
-Text GLabel 7700 5300 0    50   Input ~ 0
-ROW4
-Text GLabel 9100 6000 2    50   Input ~ 0
-COL8
-Text GLabel 9100 5900 2    50   Input ~ 0
-COL9
-Text GLabel 9100 5800 2    50   Input ~ 0
-COL10
-Text GLabel 9100 5700 2    50   Input ~ 0
-COL11
-Text GLabel 9100 5600 2    50   Input ~ 0
-COL12
-Text GLabel 9100 5500 2    50   Input ~ 0
-COL13
-Text GLabel 9100 5400 2    50   Input ~ 0
-COL14
 $Comp
 L horizon-components:Logo LOGO1
 U 1 1 611138F2
 P 2400 6400
 F 0 "LOGO1" H 2678 6446 50  0000 L CNN
 F 1 "Logo" H 2678 6355 50  0000 L CNN
-F 2 "horizon-footprints:Logo_Horizon" H 2400 6350 50  0001 C CNN
+F 2 "horizon-footprints:Logo_Horizon_Small" H 2400 6350 50  0001 C CNN
 F 3 "" H 2400 6350 50  0001 C CNN
 	1    2400 6400
 	1    0    0    -1  
@@ -1736,12 +1704,6 @@ Wire Wire Line
 	7350 4900 7250 4900
 Text GLabel 7700 5100 0    50   Input ~ 0
 RESET
-Wire Wire Line
-	4700 1050 4700 3950
-Wire Wire Line
-	5350 1050 5350 3950
-Wire Wire Line
-	4450 3400 6400 3400
 Text GLabel 7700 4900 0    50   Input ~ 0
 RAW
 $Comp
@@ -1774,7 +1736,7 @@ Wire Wire Line
 	5100 6050 5050 6050
 Wire Wire Line
 	5050 6050 5050 6100
-Text GLabel 5650 5350 2    50   Input ~ 0
+Text GLabel 5650 5550 2    50   Input ~ 0
 RAW
 Wire Wire Line
 	5150 5450 5000 5450
@@ -1790,19 +1752,7 @@ F 3 "" H 5000 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 5350 5550 5350
-$Comp
-L horizon-components:SW_SPDT SS1
-U 1 1 617240F8
-P 5350 5450
-F 0 "SS1" H 5350 5735 50  0000 C CNN
-F 1 "POWER" H 5350 5644 50  0000 C CNN
-F 2 "horizon-footprints:SS12D00" H 5350 5450 50  0001 C CNN
-F 3 "~" H 5350 5450 50  0001 C CNN
-	1    5350 5450
-	1    0    0    -1  
-$EndComp
-NoConn ~ 5550 5550
+	5650 5550 5550 5550
 Wire Wire Line
 	5300 4900 5700 4900
 $Comp
@@ -1828,12 +1778,12 @@ F 3 "" H 5500 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L horizon-components:Conn_01x02 W1
+L horizon-components:Conn_01x02 TB1
 U 1 1 617240F0
 P 5100 4800
-F 0 "W1" H 5018 5017 50  0000 C CNN
+F 0 "TB1" H 5018 5017 50  0000 C CNN
 F 1 "BATTERY" H 5018 4926 50  0000 C CNN
-F 2 "horizon-footprints:Battery_Wire_Pads" H 5100 4800 50  0001 C CNN
+F 2 "horizon-footprints:KF350-2P" H 5100 4800 50  0001 C CNN
 F 3 "~" H 5100 4800 50  0001 C CNN
 	1    5100 4800
 	-1   0    0    -1  
@@ -1844,4 +1794,114 @@ Wire Wire Line
 	5400 4800 5400 4600
 Wire Wire Line
 	5400 4600 5500 4600
+$Comp
+L horizon-components:D D31
+U 1 1 61392C79
+P 5100 3300
+F 0 "D31" V 5146 3232 50  0000 R CNN
+F 1 "D" V 5055 3232 50  0000 R CNN
+F 2 "horizon-footprints:D_SOD-123" V 5100 3300 50  0001 C CNN
+F 3 "~" V 5100 3300 50  0001 C CNN
+	1    5100 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5100 3150 5100 3200
+$Comp
+L horizon-components:SW_Push SW31
+U 1 1 61392C80
+P 4900 3150
+F 0 "SW31" H 4900 3435 50  0000 C CNN
+F 1 "SW_Push" H 4900 3344 50  0000 C CNN
+F 2 "horizon-footprints:SW_Choc" H 4900 3350 50  0001 C CNN
+F 3 "~" H 4900 3350 50  0001 C CNN
+	1    4900 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L horizon-components:D D32
+U 1 1 61399ABF
+P 5750 3300
+F 0 "D32" V 5796 3232 50  0000 R CNN
+F 1 "D" V 5705 3232 50  0000 R CNN
+F 2 "horizon-footprints:D_SOD-123" V 5750 3300 50  0001 C CNN
+F 3 "~" V 5750 3300 50  0001 C CNN
+	1    5750 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 3150 5750 3200
+$Comp
+L horizon-components:SW_Push SW32
+U 1 1 61399AC6
+P 5550 3150
+F 0 "SW32" H 5550 3435 50  0000 C CNN
+F 1 "SW_Push" H 5550 3344 50  0000 C CNN
+F 2 "horizon-footprints:SW_Choc" H 5550 3350 50  0001 C CNN
+F 3 "~" H 5550 3350 50  0001 C CNN
+	1    5550 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 1050 4700 3150
+Connection ~ 4700 3150
+Wire Wire Line
+	4700 3150 4700 3950
+Wire Wire Line
+	5350 1050 5350 3150
+Connection ~ 5350 3150
+Wire Wire Line
+	5350 3150 5350 3950
+Wire Wire Line
+	4450 3400 5100 3400
+Connection ~ 5100 3400
+Wire Wire Line
+	5100 3400 5750 3400
+Connection ~ 5750 3400
+Wire Wire Line
+	5750 3400 6400 3400
+Text GLabel 7700 5300 0    50   Input ~ 0
+ROW4
+Text GLabel 9100 5300 2    50   Input ~ 0
+ROW3
+Text GLabel 9100 5400 2    50   Input ~ 0
+COL14
+Text GLabel 9100 5500 2    50   Input ~ 0
+COL13
+Text GLabel 9100 5600 2    50   Input ~ 0
+COL12
+Text GLabel 9100 5700 2    50   Input ~ 0
+COL11
+Text GLabel 9100 5800 2    50   Input ~ 0
+COL10
+Text GLabel 9100 5900 2    50   Input ~ 0
+COL9
+Text GLabel 9100 6000 2    50   Input ~ 0
+COL8
+Text GLabel 7700 6000 0    50   Input ~ 0
+COL7
+Text GLabel 7700 5900 0    50   Input ~ 0
+COL6
+Text GLabel 7700 5800 0    50   Input ~ 0
+COL5
+Text GLabel 7700 5700 0    50   Input ~ 0
+COL4
+Text GLabel 7700 5600 0    50   Input ~ 0
+COL3
+Text GLabel 7700 5500 0    50   Input ~ 0
+COL2
+Text GLabel 7700 5400 0    50   Input ~ 0
+COL1
+$Comp
+L horizon-components:SW_SPDT SS1
+U 1 1 617240F8
+P 5350 5450
+F 0 "SS1" H 5350 5735 50  0000 C CNN
+F 1 "POWER" H 5350 5644 50  0000 C CNN
+F 2 "horizon-footprints:SS12D00" H 5350 5450 50  0001 C CNN
+F 3 "~" H 5350 5450 50  0001 C CNN
+	1    5350 5450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5550 5350
 $EndSCHEMATC

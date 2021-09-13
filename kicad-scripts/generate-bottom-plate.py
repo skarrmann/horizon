@@ -4,10 +4,25 @@ bottomplatefilename = mainboard.GetFileName().replace('.kicad_pcb', '-bottom-pla
 mainboard.Save(bottomplatefilename)
 bottomplate = pcbnew.LoadBoard(bottomplatefilename)
 
+## Delete tracks
+for track in bottomplate.GetTracks():
+  bottomplate.Delete(track)
+
+## Delete zones
+for zone in bottomplate.Zones():
+  bottomplate.Delete(zone)
+
+## TODO: Delete edge cuts
+## TODO: Move adhesive layer graphics to edge cuts layer
+
+## Convert footprints to cutouts based on adhesive
 for module in bottomplate.GetModules():
-  graphics = module.GraphicalItemsList()
-  for shape in graphics:
-    if shape.GetLayerName() == 'F.Adhes':
-      shape.SetLayer(bottomplate.GetLayerID('Edge.Cuts'))
-      shape.SetParent(bottomplate)
-      
+  module.SetReference('')
+  # TODO: Delete footprints outside edge cuts bounds
+  for graphic in module.GraphicalItemsList():
+    if graphic.GetLayerName() == 'B.Adhes':
+      graphic.SetLayer(bottomplate.GetLayerID('Edge.Cuts'))
+    else:
+      module.Delete(graphic)
+  for pad in module.Pads():
+    module.Delete(pad)

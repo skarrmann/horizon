@@ -2,10 +2,10 @@
 
   (general
     (thickness 1.6)
-    (drawings 20)
+    (drawings 17)
     (tracks 0)
     (zones 0)
-    (modules 5)
+    (modules 6)
     (nets 5)
   )
 
@@ -121,6 +121,30 @@
     (uvia_drill 0.1)
     (diff_pair_width 0.2)
     (diff_pair_gap 0.3)
+  )
+
+  (module horizon-footprints:SS12D00 (layer F.Cu) (tedit 613AC4A6) (tstamp 613E5970)
+    (at 188.5 108)
+    (descr "SS12D00 SPDT Slide Switch")
+    (tags "SPDT, slide switch")
+    (path /617240F8)
+    (fp_text reference SS1 (at 0 1.35) (layer F.SilkS)
+      (effects (font (size 0.75 0.75) (thickness 0.15)))
+    )
+    (fp_text value POWER (at 0 -1.35) (layer F.Fab)
+      (effects (font (size 0.75 0.75) (thickness 0.15)))
+    )
+    (fp_line (start -4.25 -1.75) (end 4.25 -1.75) (layer F.CrtYd) (width 0.1))
+    (fp_line (start -4.25 1.75) (end 4.25 1.75) (layer F.CrtYd) (width 0.1))
+    (fp_line (start -4.25 -1.75) (end -4.25 1.75) (layer F.CrtYd) (width 0.1))
+    (fp_line (start 4.25 -1.75) (end 4.25 1.75) (layer F.CrtYd) (width 0.1))
+    (fp_line (start -1.75 -0.8) (end 1.75 -0.8) (layer Dwgs.User) (width 0.15))
+    (fp_line (start -1.75 0.8) (end 1.75 0.8) (layer Dwgs.User) (width 0.15))
+    (fp_line (start -1.75 -0.8) (end -1.75 0.8) (layer Dwgs.User) (width 0.15))
+    (fp_line (start 1.75 -0.8) (end 1.75 0.8) (layer Dwgs.User) (width 0.15))
+    (pad 1 thru_hole circle (at -2.5 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
+    (pad 2 thru_hole circle (at 0 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
+    (pad 3 thru_hole circle (at 2.5 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask))
   )
 
   (module horizon-footprints:Logo_Horizon (layer F.Cu) (tedit 612316FB) (tstamp 613617FC)
@@ -295,7 +319,7 @@
     (tags "mounting hole 2.2mm m2")
     (path /617B3807)
     (attr virtual)
-    (fp_text reference H12 (at 0 -3.25) (layer F.SilkS) hide
+    (fp_text reference "" (at 0 -3.25) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Hole_Pad (at 0 3.25) (layer F.Fab)
@@ -329,7 +353,7 @@
     (tags "mounting hole 2.2mm m2")
     (path /617B3801)
     (attr virtual)
-    (fp_text reference H11 (at 0 -3.25) (layer F.SilkS) hide
+    (fp_text reference "" (at 0 -3.25) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Hole_Pad (at 0 3.25) (layer F.Fab)
@@ -363,7 +387,7 @@
     (tags "mounting hole 2.2mm m2")
     (path /617B37F2)
     (attr virtual)
-    (fp_text reference H10 (at 0 -3.25) (layer F.SilkS) hide
+    (fp_text reference "" (at 0 -3.25) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Hole_Pad (at 0 3.25) (layer F.Fab)
@@ -397,7 +421,7 @@
     (tags "mounting hole 2.2mm m2")
     (path /617B37F8)
     (attr virtual)
-    (fp_text reference H9 (at 0 -3.25) (layer F.SilkS) hide
+    (fp_text reference "" (at 0 -3.25) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Hole_Pad (at 0 3.25) (layer F.Fab)
@@ -425,10 +449,10 @@
       (net 1 "Net-(H9-Pad1)"))
   )
 
-  (gr_arc (start 189.8 116.3) (end 189.8 117.3) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 613ACEE8))
-  (gr_arc (start 187.2 116.3) (end 186.2 116.3) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 613ACEE8))
-  (gr_arc (start 189.8 107.9) (end 190.8 107.9) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 613ACEE8))
-  (gr_arc (start 187.2 107.9) (end 187.2 106.9) (angle -90) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 191.5 106.9) (end 191.5 109) (layer Edge.Cuts) (width 0.05) (tstamp 613F3864))
+  (gr_line (start 185.5 106.9) (end 185.5 109) (layer Edge.Cuts) (width 0.05) (tstamp 613F3863))
+  (gr_line (start 191.5 109) (end 185.5 109) (layer Edge.Cuts) (width 0.05) (tstamp 613F3861))
+  (gr_circle (center 188.5 115) (end 190.5 116) (layer Edge.Cuts) (width 0.05))
   (gr_text ON (at 191 106) (layer F.SilkS) (tstamp 613BE1F5)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -438,10 +462,7 @@
   (gr_text OFF (at 186 106) (layer F.SilkS) (tstamp 613BE1F3)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_line (start 189.8 106.9) (end 187.2 106.9) (layer Edge.Cuts) (width 0.05) (tstamp 6136BEA9))
-  (gr_line (start 190.8 116.3) (end 190.8 107.9) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 187.2 117.3) (end 189.8 117.3) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 186.2 107.9) (end 186.2 116.3) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 191.5 106.9) (end 185.5 106.9) (layer Edge.Cuts) (width 0.05) (tstamp 6136BEA9))
   (gr_arc (start 186 127) (end 184 127) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 218 127) (end 218 129) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 218 97) (end 220 97) (angle -90) (layer Edge.Cuts) (width 0.05))

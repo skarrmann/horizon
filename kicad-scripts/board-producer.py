@@ -1,3 +1,13 @@
+# Generates top and bottom plate PCBs, and then creates gerber files for the main, top, and bottom plate PCBs
+# Usage:
+# 1. Open KiCAD PCBNEW, and open the main board .kicad_pcb file
+# 2. In PCBNEW, open "Tools > Scripting Console"
+# 3. Copy/paste the import statement below into the console, then press enter
+# 4. Copy/paste the "BoardProducer" class into the console, then press enter TWICE
+# 5. Enter command:
+#     BoardProducer.produce()
+# 6. In this project root, check the gerbers folder for the output
+
 import pcbnew, os, shutil
 
 class BoardProducer:
@@ -118,13 +128,14 @@ class BoardProducer:
     return plate_pcb
 
   @staticmethod
-  def produce(board_file_path, relative_output_path):
-    (board_folder, board_filename) = os.path.split(board_file_path)
-    output_path = os.path.normpath(os.path.join(board_folder, relative_output_path))
-
-    board = pcbnew.LoadBoard(board_file_path)
+  def produce():
+    board = pcbnew.GetBoard()
     bottom_plate = BoardProducer.__create_plate_pcb_from_layer(board, 'B.Adhes', 'generated', 'bottom-plate')
     top_plate = BoardProducer.__create_plate_pcb_from_layer(board, 'F.Adhes', 'generated', 'top-plate')
+
+    relative_output_path = '../../gerbers'
+    (board_folder, board_filename) = os.path.split(board.GetFileName())
+    output_path = os.path.normpath(os.path.join(board_folder, relative_output_path))
 
     for pcb in [board, bottom_plate, top_plate]:
       (board_folder, board_filename) = os.path.split(pcb.GetFileName())

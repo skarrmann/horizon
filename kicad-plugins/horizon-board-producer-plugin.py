@@ -1,16 +1,23 @@
-# Generates top and bottom plate PCBs, and then creates gerber files for the main, top, and bottom plate PCBs
 # Usage:
-# 1. Open KiCAD PCBNEW, and open the main board .kicad_pcb file
-# 2. In PCBNEW, open "Tools > Scripting Console"
-# 3. Copy/paste the import statement below into the console, then press enter
-# 4. Copy/paste the "BoardProducer" class into the console, then press enter TWICE
-# 5. Enter command:
-#     BoardProducer.produce()
-# 6. In this project root, check the gerbers folder for the output
+# 1. Copy this Python file (or create a symbolic link) in the KiCAD plugins directory
+#    See: https://dev-docs.kicad.org/en/python/pcbnew/#_typical_plugin_structure
+# 2. Open KiCAD PCBNEW, and open the main board .kicad_pcb file
+# 3. In PCBNEW, click "Tools > External Plugins > Horizon Board Producer"
+# 4. If successful, the following files will be generated:
+#  * Plate PCB files: in the main KiCAD project's "generated" folder
+#  * Gerber files for all PCBs: in the project root's "gerbers" folder
 
 import pcbnew, os, shutil
 
-class BoardProducer:
+class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
+  def defaults(self):
+    self.name = "Horizon Board Producer"
+    self.category = "Gerbers, plates, generator"
+    self.description = "Generates top plate and bottom plate PCBs, and then creates gerber files for the main, top plate, and bottom plate PCBs"
+
+  def Run(self):
+    HorizonBoardProducerPlugin.produce()
+
   @staticmethod
   def __create_gerbers(board, path):
     plot_controller = pcbnew.PLOT_CONTROLLER(board)
@@ -130,8 +137,8 @@ class BoardProducer:
   @staticmethod
   def produce():
     board = pcbnew.GetBoard()
-    bottom_plate = BoardProducer.__create_plate_pcb_from_layer(board, 'B.Adhes', 'generated', 'bottom-plate')
-    top_plate = BoardProducer.__create_plate_pcb_from_layer(board, 'F.Adhes', 'generated', 'top-plate')
+    bottom_plate = HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(board, 'B.Adhes', 'generated', 'bottom-plate')
+    top_plate = HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(board, 'F.Adhes', 'generated', 'top-plate')
 
     relative_output_path = '../../gerbers'
     (board_folder, board_filename) = os.path.split(board.GetFileName())
@@ -142,6 +149,8 @@ class BoardProducer:
       (board_name, file_extension) = os.path.splitext(board_filename)
       gerber_output_path = os.path.join(output_path, board_name)
       archive_file_path = os.path.join(output_path, board_name)
-      BoardProducer.__create_gerbers(pcb, gerber_output_path)
-      BoardProducer.__create_drill_file(pcb, gerber_output_path)
-      BoardProducer.__create_zip(archive_file_path, gerber_output_path)
+      HorizonBoardProducerPlugin.__create_gerbers(pcb, gerber_output_path)
+      HorizonBoardProducerPlugin.__create_drill_file(pcb, gerber_output_path)
+      HorizonBoardProducerPlugin.__create_zip(archive_file_path, gerber_output_path)
+
+HorizonBoardProducerPlugin().register()

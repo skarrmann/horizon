@@ -25,6 +25,5 @@ fp-info-cache
 *.xml
 *.csv
 
-# Generated files (except gerber zip files)
-generated/
-gerbers/**/
+# Temp folders
+temp/

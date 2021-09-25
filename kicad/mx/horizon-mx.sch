@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:horizon-cache
+LIBS:horizon-mx-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1583,7 +1583,7 @@ L horizon-components:Logo LOGO1
 U 1 1 611138F2
 P 2400 6400
 F 0 "LOGO1" H 2678 6446 50  0000 L CNN
-F 1 "Logo" H 2678 6355 50  0000 L CNN
+F 1 "Logo-Bottom" H 2678 6355 50  0000 L CNN
 F 2 "horizon-footprints:Logo_Horizon_Small" H 2400 6350 50  0001 C CNN
 F 3 "" H 2400 6350 50  0001 C CNN
 	1    2400 6400
@@ -1833,4 +1833,15 @@ COL1
 NoConn ~ 7700 4900
 Text GLabel 5350 5250 2    50   Input ~ 0
 RESET
+$Comp
+L horizon-components:Logo LOGO2
+U 1 1 614B138E
+P 3450 6400
+F 0 "LOGO2" H 3728 6446 50  0000 L CNN
+F 1 "Logo-Top" H 3728 6355 50  0000 L CNN
+F 2 "horizon-footprints:Logo_Horizon_H" H 3450 6350 50  0001 C CNN
+F 3 "" H 3450 6350 50  0001 C CNN
+	1    3450 6400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

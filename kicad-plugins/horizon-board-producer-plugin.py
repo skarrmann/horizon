@@ -106,11 +106,13 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     for zone in plate_pcb.Zones():
       plate_pcb.Delete(zone)
 
-    ## Move target layer graphics to edge cuts layer, remove all other graphics
+    ## Move target layer graphics to edge cuts layer, preserve silkscreen, and remove all other graphics
     for drawing in plate_pcb.GetDrawings():
       if drawing.GetLayerName() == layer_name:
         drawing.SetLayer(plate_pcb.GetLayerID('Edge.Cuts'))
-      elif isinstance(drawing, pcbnew.TEXTE_PCB) and drawing.GetShownText() == 'JLCJLCJLCJLC': # Preserve PCB manufacturer guides
+      elif drawing.GetLayerName() == 'F.SilkS':
+        continue
+      elif drawing.GetLayerName() == 'B.SilkS':
         continue
       else:
         plate_pcb.Delete(drawing)
@@ -119,16 +121,17 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
 
     ## Convert footprints to edge cuts
     for module in plate_pcb.GetModules():
-      for graphic in module.GraphicalItemsList():
-        if graphic.GetLayerName() == layer_name:
-          graphic.SetLayer(plate_pcb.GetLayerID('Edge.Cuts'))
-        else:
-          module.Delete(graphic)
+      if not module.GetReference().startswith('LOGO'): # Preserve graphics on logo footprints
+        for graphic in module.GraphicalItemsList():
+          if graphic.GetLayerName() == layer_name:
+            graphic.SetLayer(plate_pcb.GetLayerID('Edge.Cuts'))
+          else:
+            module.Delete(graphic)
       if not module.GetReference().startswith('H'): # Preserve pads on hole footprints
         for pad in module.Pads():
           module.Delete(pad)
       module.SetReference('')
-      if not module.HitTest(platebounds, False):
+      if not module.GetFootprintRect().Intersects(platebounds):
         plate_pcb.Delete(module)
 
     plate_pcb.Save(plate_file_path)

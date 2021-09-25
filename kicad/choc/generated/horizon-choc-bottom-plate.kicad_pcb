@@ -197,7 +197,7 @@
   )
 
   (module horizon-footprints:Logo_Horizon_Small (layer B.Cu) (tedit 614E4644) (tstamp 60FF3751)
-    (at 202 100.5 180)
+    (at 202 111.5 180)
     (path /611138F2)
     (fp_text reference "" (at 0 -2) (layer B.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)) (justify mirror))
@@ -2744,10 +2744,10 @@
   (gr_line (start 326 95) (end 78 95) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 328 161) (end 328 97) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 78 163) (end 326 163) (layer Edge.Cuts) (width 0.05))
-  (gr_text "rev2 | Choc" (at 202 104.5) (layer B.SilkS)
+  (gr_text "rev2 | Choc" (at 202 115.5) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
-  (gr_text JLCJLCJLCJLC (at 202 106.5) (layer B.SilkS) (tstamp 61246F56)
+  (gr_text JLCJLCJLCJLC (at 202 127.5) (layer B.SilkS) (tstamp 61246F56)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_text github.com/skarrmann/horizon (at 202 96.5) (layer B.SilkS)

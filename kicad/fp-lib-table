@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name concat-footprints)(type KiCad)(uri D:/git/concat/concat-footprints.pretty)(options "")(descr ""))
-)

@@ -6,8 +6,14 @@ K capacitor cap
 F ~
 $ENDCMP
 #
+$CMP Conn_01x02
+D Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
 $CMP Conn_01x04
-D Connector 01x04
+D Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)
 K connector
 F ~
 $ENDCMP
@@ -57,6 +63,12 @@ $ENDCMP
 $CMP SW_Push
 D Push button switch, generic, two pins
 K switch normally-open pushbutton push-button
+F ~
+$ENDCMP
+#
+$CMP SW_SPDT
+D Switch, single pole double throw
+K switch single-pole double-throw spdt ON-ON
 F ~
 $ENDCMP
 #

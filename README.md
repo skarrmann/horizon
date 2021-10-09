@@ -46,11 +46,11 @@ M2 8mm male-female standoffs | Raise top plate PCB above microcontroller | 4 | |
 
 I recommend using sockets for the Pro Micro. For socketing options, refer to [40% Keyboards' sockets article](https://www.40percent.club/2018/03/sockets.html).
 
-M2 standoff height requirements are dependent on the seated microcontroller height. An M2 spacer set should give you enough options. I recommend getting a reset button ~2mm taller than the M2 standoffs so the button is nearly level with the top plate.
+M2 standoff height requirements are dependent on the seated microcontroller height. An M2 spacer set should give you enough options. I recommend getting a reset button ~2mm taller than the M2 standoffs so the button is level with the top plate.
 
 ## KiCad Project Notes
 
-The bottom and top plates are automatically generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins\horizon-board-producer-plugin.py).
+The bottom and top plates are automatically generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
 
 For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
 * Layer `F.Adhes` denotes edge cuts for the top plate.

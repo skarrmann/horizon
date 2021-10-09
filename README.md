@@ -8,15 +8,17 @@ This keyboard is a grid of 1U keys with no special features: no hotswap, no RGB,
 
 ## PCBs
 
+Gerber files are available in the [gerbers directory](gerbers).
+
 Two separate PCB designs are available for MX and Choc keyswitches, with their respective footprints and key spacing (MX: 19mm x 19mm, Choc: 18mm x 17mm).
 
 Each design consists of a main PCB, a top plate to protect the microcontroller, and a bottom plate to protect the bottom components:
+
 ![Horizon MX PCBs photo](photos/horizon-mx-pcbs.jpg)
 
 The bottom plate is a cutout of all the components exposed through the bottom of the main PCB, and screws *directly* against the main PCB. This nicely guards you and your desk surface from all the pointy through-hole bits, while retaining a low keyboard height:
-![Horizon Choc + MX complete build bottom photo](photos/horizon-choc-mx-bottom.jpg).
 
-Gerber files are available in the [gerbers directory](gerbers).
+![Horizon Choc + MX complete build bottom photo](photos/horizon-choc-mx-bottom.jpg)
 
 **IMPORTANT: When uploading the top and bottom plate files to JLCPCB, their preview software does not render the interior cutout holes. But the PCBs came out great in my experience!**
 
@@ -50,7 +52,7 @@ M2 standoff height requirements are dependent on the seated microcontroller heig
 
 ## KiCad Project Notes
 
-The bottom and top plates are automatically generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
+The bottom and top plates are generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
 
 For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
 * Layer `F.Adhes` denotes edge cuts for the top plate.
@@ -58,9 +60,9 @@ For the plugin to generate these plate boards, the PCB and its footprints use th
 
 ![Horizon KiCAD plate cuts](photos/horizon-kicad-plate-cuts.png)
 
-The Horizon Board Producer plugin also generates all the Gerber and drill and ZIP files for production.
+The Horizon Board Producer plugin also generates all the Gerber files for production.
 
-**IMPORTANT: If you would like to use this plugin and plate edge cuts convention for you own project, please make sure you carefully examine the output Gerber files before printing! The plugin ultimately worked well in my case, however implementation compromises were necessary due to limitations of the KiCAD scripting API.**
+**IMPORTANT: If you would like to use this plugin and plate edge cuts convention for you own project, please make sure you carefully examine the output Gerber files! The plugin ultimately worked well in my case, however implementation compromises were necessary due to limitations of the KiCAD scripting API.**
 
 ## Build Tips
 

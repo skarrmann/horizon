@@ -24,7 +24,7 @@ The bottom plate is a cutout of all the components exposed through the bottom of
 
 ## Keyboard firmware
 
-* QMK: [Horizon in QMK repo](https://github.com/qmk/qmk_firmware/tree/master/keyboards/horizon)
+* [QMK](https://github.com/qmk/qmk_firmware/tree/master/keyboards/horizon)
 * ZMK: *Coming soon*
 
 ## Bill of materials
@@ -46,6 +46,7 @@ Keycaps |  | 52 | | MX: [AliExpress - DSA 104 Key](https://www.aliexpress.com/it
 M2 6mm screws | Secure main PCB and plate PCBs | 8 | | [AliExpress - 200PCS-M2 Mix - Black](https://www.aliexpress.com/item/32862529967.html)
 M2 nuts | Secure main PCB and plate PCBs | 8 | | See M2 set above
 M2 8mm male-female standoffs | Raise top plate PCB above microcontroller | 4 | | See M2 set above
+2mm tall rubber bumpons | Raise board above desk surface and provide skid resitance | 6 | Shop around - you can get cheaper alternatives if you don't need 96 of them! | [Amazon - 3M SJ5302 Clear Bumpon Blister Pack (96 Bumpons)](https://www.amazon.com/SJ5302-Clear-Bumpon-Blister-Bumpons/dp/B01ACPT2LU)
 
 I recommend using sockets for the Pro Micro. For socketing options, refer to [40% Keyboards' sockets article](https://www.40percent.club/2018/03/sockets.html).
 
@@ -67,7 +68,7 @@ The Horizon Board Producer plugin also generates all the Gerber files for produc
 
 ## Build Tips
 
-* The main PCB uses a ground plane, so ground pads are more stubborn to solder. Make sure your soldering tip is has good surface area coverage across the pad and component leg. If your soldering iron supports it, turning up the temperature a bit can help too.
+* The main PCB uses a ground plane, so ground pads are more stubborn to solder. Make sure your soldering tip has good surface area coverage across the pad and component leg. If your soldering iron supports it, turning up the temperature a bit can help too.
 * Before soldering the keyswitches, make sure they are perfectly straight and fully inserted into the PCB. Put the keycaps on the inserted keyswitches, and give a thorough visual inspection for any spacing or height irregularities between the keycaps. For MX builds, Gateron switches in particular have thicker PCB-mount pins - push these keyswitches in hard to make sure they are fully inserted!
 * To get a perfect fit between the main PCB and bottom plate, keep your soldering tidy! Clean any excess solder/flux which falls outside the bounds of the bottom plate cutouts.
 * Attaching the main PCB and the bottom plate requires a very steady hand. The approach that worked best for me was using narrow tweezers to grip the edges of the hex nut against the main PCB, while driving in the screw from the bottom plate.

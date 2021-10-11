@@ -24,8 +24,8 @@ The bottom plate is a cutout of all the components exposed through the bottom of
 
 ## Keyboard firmware
 
-* QMK: [QMK GitHub](https://github.com/qmk/qmk_firmware)
-    * [Horizon keyboard is an open PR](https://github.com/qmk/qmk_firmware/pull/14776)
+* QMK: [Horizon in QMK repo](https://github.com/qmk/qmk_firmware/tree/master/keyboards/horizon)
+* ZMK: *Coming soon*
 
 ## Bill of materials
 

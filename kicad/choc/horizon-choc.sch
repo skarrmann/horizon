@@ -1,13 +1,14 @@
 EESchema Schematic File Version 4
+LIBS:horizon-choc-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Horizon Choc"
+Date "2021-10-13"
+Rev "2"
+Comp "skarrmann"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -1580,23 +1581,23 @@ Wire Wire Line
 $Comp
 L horizon-components:Logo LOGO1
 U 1 1 611138F2
-P 2400 6400
-F 0 "LOGO1" H 2678 6446 50  0000 L CNN
-F 1 "Logo-Bottom" H 2678 6355 50  0000 L CNN
-F 2 "horizon-footprints:Logo_Horizon_Small" H 2400 6350 50  0001 C CNN
-F 3 "" H 2400 6350 50  0001 C CNN
-	1    2400 6400
+P 1750 6250
+F 0 "LOGO1" H 2028 6296 50  0000 L CNN
+F 1 "Logo-Bottom" H 2028 6205 50  0000 L CNN
+F 2 "horizon-footprints:Logo_Horizon_Small" H 1750 6200 50  0001 C CNN
+F 3 "" H 1750 6200 50  0001 C CNN
+	1    1750 6250
 	1    0    0    -1  
 $EndComp
 $Comp
 L horizon-components:Hole_Pad H2
 U 1 1 610D9935
-P 2200 5000
-F 0 "H2" H 2300 5049 50  0000 L CNN
-F 1 "Hole_Pad" H 2300 4958 50  0000 L CNN
-F 2 "horizon-footprints:Mount_M2" H 2200 5000 50  0001 C CNN
-F 3 "~" H 2200 5000 50  0001 C CNN
-	1    2200 5000
+P 2250 5000
+F 0 "H2" H 2350 5049 50  0000 L CNN
+F 1 "Hole_Pad" H 2350 4958 50  0000 L CNN
+F 2 "horizon-footprints:Mount_M2" H 2250 5000 50  0001 C CNN
+F 3 "~" H 2250 5000 50  0001 C CNN
+	1    2250 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1611,40 +1612,40 @@ F 3 "~" H 1700 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 1700 5100
-NoConn ~ 2200 5100
-NoConn ~ 2700 5100
+NoConn ~ 2250 5100
+NoConn ~ 2800 5100
 $Comp
 L horizon-components:Hole_Pad H3
 U 1 1 610E42C7
-P 2700 5000
-F 0 "H3" H 2800 5049 50  0000 L CNN
-F 1 "Hole_Pad" H 2800 4958 50  0000 L CNN
-F 2 "horizon-footprints:Mount_M2" H 2700 5000 50  0001 C CNN
-F 3 "~" H 2700 5000 50  0001 C CNN
-	1    2700 5000
+P 2800 5000
+F 0 "H3" H 2900 5049 50  0000 L CNN
+F 1 "Hole_Pad" H 2900 4958 50  0000 L CNN
+F 2 "horizon-footprints:Mount_M2" H 2800 5000 50  0001 C CNN
+F 3 "~" H 2800 5000 50  0001 C CNN
+	1    2800 5000
 	1    0    0    -1  
 $EndComp
 $Comp
 L horizon-components:Hole_Pad H4
 U 1 1 610E42CD
-P 3200 5000
-F 0 "H4" H 3300 5049 50  0000 L CNN
-F 1 "Hole_Pad" H 3300 4958 50  0000 L CNN
-F 2 "horizon-footprints:Mount_M2" H 3200 5000 50  0001 C CNN
-F 3 "~" H 3200 5000 50  0001 C CNN
-	1    3200 5000
+P 3350 5000
+F 0 "H4" H 3450 5049 50  0000 L CNN
+F 1 "Hole_Pad" H 3450 4958 50  0000 L CNN
+F 2 "horizon-footprints:Mount_M2" H 3350 5000 50  0001 C CNN
+F 3 "~" H 3350 5000 50  0001 C CNN
+	1    3350 5000
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3200 5100
+NoConn ~ 3350 5100
 $Comp
 L horizon-components:Hole_Pad H6
 U 1 1 616DD5D0
-P 2200 5350
-F 0 "H6" H 2300 5399 50  0000 L CNN
-F 1 "Hole_Pad" H 2300 5308 50  0000 L CNN
-F 2 "horizon-footprints:Mount_M2" H 2200 5350 50  0001 C CNN
-F 3 "~" H 2200 5350 50  0001 C CNN
-	1    2200 5350
+P 2250 5350
+F 0 "H6" H 2350 5399 50  0000 L CNN
+F 1 "Hole_Pad" H 2350 5308 50  0000 L CNN
+F 2 "horizon-footprints:Mount_M2" H 2250 5350 50  0001 C CNN
+F 3 "~" H 2250 5350 50  0001 C CNN
+	1    2250 5350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1659,31 +1660,31 @@ F 3 "~" H 1700 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 1700 5450
-NoConn ~ 2200 5450
-NoConn ~ 2700 5450
+NoConn ~ 2250 5450
+NoConn ~ 2800 5450
 $Comp
 L horizon-components:Hole_Pad H7
 U 1 1 616DD5DF
-P 2700 5350
-F 0 "H7" H 2800 5399 50  0000 L CNN
-F 1 "Hole_Pad" H 2800 5308 50  0000 L CNN
-F 2 "horizon-footprints:Mount_M2" H 2700 5350 50  0001 C CNN
-F 3 "~" H 2700 5350 50  0001 C CNN
-	1    2700 5350
+P 2800 5350
+F 0 "H7" H 2900 5399 50  0000 L CNN
+F 1 "Hole_Pad" H 2900 5308 50  0000 L CNN
+F 2 "horizon-footprints:Mount_M2" H 2800 5350 50  0001 C CNN
+F 3 "~" H 2800 5350 50  0001 C CNN
+	1    2800 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L horizon-components:Hole_Pad H8
 U 1 1 616DD5E5
-P 3200 5350
-F 0 "H8" H 3300 5399 50  0000 L CNN
-F 1 "Hole_Pad" H 3300 5308 50  0000 L CNN
-F 2 "horizon-footprints:Mount_M2" H 3200 5350 50  0001 C CNN
-F 3 "~" H 3200 5350 50  0001 C CNN
-	1    3200 5350
+P 3350 5350
+F 0 "H8" H 3450 5399 50  0000 L CNN
+F 1 "Hole_Pad" H 3450 5308 50  0000 L CNN
+F 2 "horizon-footprints:Mount_M2" H 3350 5350 50  0001 C CNN
+F 3 "~" H 3350 5350 50  0001 C CNN
+	1    3350 5350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3200 5450
+NoConn ~ 3350 5450
 $Comp
 L power:GND #PWR03
 U 1 1 618E0B20
@@ -1703,36 +1704,6 @@ Wire Wire Line
 	7350 4900 7250 4900
 Text GLabel 7700 5100 0    50   Input ~ 0
 RESET
-$Comp
-L horizon-components:SW_Push BTN1
-U 1 1 60FA8D3C
-P 5100 5250
-F 0 "BTN1" H 5100 5535 50  0000 C CNN
-F 1 "RESET" H 5100 5444 50  0000 C CNN
-F 2 "horizon-footprints:SW_Push_6mm" H 5100 5450 50  0001 C CNN
-F 3 "~" H 5100 5450 50  0001 C CNN
-	1    5100 5250
-	-1   0    0    -1  
-$EndComp
-Text GLabel 5350 5250 2    50   Input ~ 0
-RESET
-Wire Wire Line
-	5350 5250 5300 5250
-$Comp
-L power:GND #PWR07
-U 1 1 60FB8E05
-P 4850 5300
-F 0 "#PWR07" H 4850 5050 50  0001 C CNN
-F 1 "GND" H 4855 5127 50  0000 C CNN
-F 2 "" H 4850 5300 50  0001 C CNN
-F 3 "" H 4850 5300 50  0001 C CNN
-	1    4850 5300
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4900 5250 4850 5250
-Wire Wire Line
-	4850 5250 4850 5300
 $Comp
 L horizon-components:D D31
 U 1 1 61392C79
@@ -1835,12 +1806,42 @@ NoConn ~ 7700 4900
 $Comp
 L horizon-components:Logo LOGO2
 U 1 1 61512730
-P 3450 6400
-F 0 "LOGO2" H 3728 6446 50  0000 L CNN
-F 1 "Logo-Top" H 3728 6355 50  0000 L CNN
-F 2 "horizon-footprints:Logo_Horizon_H" H 3450 6350 50  0001 C CNN
-F 3 "" H 3450 6350 50  0001 C CNN
-	1    3450 6400
+P 3250 6250
+F 0 "LOGO2" H 3528 6296 50  0000 L CNN
+F 1 "Logo-Top" H 3528 6205 50  0000 L CNN
+F 2 "horizon-footprints:Logo_Horizon_H" H 3250 6200 50  0001 C CNN
+F 3 "" H 3250 6200 50  0001 C CNN
+	1    3250 6250
 	1    0    0    -1  
 $EndComp
+$Comp
+L horizon-components:SW_Push BTN1
+U 1 1 60FA8D3C
+P 5100 5200
+F 0 "BTN1" H 5100 5485 50  0000 C CNN
+F 1 "RESET" H 5100 5394 50  0000 C CNN
+F 2 "horizon-footprints:SW_Push_6mm" H 5100 5400 50  0001 C CNN
+F 3 "~" H 5100 5400 50  0001 C CNN
+	1    5100 5200
+	-1   0    0    -1  
+$EndComp
+Text GLabel 5350 5200 2    50   Input ~ 0
+RESET
+Wire Wire Line
+	5350 5200 5300 5200
+$Comp
+L power:GND #PWR07
+U 1 1 60FB8E05
+P 4850 5250
+F 0 "#PWR07" H 4850 5000 50  0001 C CNN
+F 1 "GND" H 4855 5077 50  0000 C CNN
+F 2 "" H 4850 5250 50  0001 C CNN
+F 3 "" H 4850 5250 50  0001 C CNN
+	1    4850 5250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 5200 4850 5200
+Wire Wire Line
+	4850 5200 4850 5250
 $EndSCHEMATC

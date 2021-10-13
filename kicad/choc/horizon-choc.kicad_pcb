@@ -10,6 +10,13 @@
   )
 
   (page A3)
+  (title_block
+    (title "Horizon Choc")
+    (date 2021-10-13)
+    (rev 2)
+    (company skarrmann)
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)

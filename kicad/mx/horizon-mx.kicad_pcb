@@ -10,6 +10,13 @@
   )
 
   (page A3)
+  (title_block
+    (title "Horizon MX")
+    (date 2021-10-13)
+    (rev 2)
+    (company skarrmann)
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
@@ -61,7 +68,7 @@
     (solder_mask_min_width 0.25)
     (aux_axis_origin 76 95)
     (grid_origin 76 95)
-    (visible_elements 7FFDFFFF)
+    (visible_elements 7FFDEFFF)
     (pcbplotparams
       (layerselection 0x010f0_ffffffff)
       (usegerberextensions true)

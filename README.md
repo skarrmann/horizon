@@ -94,7 +94,7 @@ These are the manufacturing settings I used when ordering from JLCPCB:
 
 **IMPORTANT:** All PCBs have ["JLCJLCJLCJLC" silkscreen text](https://support.jlcpcb.com/article/28-how-to-remove-order-number-from-your-pcb) underneath the Pro Micro footprint. If you want to remove the order number from the boards or you want to print the PCBs with another manufacturer, then I recommend removing this silkscreen text from the `.kicad_pcb` file, and then re-run the Horizon Board Producer plugin to create the updated Gerber files.
 
-**IMPORTANT:** When uploading the top and bottom plate files to JLCPCB, their preview software does not render the interior cutout holes. This seemBut the PCBs came out great in my experience.
+**IMPORTANT:** When uploading the top and bottom plate files to JLCPCB, their preview software does not render the interior cutout holes. This is a limitation of their preview, not an issue with the Gerber files. The boards printed correctly in my experience!
 
 ## Build tips
 

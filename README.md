@@ -1,26 +1,45 @@
 # Horizon Keyboard
 
-![Horizon Choc + MX complete build top photo](photos/horizon-choc-mx-top.jpg)
+![Horizon Choc + MX complete build top photo](images/horizon-choc-mx-top.jpg)
 
 Horizon is a QMK compatible 52-key (4x14) ortholinear keyboard, powered by an Arduino Pro Micro.
 
 This keyboard is a grid of 1U keys with no special features: no hotswap, no RGB, no OLED screen, no knobs.
 
-## PCBs
+## Project structure
 
-Gerber files are available in the [gerbers directory](gerbers).
+* [`gerbers`](gerbers): Gerber files for PCB manufacturing
+* [`graphics`](graphics): Source assets for PCB silkscreen
+* [`kicad`](kicad): KiCad project files (schematics and PCB designs)
+* [`kicad-libraries`](kicad-libraries): KiCad components and footprints
+* [`kicad-plugins`](kicad-plugins): KiCad Pcbnew Python plugins
+* [`images`](images): Images for project documentation
+
+## PCBs
 
 Two separate PCB designs are available for MX and Choc keyswitches, with their respective footprints and key spacing (MX: 19mm x 19mm, Choc: 18mm x 17mm).
 
 Each design consists of a main PCB, a top plate to protect the microcontroller, and a bottom plate to protect the bottom components:
 
-![Horizon MX PCBs photo](photos/horizon-mx-pcbs.jpg)
+![Horizon MX PCBs photo](images/horizon-mx-pcbs.jpg)
 
 The bottom plate is a cutout of all the components exposed through the bottom of the main PCB, and screws *directly* against the main PCB. This nicely guards you and your desk surface from all the pointy through-hole bits, while retaining a low keyboard height:
 
-![Horizon Choc + MX complete build bottom photo](photos/horizon-choc-mx-bottom.jpg)
+![Horizon Choc + MX complete build bottom photo](images/horizon-choc-mx-bottom.jpg)
 
-**IMPORTANT: When uploading the top and bottom plate files to JLCPCB, their preview software does not render the interior cutout holes. But the PCBs came out great in my experience!**
+## KiCad project notes
+
+The bottom and top plates are generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
+
+For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
+* Layer `F.Adhes` denotes edge cuts for the top plate.
+* Layer `B.Adhes` denotes edge cuts for the bottom plate.
+
+![Horizon KiCad plate cuts](images/horizon-kicad-plate-cuts.png)
+
+The Horizon Board Producer plugin also generates all the Gerber files for production.
+
+**IMPORTANT:** If you would like to use this plugin and plate edge cuts convention for you own project, please make sure you carefully examine the output Gerber files! The plugin ultimately worked well for my case, but you might need to make adjustments to the plugin to suit your project.
 
 ## Keyboard firmware
 
@@ -35,8 +54,8 @@ Vendor URLs are just recommendations based on quality/affordablity. I have purch
 
 Part | Purpose | Quantity | Notes | Vendor URL
 ---- | ------- | -------- | --------- | ----------
-Main PCB  | circuit board | 1 | All PCBs have ["JLCJLCJLCJLC" silkscreen](https://support.jlcpcb.com/article/28-how-to-remove-order-number-from-your-pcb) underneath the Pro Micro footprint | Send gerber zip files to [JLCPCB](https://jlcpcb.com/)
-Top plate PCB  | protects microcontroller | 1 |
+Main PCB  | circuit board | 1 | | Send Gerber zip files to [JLCPCB](https://jlcpcb.com/).
+Top plate PCB  | protects microcontroller | 1 | 
 Bottom plate PCB  | protects bottom pins and components | 1 | **IMPORTANT: JLCPCB charged $15.20 USD extra due to the number of small holes**
 Arduino Pro Micro | Microcontroller board | 1 | Or any Pro Micro compatible board | [AliExpress - Micro USB 3-18V](https://www.aliexpress.com/item/32849563958.html)
 6x6mm DIP 4-pin tactile switch | Reset button | 1 | | [AliExpress - 6x6x10mm](https://www.aliexpress.com/item/32912263133.html)
@@ -52,21 +71,32 @@ I recommend using sockets for the Pro Micro. For socketing options, refer to [40
 
 M2 standoff height requirements are dependent on the seated microcontroller height. An M2 spacer set should give you enough options. I recommend getting a reset button ~2mm taller than the M2 standoffs so the button is level with the top plate.
 
-## KiCad Project Notes
+## PCB manufacturing settings
 
-The bottom and top plates are generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
+These are the manufacturing settings I used when ordering from JLCPCB:
 
-For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
-* Layer `F.Adhes` denotes edge cuts for the top plate.
-* Layer `B.Adhes` denotes edge cuts for the bottom plate.
+* **Base Material**: FR4
+* **Layers**: 2
+* **Dimensions**: (whatever the gerber file specifies)
+* **PCB Qty**: 5
+* **Different Design**: 1
+* **Delivery Format**: Single PCB
+* **PCB Thickness**: 1.6
+* **PCB Color**: Black
+* **Silkscreen**: White
+* **Surface Finish**: LeadFree HASL-RoHS
+* **Outer Copper Weight**: 1 oz
+* **Gold Fingers**: No
+* **Confirm Production File**: No
+* **Flying Probe Test**: Fully Test
+* **Castellated Holes**: No
+* **Remove Order Number**: Specify a location
 
-![Horizon KiCAD plate cuts](photos/horizon-kicad-plate-cuts.png)
+**IMPORTANT:** All PCBs have ["JLCJLCJLCJLC" silkscreen text](https://support.jlcpcb.com/article/28-how-to-remove-order-number-from-your-pcb) underneath the Pro Micro footprint. If you want to remove the order number from the boards or you want to print the PCBs with another manufacturer, then I recommend removing this silkscreen text from the `.kicad_pcb` file, and then re-run the Horizon Board Producer plugin to create the updated Gerber files.
 
-The Horizon Board Producer plugin also generates all the Gerber files for production.
+**IMPORTANT:** When uploading the top and bottom plate files to JLCPCB, their preview software does not render the interior cutout holes. This seemBut the PCBs came out great in my experience.
 
-**IMPORTANT: If you would like to use this plugin and plate edge cuts convention for you own project, please make sure you carefully examine the output Gerber files! The plugin ultimately worked well in my case, however implementation compromises were necessary due to limitations of the KiCAD scripting API.**
-
-## Build Tips
+## Build tips
 
 * The main PCB uses a ground plane, so ground pads are more stubborn to solder. Make sure your soldering tip has good surface area coverage across the pad and component leg. If your soldering iron supports it, turning up the temperature a bit can help too.
 * Before soldering the keyswitches, make sure they are perfectly straight and fully inserted into the PCB. Put the keycaps on the inserted keyswitches, and give a thorough visual inspection for any spacing or height irregularities between the keycaps. For MX builds, Gateron switches in particular have thicker PCB-mount pins - push these keyswitches in hard to make sure they are fully inserted!

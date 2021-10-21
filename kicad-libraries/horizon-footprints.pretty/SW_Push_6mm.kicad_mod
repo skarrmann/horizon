@@ -1,4 +1,4 @@
-(module SW_Push_6mm (layer F.Cu) (tedit 61468A4F)
+(module SW_Push_6mm (layer F.Cu) (tedit 6171F80F)
   (descr "6mmx6mm push button")
   (tags "button, tactile, 6mm")
   (fp_text reference REF** (at 0 0) (layer F.SilkS)

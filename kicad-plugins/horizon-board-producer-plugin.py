@@ -1,8 +1,11 @@
-# Usage:
-# 1. Copy this Python file (or create a symbolic link) in the KiCAD plugins directory
-#    See: https://dev-docs.kicad.org/en/python/pcbnew/#_typical_plugin_structure
-# 2. Open KiCAD PCBNEW, and open the main board .kicad_pcb file
-# 3. In PCBNEW, click "Tools > External Plugins > Horizon Board Producer"
+# Copyright (c) 2021 Steven Karrmann
+# SPDX-License-Identifier: MIT
+
+# Horizon Board Producer Plugin Usage:
+# 1. Copy this Python file (or create a symbolic link) in the KiCad plugins directory
+#     * See: https://dev-docs.kicad.org/en/python/pcbnew/#_typical_plugin_structure
+# 2. Open KiCad Pcbnew, and open the main board .kicad_pcb file
+# 3. In Pcbnew, click "Tools > External Plugins > Horizon Board Producer"
 # 4. If successful, 3 gerber zip files are created in the gerbers folder: main board, top plate, and bottom plate
 
 import pcbnew, os, shutil
@@ -18,6 +21,13 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
 
   @staticmethod
   def __create_gerbers(board, path):
+    """
+    Creates Gerber files for a KiCad board and outputs them to the specified path.
+
+    Args:
+        board (pcbnew.BOARD): The board for which to generate Gerber files.
+        path (str): File system path where Gerber files will be created.
+    """
     plot_controller = pcbnew.PLOT_CONTROLLER(board)
     plot_options = plot_controller.GetPlotOptions()
     
@@ -67,6 +77,13 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
 
   @staticmethod
   def __create_drill_file(board, path):
+    """
+    Creates drill files for a KiCad board and outputs them to the specified path.
+
+    Args:
+        board (pcbnew.BOARD): The board for which to generate Gerber files.
+        path (str): File system path where drill files will be created.
+    """
     format = {
       'metric': True,
       'zero_format': pcbnew.GENDRILL_WRITER_BASE.DECIMAL_FORMAT,
@@ -88,10 +105,34 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
 
   @staticmethod
   def __create_zip(zip_file_path, source_folder):
+    """
+    Creates a zip file containing all files in the source folder.
+
+    Args:
+        zip_file_path (str): The full path and file name for the new zip file.
+        source_folder (str): The source folder containing the files to include in the zip.
+    """
     shutil.make_archive(zip_file_path, 'zip', source_folder)
 
   @staticmethod
   def __create_plate_pcb_from_layer(board, layer_name, output_folder, plate_file_name_suffix):
+    """
+    Creates a new cutout plate PCB, using layer data from the specified source board.
+    All tracks and zones are removed from the plate, and only the footprint's cutouts are retained.
+    These items within the bounds of the plate's cutout will be preserved:
+       * Silkscreen directly on the board (but not in footprints)
+       * LOGO footprints (silkscreen images)
+       * H footprints (mounting holes)
+
+    Args:
+        board (pcbnew.BOARD): The source board
+        layer_name (str): The layer name which represents the edge cutouts for the plate.
+        output_folder (str): The folder to save the plate .kicad_pcb file.
+        plate_file_name_suffix (str): The name appended to the end of the plate .kicad_pcb file name.
+
+    Returns:
+        [pcbnew.BOARD]: The plate PCB.
+    """
     # Create plate PCB file as a copy of the main board
     (board_folder, board_filename) = os.path.split(board.GetFileName())
     plate_file_path = os.path.join(output_folder, board_filename.replace('.kicad_pcb', '-' + plate_file_name_suffix + '.kicad_pcb'))
@@ -104,7 +145,7 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     for zone in plate_pcb.Zones():
       plate_pcb.Delete(zone)
 
-    ## Move target layer graphics to edge cuts layer, preserve silkscreen, and remove all other graphics
+    # Move target layer graphics to edge cuts layer, preserve silkscreen, and remove all other graphics
     for drawing in plate_pcb.GetDrawings():
       if drawing.GetLayerName() == layer_name:
         drawing.SetLayer(plate_pcb.GetLayerID('Edge.Cuts'))
@@ -117,7 +158,7 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
 
     platebounds = plate_pcb.GetBoardEdgesBoundingBox()
 
-    ## Convert footprints to edge cuts
+    # Convert footprints to edge cuts
     for module in plate_pcb.GetModules():
       if not module.GetReference().startswith('LOGO'): # Preserve graphics on logo footprints
         for graphic in module.GraphicalItemsList():
@@ -137,6 +178,9 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
 
   @staticmethod
   def produce():
+    """
+    Executes the board production on the currently-opened board.
+    """
     board = pcbnew.GetBoard()
 
     relative_output_path = '../../gerbers'
@@ -155,7 +199,7 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
 
     for pcb in [board, bottom_plate, top_plate]:
       (board_folder, board_filename) = os.path.split(pcb.GetFileName())
-      (board_name, file_extension) = os.path.splitext(board_filename)
+      (board_name, _) = os.path.splitext(board_filename)
       gerber_output_path = os.path.join(temp_path, board_name)
       archive_file_path = os.path.join(output_path, board_name)
       HorizonBoardProducerPlugin.__create_gerbers(pcb, gerber_output_path)

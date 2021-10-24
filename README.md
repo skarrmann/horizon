@@ -2,7 +2,7 @@
 
 ![Horizon Choc + MX complete build top photo](images/horizon-choc-mx-top.jpg)
 
-Horizon is a QMK compatible 52-key (4x14) ortholinear keyboard, powered by an Arduino Pro Micro.
+Horizon is a 52-key (4x14) ortholinear keyboard, powered by an Arduino Pro Micro.
 
 This keyboard is a grid of 1U keys with no special features: no hotswap, no RGB, no OLED screen, no knobs.
 
@@ -57,7 +57,7 @@ Part | Purpose | Quantity | Notes | Vendor URL
 Main PCB  | circuit board | 1 | | Send Gerber zip files to [JLCPCB](https://jlcpcb.com/).
 Top plate PCB  | protects microcontroller | 1 | 
 Bottom plate PCB  | protects bottom pins and components | 1 | **IMPORTANT: JLCPCB charged $15.20 USD extra due to the number of small holes**
-Arduino Pro Micro | Microcontroller board | 1 | Or any Pro Micro compatible board | [AliExpress - Micro USB 3-18V](https://www.aliexpress.com/item/32849563958.html)
+Arduino Pro Micro | Microcontroller board | 1 | Or use another Pro Micro compatible board with same dimensions (confirmed Elite-C V4 and nice!nano 2.0 fit) | [AliExpress - Micro USB 3-18V](https://www.aliexpress.com/item/32849563958.html)
 6x6mm DIP 4-pin tactile switch | Reset button | 1 | | [AliExpress - 6x6x10mm](https://www.aliexpress.com/item/32912263133.html)
 1N4148 SOD-123 | Diodes for keyboard row-column matrix | 52 | | [AliExpress - 1N4148 SOD-123](https://www.aliexpress.com/item/4000331408283.html)
 Keyswitches |  | 52 | PCB mount (5 pin) switches recommended | MX: [KBDFans - Gateron Switches (10 switches)](https://kbdfans.com/collections/gateron-swithes/products/gateron-swtich-3pin-or-5pin?variant=35765199629), Choc: [MKUltra Corporation - Kailh Low Profile Choc Switches](https://mkultra.click/choc-switches)
@@ -70,6 +70,8 @@ M2 8mm male-female standoffs | Raise top plate PCB above microcontroller | 4 | |
 I recommend using sockets for the Pro Micro. For socketing options, refer to [40% Keyboards' sockets article](https://www.40percent.club/2018/03/sockets.html).
 
 M2 standoff height requirements are dependent on the seated microcontroller height. An M2 spacer set should give you enough options. I recommend getting a reset button ~2mm taller than the M2 standoffs so the button is level with the top plate.
+
+If using a LiPo battery and a bluetooth Pro Micro compatible board, then use battery size 301230. Just make sure the microcontroller socket height provides clearance for the battery to fit underneath (standard SIP sockets are a common choice).
 
 ## PCB manufacturing settings
 

@@ -2,7 +2,7 @@
 
 ![Horizon Choc + MX complete build top photo](images/horizon-choc-mx-top.jpg)
 
-Horizon is a 52-key (4x14) ortholinear keyboard, powered by an Arduino Pro Micro.
+Horizon is a 52 key (4x14) ortholinear keyboard, powered by an Arduino Pro Micro.
 
 This keyboard is a grid of 1U keys with no special features: no hotswap, no RGB, no OLED screen, no knobs.
 
@@ -105,3 +105,14 @@ These are the manufacturing settings I used when ordering from JLCPCB:
 * To get a perfect fit between the main PCB and bottom plate, keep your soldering tidy! Clean any excess solder/flux which falls outside the bounds of the bottom plate cutouts.
 * Attaching the main PCB and the bottom plate requires a very steady hand. The approach that worked best for me was using narrow tweezers to grip the edges of the hex nut against the main PCB, while driving in the screw from the bottom plate.
 * The top plate is a very tight fit. If the inner keycaps rub against it, first ensure the top plate is perfectly centered. To center it, slide a thin piece of cardstock in-and-out between the inner keycaps and the top plate on all sides. If that does not resolve the keycaps rubbing, then remove the top plate, sand its edges a bit, and try again.
+
+## Revision history
+
+* Rev1 (2021-07-30 - not publicly released):
+    * PCB: Experimental prototype of MX board.
+    * Schematic: Wire as 42 key 7x6 matrix (original release only had 6 keys on bottom row).
+* Rev2 (2021-9-26)
+    * PCB: Create MX and Choc boards with bottom and top plates.
+    * Schematic: Wire as 52 key 4x14 matrix.
+* Rev2.1 (2021-10-24)
+    * PCB: Slightly improve thermal relief clearance to make soldering ground pads easier.

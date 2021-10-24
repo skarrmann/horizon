@@ -108,11 +108,11 @@ These are the manufacturing settings I used when ordering from JLCPCB:
 
 ## Revision history
 
-* Rev1 (2021-07-30 - not publicly released):
+* **Rev1** (2021-07-30 - not publicly released):
     * PCB: Experimental prototype of MX board.
     * Schematic: Wire as 42 key 7x6 matrix (original release only had 6 keys on bottom row).
-* Rev2 (2021-9-26)
+* **Rev2** (2021-09-26)
     * PCB: Create MX and Choc boards with bottom and top plates.
     * Schematic: Wire as 52 key 4x14 matrix.
-* Rev2.1 (2021-10-24)
+* **Rev2.1** (2021-10-24)
     * PCB: Slightly improve thermal relief clearance to make soldering ground pads easier.

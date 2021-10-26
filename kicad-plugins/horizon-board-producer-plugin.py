@@ -12,7 +12,7 @@ import pcbnew, os, shutil
 
 class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
   def defaults(self):
-    self.name = "Horizon Board Producer"
+    self.name = "Horizon Board Producer Rev2.2"
     self.category = "Gerbers, plates, generator"
     self.description = "Generates top plate and bottom plate PCBs, and then creates gerber files for the main, top plate, and bottom plate PCBs"
 
@@ -134,7 +134,7 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
         [pcbnew.BOARD]: The plate PCB.
     """
     # Create plate PCB file as a copy of the main board
-    (board_folder, board_filename) = os.path.split(board.GetFileName())
+    (_, board_filename) = os.path.split(board.GetFileName())
     plate_file_path = os.path.join(output_folder, board_filename.replace('.kicad_pcb', '-' + plate_file_name_suffix + '.kicad_pcb'))
     board.Save(plate_file_path)
     plate_pcb = pcbnew.LoadBoard(plate_file_path)
@@ -158,17 +158,26 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
 
     platebounds = plate_pcb.GetBoardEdgesBoundingBox()
 
-    # Convert footprints to edge cuts
+    # Convert footprints to NPTH pads and edge cuts
     for module in plate_pcb.GetModules():
-      if not module.GetReference().startswith('LOGO'): # Preserve graphics on logo footprints
+      if not module.GetReference().startswith('H'): # Preserve pads on 'H' (mounting hole) footprints
+        for pad in module.Pads():
+          if pad.IsOnLayer(plate_pcb.GetLayerID(layer_name)) and pad.GetShape() in [pcbnew.PAD_SHAPE_CIRCLE, pcbnew.PAD_SHAPE_OVAL]:
+            drill_shape = pcbnew.PAD_DRILL_SHAPE_CIRCLE if pad.GetShape() == pcbnew.PAD_SHAPE_CIRCLE else pcbnew.PAD_DRILL_SHAPE_OBLONG
+            # Convert SMD circle/oval pads on target layer to NPTH pads
+            pad.SetAttribute(pcbnew.PAD_ATTRIB_HOLE_NOT_PLATED)
+            pad.SetDrillShape(drill_shape)
+            pad.SetDrillSize(pad.GetSize())
+            pad.SetLayerSet(pad.UnplatedHoleMask())
+          else:
+            # Delete all other pads
+            module.Delete(pad)
+      if not module.GetReference().startswith('LOGO'): # Preserve graphics on 'LOGO' footprints, and process graphics on other footprints for cleanup and edge cut conversion
         for graphic in module.GraphicalItemsList():
           if graphic.GetLayerName() == layer_name:
-            graphic.SetLayer(plate_pcb.GetLayerID('Edge.Cuts'))
+            graphic.SetLayer(plate_pcb.GetLayerID('Edge.Cuts')) # Move target layer graphics to edge cuts
           else:
             module.Delete(graphic)
-      if not module.GetReference().startswith('H'): # Preserve pads on hole footprints
-        for pad in module.Pads():
-          module.Delete(pad)
       module.SetReference('')
       if not module.GetFootprintRect().Intersects(platebounds):
         plate_pcb.Delete(module)

@@ -32,14 +32,28 @@ The bottom plate is a cutout of all the components exposed through the bottom of
 The bottom and top plates are generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
 
 For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
-* Layer `F.Adhes` denotes edge cuts for the top plate.
-* Layer `B.Adhes` denotes edge cuts for the bottom plate.
 
-![Horizon KiCad plate cuts](images/horizon-kicad-plate-cuts.png)
+* `F.Adhes` designates top plate holes and edge cuts.
+* `B.Adhes` designates bottom plate holes and edge cuts.
 
-The Horizon Board Producer plugin also generates all the Gerber files for production.
+When the board producer runs, these layers are used as follows:
 
-**IMPORTANT:** If you would like to use this plugin and plate edge cuts convention for you own project, please make sure you carefully examine the output Gerber files! The plugin ultimately worked well for my case, but you might need to make adjustments to the plugin to suit your project.
+* On the board and footprints:
+    * Graphics on the plate's designated layer will be moved to `Edge.Cuts` when producing that plate.
+    * As with all edge cuts, please make sure your graphics are non-overlapping closed shapes.
+* On footprints only:
+    * Pads of type "SMD" and shape "Circular/Oval" on the plate's designated layer will be converted to proper NPTH pads.
+    * Note only circular/oval shapes are supported for these pads, because they are the only available hole/drill shapes. If you need a fancy plate cutout shape on your footprint, then draw graphics lines on the designated layer.
+    * **IMPORTANT**: When adding pads solely for plate cutout purposes, set the pad to only use to the designated plate cutout layers - set all other technical layers blank. Make sure "Copper" is set to "None", otherwise the pad might add an unwanted copper region to your main board.
+
+![Horizon KiCad plate edge cuts](images/horizon-kicad-plate-cuts.png)
+![Horizon KiCad footprint plate holes](images/horizon-kicad-footprint-plate-holes.png)
+
+Additionally, the board producer plugin will preserve any in-bounds "H" footprint pads (mounting holes), "LOGO" footprint graphics (custom silkscreen art), and board silkscreen on the plates. Other items which are not needed for plates (e.g., copper tracks and zones) are removed from the plates.
+
+The board producer plugin also generates all the Gerber files for production.
+
+**IMPORTANT:** If you would like to use this plugin and plate edge cuts convention for you own project, please make sure you carefully examine the output Gerber files! The plugin ultimately worked well for my case, but you might need to make adjustments to the plugin to suit your project. And to reduce the chance of being charged extra money by PCB manufacturers, use footprint plate holes instead of edge cuts whenever reasonable to do so.
 
 ## Keyboard firmware
 
@@ -56,7 +70,7 @@ Part | Purpose | Quantity | Notes | Vendor URL
 ---- | ------- | -------- | --------- | ----------
 Main PCB  | circuit board | 1 | | Send Gerber zip files to [JLCPCB](https://jlcpcb.com/).
 Top plate PCB  | protects microcontroller | 1 | 
-Bottom plate PCB  | protects bottom pins and components | 1 | **IMPORTANT: JLCPCB charged $15.20 USD extra due to the number of small holes**
+Bottom plate PCB  | protects bottom pins and components | 1 | **NOTE: For Rev2, JLCPCB charged me $15.20 USD extra due to the number of small holes. For  Rev2.2, I made Gerber file preparation changes to hopefully avoid this cost.**
 Arduino Pro Micro | Microcontroller board | 1 | Or use another Pro Micro compatible board with same dimensions (confirmed Elite-C V4 and nice!nano 2.0 fit) | [AliExpress - Micro USB 3-18V](https://www.aliexpress.com/item/32849563958.html)
 6x6mm DIP 4-pin tactile switch | Reset button | 1 | | [AliExpress - 6x6x10mm](https://www.aliexpress.com/item/32912263133.html)
 1N4148 SOD-123 | Diodes for keyboard row-column matrix | 52 | | [AliExpress - 1N4148 SOD-123](https://www.aliexpress.com/item/4000331408283.html)
@@ -96,8 +110,6 @@ These are the manufacturing settings I used when ordering from JLCPCB:
 
 **IMPORTANT:** All PCBs have ["JLCJLCJLCJLC" silkscreen text](https://support.jlcpcb.com/article/28-how-to-remove-order-number-from-your-pcb) underneath the Pro Micro footprint. If you want to remove the order number from the boards or you want to print the PCBs with another manufacturer, then I recommend removing this silkscreen text from the `.kicad_pcb` file, and then re-run the Horizon Board Producer plugin to create the updated Gerber files.
 
-**IMPORTANT:** When uploading the top and bottom plate files to JLCPCB, their preview software does not render the interior cutout holes. This is a limitation of their preview, not an issue with the Gerber files. The boards printed correctly in my experience!
-
 ## Build tips
 
 * The main PCB uses a ground plane, so ground pads are more stubborn to solder. Make sure your soldering tip has good surface area coverage across the pad and component leg. If your soldering iron supports it, turning up the temperature a bit can help too.
@@ -116,3 +128,7 @@ These are the manufacturing settings I used when ordering from JLCPCB:
     * Schematic: Wire as 52 key 4x14 matrix.
 * **Rev2.1** (2021-10-24)
     * PCB: Slightly improve thermal relief clearance to make soldering ground pads easier.
+* **Rev2.2** (2021-10-25)
+    * Horizon Board Producer plugin: Now supports converting designated placeholder pads to NPTH pads during plate generation.
+    * Footprints: Replace graphics which indicate plate cutouts with placeholder pads which indicate plate NPTH pads.
+    * PCB: Gerber files re-generated using updated board producer plugin.

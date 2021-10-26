@@ -1,9 +1,9 @@
-(module Logo_Horizon_H (layer F.Cu) (tedit 614E7934)
-  (fp_text reference G*** (at 0 2) (layer F.SilkS) hide
-    (effects (font (size 1.524 1.524) (thickness 0.3)))
+(module Logo_Horizon_H (layer F.Cu) (tedit 61775C61)
+  (fp_text reference G*** (at 0 1) (layer F.SilkS) hide
+    (effects (font (size 0.75 0.75) (thickness 0.15)))
   )
-  (fp_text value LOGO (at 0 -2) (layer F.SilkS) hide
-    (effects (font (size 1.524 1.524) (thickness 0.3)))
+  (fp_text value LOGO (at 0 -1) (layer F.SilkS) hide
+    (effects (font (size 0.75 0.75) (thickness 0.15)))
   )
   (fp_poly (pts (xy 2.811161 -4.287795) (xy 3.459892 -3.639066) (xy 3.459892 -0.685799) (xy 2.900748 -0.126656)
     (xy 2.341604 0.432486) (xy 1.731319 0.432486) (xy 1.731319 3.280722) (xy 1.94722 3.49662)

@@ -101,6 +101,7 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     drill_writer = pcbnew.EXCELLON_WRITER(board)
     drill_writer.SetFormat(format['metric'], format['zero_format'], format['left_digits'], format['right_digits'])
     drill_writer.SetOptions(options['mirror_y_axis'], options['minimal_header'], options['offset'], options['pth_npth_single_file'])
+    drill_writer.SetRouteModeForOvalHoles(False) # JLCPCB requests (Oval Holes Drill Mode -> use alternate drill mode https://support.jlcpcb.com/article/149-how-to-generate-gerber-and-drill-files-in-kicad)
     drill_writer.CreateDrillandMapFilesSet(path, True, False)
 
   @staticmethod

@@ -199,8 +199,9 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     temp_path = os.path.normpath(os.path.join(board_folder, relative_temp_path))
     output_path = os.path.normpath(os.path.join(board_folder, relative_output_path))
 
-    if not os.path.exists(temp_path):
-      os.makedirs(temp_path)
+    shutil.rmtree(temp_path)
+    os.makedirs(temp_path)
+
     if not os.path.exists(output_path):
       os.makedirs(output_path)
 

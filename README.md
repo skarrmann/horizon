@@ -60,7 +60,6 @@ The board producer plugin also generates all the Gerber files for production.
 * [QMK](https://github.com/qmk/qmk_firmware/tree/master/keyboards/horizon)
 * ZMK
     * Horizon shield definition is in [skarrmann's zmk-config](https://github.com/skarrmann/zmk-config)
-    * In ZMK official repo, there is a pending [PR for the Horizon shield definition](https://github.com/zmkfirmware/zmk/pull/1000)
 
 ## Bill of materials
 

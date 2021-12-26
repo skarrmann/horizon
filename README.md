@@ -53,6 +53,12 @@ Additionally, the board producer plugin will preserve any in-bounds "H" footprin
 
 The board producer plugin also generates all the Gerber files for production.
 
+Please note the board producer plugin expects the following folder structure:
+
+* The KiCad PCB file is two folders deep from the project root, e.g., `kicad/[board-version]/[board-name].kicad_pcb`
+* When the plugin executes, a folder called `temp` is created in the project root to store any temporary files created.
+    * Each time the board producer runs, any existing files in this temporary folder are deleted.
+
 **IMPORTANT:** If you would like to use this plugin and plate edge cuts convention for you own project, please make sure you carefully examine the output Gerber files! The plugin ultimately worked well for my case, but you might need to make adjustments to the plugin to suit your project. And to reduce the chance of being charged extra money by PCB manufacturers, use footprint plate holes instead of edge cuts whenever reasonable to do so.
 
 ## Keyboard firmware
@@ -60,7 +66,6 @@ The board producer plugin also generates all the Gerber files for production.
 * [QMK](https://github.com/qmk/qmk_firmware/tree/master/keyboards/horizon)
 * ZMK
     * Horizon shield definition is in [skarrmann's zmk-config](https://github.com/skarrmann/zmk-config)
-    * In ZMK official repo, there is a pending [PR for the Horizon shield definition](https://github.com/zmkfirmware/zmk/pull/1000)
 
 ## Bill of materials
 

@@ -12,7 +12,7 @@ import pcbnew, os, shutil
 
 class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
   def defaults(self):
-    self.name = "Horizon Board Producer Rev2.2"
+    self.name = "Horizon Board Producer Rev2.2.1"
     self.category = "Gerbers, plates, generator"
     self.description = "Generates top plate and bottom plate PCBs, and then creates gerber files for the main, top plate, and bottom plate PCBs"
 
@@ -132,7 +132,7 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
         plate_file_name_suffix (str): The name appended to the end of the plate .kicad_pcb file name.
 
     Returns:
-        [pcbnew.BOARD]: The plate PCB.
+        [pcbnew.BOARD]: The plate PCB if created, otherwise None.
     """
     # Create plate PCB file as a copy of the main board
     (_, board_filename) = os.path.split(board.GetFileName())
@@ -158,6 +158,10 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
         plate_pcb.Delete(drawing)
 
     platebounds = plate_pcb.GetBoardEdgesBoundingBox()
+
+    # If plate has no bounds, then exit
+    if platebounds.GetArea() == 0:
+      return None
 
     # Convert footprints to NPTH pads and edge cuts
     for module in plate_pcb.GetModules():
@@ -210,7 +214,7 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     bottom_plate = HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(board, 'B.Adhes', temp_path, 'bottom-plate')
     top_plate = HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(board, 'F.Adhes', temp_path, 'top-plate')
 
-    for pcb in [board, bottom_plate, top_plate]:
+    for pcb in [p for p in [board, bottom_plate, top_plate] if p]:
       (board_folder, board_filename) = os.path.split(pcb.GetFileName())
       (board_name, _) = os.path.splitext(board_filename)
       gerber_output_path = os.path.join(temp_path, board_name)

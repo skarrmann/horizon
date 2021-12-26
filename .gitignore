@@ -27,3 +27,6 @@ fp-info-cache
 
 # Temp folders
 temp/
+
+# Experimental boards
+kicad/horus/

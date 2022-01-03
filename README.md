@@ -29,7 +29,9 @@ The bottom plate is a cutout of all the components exposed through the bottom of
 
 ## KiCad project notes
 
-The bottom and top plates are generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
+The bottom and top plates are generated via a custom KiCad Python SWIG plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
+
+**IMPORTANT:** This plugin currently only works with **KiCad 5.1**. Migration to KiCad 6.0 is a work in progress.
 
 For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
 

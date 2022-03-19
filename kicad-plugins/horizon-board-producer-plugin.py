@@ -140,21 +140,21 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     plate_pcb = pcbnew.LoadBoard(plate_file_path)
 
     for track in plate_pcb.GetTracks():
-      plate_pcb.DeleteNative(track)
+      plate_pcb.Remove(track)
 
     for zone in plate_pcb.Zones():
-      plate_pcb.DeleteNative(zone)
+      plate_pcb.Remove(zone)
 
     # Move target layer graphics to edge cuts layer, preserve silkscreen, and remove all other graphics
     for drawing in plate_pcb.GetDrawings():
       if drawing.GetLayerName() == layer_name:
         drawing.SetLayer(plate_pcb.GetLayerID('Edge.Cuts'))
-      elif drawing.GetLayerName() == 'F.SilkS':
+      elif drawing.GetLayerName() == 'F.Silkscreen':
         continue
-      elif drawing.GetLayerName() == 'B.SilkS':
+      elif drawing.GetLayerName() == 'B.Silkscreen':
         continue
       else:
-        plate_pcb.DeleteNative(drawing)
+        plate_pcb.Remove(drawing)
 
     platebounds = plate_pcb.GetBoardEdgesBoundingBox()
 
@@ -175,16 +175,16 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
             pad.SetLayerSet(pad.UnplatedHoleMask())
           else:
             # Delete all other pads
-            footprint.DeleteNative(pad)
+            footprint.Remove(pad)
       if not footprint.GetReference().startswith('LOGO'): # Preserve graphics on 'LOGO' footprints, and process graphics on other footprints for cleanup and edge cut conversion
         for graphic in footprint.GraphicalItems():
-          if graphic.GetLayerName() == layer_name:
+          if graphic.IsOnLayer(plate_pcb.GetLayerID(layer_name)):
             graphic.SetLayer(plate_pcb.GetLayerID('Edge.Cuts')) # Move target layer graphics to edge cuts
           else:
-            footprint.DeleteNative(graphic)
+            footprint.Remove(graphic)
       footprint.SetReference('')
       if not footprint.GetBoundingBox().Intersects(platebounds):
-        plate_pcb.DeleteNative(footprint)
+        plate_pcb.Remove(footprint)
 
     plate_pcb.Save(plate_file_path)
     return plate_pcb
@@ -194,11 +194,9 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     """
     Executes the board production on the currently-opened board.
     """
-
-    source_board_file_path = pcbnew.GetBoard().GetFileName()
-
     relative_output_path = '../../gerbers'
     relative_temp_path = '../../temp'
+    source_board_file_path = pcbnew.GetBoard().GetFileName()
     (board_folder, board_filename) = os.path.split(source_board_file_path)
     temp_path = os.path.normpath(os.path.join(board_folder, relative_temp_path))
     output_path = os.path.normpath(os.path.join(board_folder, relative_output_path))

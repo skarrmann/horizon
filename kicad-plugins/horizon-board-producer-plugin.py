@@ -8,7 +8,7 @@
 # 3. In Pcbnew, click "Tools > External Plugins > Horizon Board Producer"
 # 4. If successful, 3 gerber zip files are created in the gerbers folder: main board, top plate, and bottom plate
 
-import pcbnew, os, shutil
+import pcbnew, os, shutil, re
 
 class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
   def defaults(self):
@@ -136,25 +136,16 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     # Create plate PCB file as a copy of the main board
     (_, board_filename) = os.path.split(board.GetFileName())
     plate_file_path = os.path.join(output_folder, board_filename.replace('.kicad_pcb', '-' + plate_file_name_suffix + '.kicad_pcb'))
-    pcbnew.SaveBoard(plate_file_path, board)
-    plate_pcb = pcbnew.LoadBoard(plate_file_path)
+    plate_pcb = pcbnew.NewBoard(plate_file_path)
 
-    for track in plate_pcb.GetTracks():
-      plate_pcb.Remove(track)
-
-    for zone in plate_pcb.Zones():
-      plate_pcb.Remove(zone)
-
-    # Move target layer graphics to edge cuts layer, preserve silkscreen, and remove all other graphics
-    for drawing in plate_pcb.GetDrawings():
-      if drawing.GetLayerName() == layer_name:
-        drawing.SetLayer(plate_pcb.GetLayerID('Edge.Cuts'))
-      elif drawing.GetLayerName() == 'F.Silkscreen':
-        continue
-      elif drawing.GetLayerName() == 'B.Silkscreen':
-        continue
-      else:
-        plate_pcb.Remove(drawing)
+    # Copy target layer graphics to edge cuts, and copy silkscreen text
+    for drawing in board.GetDrawings():
+      new_drawing = drawing.Duplicate()
+      if drawing.IsOnLayer(plate_pcb.GetLayerID(layer_name)) and drawing.GetClass() == 'PCB_SHAPE':
+        new_drawing.SetLayer(plate_pcb.GetLayerID('Edge.Cuts'))
+        plate_pcb.Add(new_drawing)
+      elif (drawing.IsOnLayer(plate_pcb.GetLayerID('F.Silkscreen')) or drawing.IsOnLayer(plate_pcb.GetLayerID('B.Silkscreen'))) and drawing.GetClass() == 'PTEXT':
+        plate_pcb.Add(new_drawing)
 
     platebounds = plate_pcb.GetBoardEdgesBoundingBox()
 
@@ -163,29 +154,35 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
       return None
 
     # Convert footprints to NPTH pads and edge cuts
-    for footprint in plate_pcb.GetFootprints():
-      if not footprint.GetReference().startswith('H'): # Preserve pads on 'H' (mounting hole) footprints
-        for pad in footprint.Pads():
-          if pad.IsOnLayer(plate_pcb.GetLayerID(layer_name)) and pad.GetShape() in [pcbnew.PAD_SHAPE_CIRCLE, pcbnew.PAD_SHAPE_OVAL]:
-            drill_shape = pcbnew.PAD_DRILL_SHAPE_CIRCLE if pad.GetShape() == pcbnew.PAD_SHAPE_CIRCLE else pcbnew.PAD_DRILL_SHAPE_OBLONG
-            # Convert SMD circle/oval pads on target layer to NPTH pads
-            pad.SetAttribute(pcbnew.PAD_ATTRIB_NPTH)
-            pad.SetDrillShape(drill_shape)
-            pad.SetDrillSize(pad.GetSize())
-            pad.SetLayerSet(pad.UnplatedHoleMask())
-          else:
-            # Delete all other pads
-            footprint.Remove(pad)
-      if not footprint.GetReference().startswith('LOGO'): # Preserve graphics on 'LOGO' footprints, and process graphics on other footprints for cleanup and edge cut conversion
-        for graphic in footprint.GraphicalItems():
-          if graphic.IsOnLayer(plate_pcb.GetLayerID(layer_name)):
-            graphic.SetLayer(plate_pcb.GetLayerID('Edge.Cuts')) # Move target layer graphics to edge cuts
-          else:
-            footprint.Remove(graphic)
-      footprint.SetReference('')
-      if not footprint.GetBoundingBox().Intersects(platebounds):
-        plate_pcb.Remove(footprint)
+    for footprint in board.GetFootprints():
+      if footprint.GetBoundingBox().Intersects(platebounds):
+        new_footprint = pcbnew.FOOTPRINT(footprint)
+        new_footprint.SetPosition(footprint.GetPosition())
+        if re.match(r'^(H|LOGO)\d+$', footprint.GetReference()): # Preserve pads on 'H' (mounting hole) and 'LOGO' (graphics) footprints
+          plate_pcb.Add(new_footprint)
+        else:
+          remove_footprint_items = []
+          for pad in new_footprint.Pads(): # Convert SMD circle/oval pads on target layer to NPTH pads, and remove all other pads
+            if pad.IsOnLayer(plate_pcb.GetLayerID(layer_name)) and pad.GetShape() in [pcbnew.PAD_SHAPE_CIRCLE, pcbnew.PAD_SHAPE_OVAL]:
+              drill_shape = pcbnew.PAD_DRILL_SHAPE_CIRCLE if pad.GetShape() == pcbnew.PAD_SHAPE_CIRCLE else pcbnew.PAD_DRILL_SHAPE_OBLONG
+              pad.SetAttribute(pcbnew.PAD_ATTRIB_NPTH)
+              pad.SetDrillShape(drill_shape)
+              pad.SetDrillSize(pad.GetSize())
+              pad.SetLayerSet(pad.UnplatedHoleMask())
+              pad.SetPosition(pad.GetPosition())
+            else:
+              remove_footprint_items.append(pad)
+          for graphic in new_footprint.GraphicalItems(): # Convert graphics on target layer to edge cuts, and remove all other graphics
+            if graphic.IsOnLayer(plate_pcb.GetLayerID(layer_name)):
+              graphic.SetLayer(plate_pcb.GetLayerID('Edge.Cuts')) # Move target layer graphics to edge cuts
+            else:
+              remove_footprint_items.append(graphic)
+          for remove_footprint_item in remove_footprint_items:
+            new_footprint.Remove(remove_footprint_item)
+          if len(new_footprint.Pads()) > 0 or len (new_footprint.GraphicalItems()) > 0:
+            plate_pcb.Add(new_footprint)
 
+    plate_pcb.SetFileName(plate_file_path)
     plate_pcb.Save(plate_file_path)
     return plate_pcb
 
@@ -194,10 +191,11 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     """
     Executes the board production on the currently-opened board.
     """
+    board = pcbnew.LoadBoard(pcbnew.GetBoard().GetFileName())
+
     relative_output_path = '../../gerbers'
     relative_temp_path = '../../temp'
-    source_board_file_path = pcbnew.GetBoard().GetFileName()
-    (board_folder, board_filename) = os.path.split(source_board_file_path)
+    (board_folder, board_filename) = os.path.split(board.GetFileName())
     temp_path = os.path.normpath(os.path.join(board_folder, relative_temp_path))
     output_path = os.path.normpath(os.path.join(board_folder, relative_output_path))
 
@@ -209,8 +207,6 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     if not os.path.exists(output_path):
       os.makedirs(output_path)
 
-    working_board_path = shutil.copy(source_board_file_path, temp_path)
-    board = pcbnew.LoadBoard(working_board_path)
     bottom_plate = HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(board, 'B.Adhesive', temp_path, 'bottom-plate')
     top_plate = HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(board, 'F.Adhesive', temp_path, 'top-plate')
 

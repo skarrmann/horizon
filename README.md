@@ -33,8 +33,8 @@ The bottom and top plates are generated via a custom KiCad 6 Python SWIG plugin 
 
 For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
 
-* `F.Adhes` designates top plate holes and edge cuts.
-* `B.Adhes` designates bottom plate holes and edge cuts.
+* `F.Adhesive` designates top plate holes and edge cuts.
+* `B.Adhesive` designates bottom plate holes and edge cuts.
 
 When the board producer runs, these layers are used as follows:
 
@@ -42,9 +42,9 @@ When the board producer runs, these layers are used as follows:
     * Graphics on the plate's designated layer will be moved to `Edge.Cuts` when producing that plate.
     * As with all edge cuts, please make sure your graphics are non-overlapping closed shapes.
 * On footprints only:
-    * Pads of type "SMD" and shape "Circular/Oval" on the plate's designated layer will be converted to proper NPTH pads.
+    * Pads of type "SMD Aperture" and shape "Circular/Oval" on the plate's designated layer will be converted to proper NPTH pads.
     * Note only circular/oval shapes are supported for these pads, because they are the only available hole/drill shapes. If you need a fancy plate cutout shape on your footprint, then draw graphics lines on the designated layer.
-    * **IMPORTANT**: When adding pads solely for plate cutout purposes, set the pad to only use to the designated plate cutout layers - set all other technical layers blank. Make sure "Copper" is set to "None", otherwise the pad might add an unwanted copper region to your main board.
+    * **IMPORTANT**: When adding pads solely for plate cutout purposes, set the technical layer to just the designated plate cutout layers. Leave all other technical layers unchecked.
 
 ![Horizon KiCad plate edge cuts](images/horizon-kicad-plate-cuts.png)
 ![Horizon KiCad footprint plate holes](images/horizon-kicad-footprint-plate-holes.png)

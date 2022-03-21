@@ -141,4 +141,4 @@ These are the manufacturing settings I used when ordering from JLCPCB:
     * PCB: Gerber files regenerated using updated board producer plugin.
 * **Rev2.3** (2022-03-21)
     * Horizon Board Producer plugin: Upgrade to KiCad 6
-    * PCB, Schematic: Files upgraded to KiCad 6, and Gerber files regenerated using updated files.
+    * PCB, Schematic: No physical changes. Files upgraded to KiCad 6, and Gerber files regenerated using updated files.

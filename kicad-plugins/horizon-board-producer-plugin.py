@@ -12,7 +12,7 @@ import pcbnew, wx, os, shutil, re
 
 class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
   def defaults(self):
-    self.name = "Horizon Board Producer Rev3.0 (KiCad 6.0.4)"
+    self.name = "Horizon Board Producer Rev2.3 (KiCad 6)"
     self.category = "Gerbers, plates, generator"
     self.description = "Generates top plate and bottom plate PCBs, and then creates gerber files for the main, top plate, and bottom plate PCBs"
 
@@ -216,46 +216,52 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     """
     current_board_path = pcbnew.GetBoard().GetFileName()
 
-    relative_output_path = '../../gerbers'
-    relative_temp_path = '../../temp'
-    (board_folder, board_filename) = os.path.split(current_board_path)
-    temp_path = os.path.normpath(os.path.join(board_folder, relative_temp_path))
-    output_path = os.path.normpath(os.path.join(board_folder, relative_output_path))
+    try:
+      relative_output_path = '../../gerbers'
+      relative_temp_path = '../../temp'
+      (board_folder, board_filename) = os.path.split(current_board_path)
+      temp_path = os.path.normpath(os.path.join(board_folder, relative_temp_path))
+      output_path = os.path.normpath(os.path.join(board_folder, relative_output_path))
 
-    if os.path.exists(temp_path):
-      shutil.rmtree(temp_path)
+      if os.path.exists(temp_path):
+        shutil.rmtree(temp_path)
 
-    os.makedirs(temp_path)
+      os.makedirs(temp_path)
 
-    if not os.path.exists(output_path):
-      os.makedirs(output_path)
+      if not os.path.exists(output_path):
+        os.makedirs(output_path)
 
-    main_board = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename))
-    bottom_plate = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename.replace('.kicad_pcb', '-bottom-plate.kicad_pcb')))
-    HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(bottom_plate, 'B.Adhesive')
-    top_plate = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename.replace('.kicad_pcb', '-top-plate.kicad_pcb')))
-    HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(top_plate, 'F.Adhesive')
+      main_board = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename))
+      bottom_plate = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename.replace('.kicad_pcb', '-bottom-plate.kicad_pcb')))
+      HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(bottom_plate, 'B.Adhesive')
+      top_plate = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename.replace('.kicad_pcb', '-top-plate.kicad_pcb')))
+      HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(top_plate, 'F.Adhesive')
 
-    generated_file_list = []
+      generated_file_list = []
 
-    for pcb in [main_board, bottom_plate, top_plate]:
-      if pcb.GetBoardEdgesBoundingBox().GetArea() > 0:
-        (board_folder, board_filename) = os.path.split(pcb.GetFileName())
-        (board_name, _) = os.path.splitext(board_filename)
-        gerber_output_path = os.path.join(temp_path, board_name)
-        archive_file_path = os.path.join(output_path, board_name)
-        HorizonBoardProducerPlugin.__create_gerbers(pcb, gerber_output_path)
-        HorizonBoardProducerPlugin.__create_drill_file(pcb, gerber_output_path)
-        generated_file = HorizonBoardProducerPlugin.__create_zip(archive_file_path, gerber_output_path)
-        generated_file_list.append(generated_file)
+      for pcb in [main_board, bottom_plate, top_plate]:
+        if pcb.GetBoardEdgesBoundingBox().GetArea() > 0:
+          (board_folder, board_filename) = os.path.split(pcb.GetFileName())
+          (board_name, _) = os.path.splitext(board_filename)
+          gerber_output_path = os.path.join(temp_path, board_name)
+          archive_file_path = os.path.join(output_path, board_name)
+          HorizonBoardProducerPlugin.__create_gerbers(pcb, gerber_output_path)
+          HorizonBoardProducerPlugin.__create_drill_file(pcb, gerber_output_path)
+          generated_file = HorizonBoardProducerPlugin.__create_zip(archive_file_path, gerber_output_path)
+          generated_file_list.append(generated_file)
 
-    complete_dialog = wx.MessageDialog(
-      None,
-      "Boards produced successfully.\n\nGenerated files:\n" + '\n'.join(generated_file_list),
-      "Horizon Board Producer - Complete",
-      wx.OK
-    )
-    complete_dialog.ShowModal()
-    complete_dialog.Destroy()
+      complete_dialog = wx.MessageDialog(
+        None,
+        "Boards produced successfully.\n\nGenerated files:\n" + '\n'.join(generated_file_list),
+        "Horizon Board Producer - Complete",
+        wx.OK
+      )
+      complete_dialog.ShowModal()
+      complete_dialog.Destroy()
+    finally:
+      # HACK: In KiCad 6 (as of 6.0.4), calling method `pcbnew.LoadBoard` on a board other than the one belonging to the current project
+      # undesirably mutates the application's current project context. To work around this, attempt to reload the current project.
+      settings_manager = pcbnew.GetSettingsManager()
+      settings_manager.LoadProject(current_board_path.replace('.kicab_pcb', '.kicad_pro'), False)
 
 HorizonBoardProducerPlugin().register()

@@ -7,8 +7,8 @@
   (paper "A4")
   (title_block
     (title "Horizon Choc")
-    (date "2021-10-25")
-    (rev "2.2")
+    (date "2022-03-21")
+    (rev "2.3")
     (company "skarrmann")
   )
 
@@ -5727,7 +5727,7 @@
   (gr_text "JLCJLCJLCJLC" (at 148 103.5) (layer "B.SilkS") (tstamp 00000000-0000-0000-0000-000061246f56)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
-  (gr_text "rev2.2 | Choc" (at 148 91.5) (layer "B.SilkS") (tstamp 47d7f0ab-d26d-410a-b2b7-642981cde97b)
+  (gr_text "rev2.3 | Choc" (at 148 91.5) (layer "B.SilkS") (tstamp 47d7f0ab-d26d-410a-b2b7-642981cde97b)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_text "github.com/skarrmann/horizon" (at 148 72.5) (layer "B.SilkS") (tstamp d51366f4-6f4b-40ba-89b7-00276864fbea)

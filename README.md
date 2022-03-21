@@ -29,7 +29,7 @@ The bottom plate is a cutout of all the components exposed through the bottom of
 
 ## KiCad project notes
 
-The bottom and top plates are generated via a custom KiCad 5 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
+The bottom and top plates are generated via a custom KiCad 6 plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
 
 For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
 
@@ -138,4 +138,7 @@ These are the manufacturing settings I used when ordering from JLCPCB:
 * **Rev2.2** (2021-10-25)
     * Horizon Board Producer plugin: Now supports converting designated placeholder pads to NPTH pads during plate generation.
     * Footprints: Replace graphics which indicate plate cutouts with placeholder pads which indicate plate NPTH pads.
-    * PCB: Gerber files re-generated using updated board producer plugin.
+    * PCB: Gerber files regenerated using updated board producer plugin.
+* **Rev2.3** (2022-03-21)
+    * Horizon Board Producer plugin: Upgrade to KiCad 6
+    * PCB, Schematic: Files upgraded to KiCad 6, and Gerber files regenerated using updated files.

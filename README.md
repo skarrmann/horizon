@@ -29,14 +29,12 @@ The bottom plate is a cutout of all the components exposed through the bottom of
 
 ## KiCad project notes
 
-The bottom and top plates are generated via a custom KiCad Python SWIG plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
-
-**IMPORTANT:** This plugin currently only works with **KiCad 5.1**. Migration to KiCad 6.0 is a work in progress.
+The bottom and top plates are generated via a custom KiCad 6 Python SWIG plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
 
 For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
 
-* `F.Adhes` designates top plate holes and edge cuts.
-* `B.Adhes` designates bottom plate holes and edge cuts.
+* `F.Adhesive` designates top plate holes and edge cuts.
+* `B.Adhesive` designates bottom plate holes and edge cuts.
 
 When the board producer runs, these layers are used as follows:
 
@@ -44,9 +42,9 @@ When the board producer runs, these layers are used as follows:
     * Graphics on the plate's designated layer will be moved to `Edge.Cuts` when producing that plate.
     * As with all edge cuts, please make sure your graphics are non-overlapping closed shapes.
 * On footprints only:
-    * Pads of type "SMD" and shape "Circular/Oval" on the plate's designated layer will be converted to proper NPTH pads.
+    * Pads of type "SMD Aperture" and shape "Circular/Oval" on the plate's designated layer will be converted to proper NPTH pads.
     * Note only circular/oval shapes are supported for these pads, because they are the only available hole/drill shapes. If you need a fancy plate cutout shape on your footprint, then draw graphics lines on the designated layer.
-    * **IMPORTANT**: When adding pads solely for plate cutout purposes, set the pad to only use to the designated plate cutout layers - set all other technical layers blank. Make sure "Copper" is set to "None", otherwise the pad might add an unwanted copper region to your main board.
+    * **IMPORTANT**: When adding pads solely for plate cutout purposes, set the technical layer to just the designated plate cutout layers. Leave all other technical layers unchecked.
 
 ![Horizon KiCad plate edge cuts](images/horizon-kicad-plate-cuts.png)
 ![Horizon KiCad footprint plate holes](images/horizon-kicad-footprint-plate-holes.png)
@@ -140,4 +138,7 @@ These are the manufacturing settings I used when ordering from JLCPCB:
 * **Rev2.2** (2021-10-25)
     * Horizon Board Producer plugin: Now supports converting designated placeholder pads to NPTH pads during plate generation.
     * Footprints: Replace graphics which indicate plate cutouts with placeholder pads which indicate plate NPTH pads.
-    * PCB: Gerber files re-generated using updated board producer plugin.
+    * PCB: Gerber files regenerated using updated board producer plugin.
+* **Rev2.3** (2022-03-21)
+    * Horizon Board Producer plugin: Upgrade to KiCad 6
+    * PCB, Schematic: No physical changes. Files upgraded to KiCad 6, and Gerber files regenerated using updated files.

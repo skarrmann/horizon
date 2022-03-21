@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.8,
-          "width": 1.8
+          "drill": 1.7018,
+          "height": 1.75,
+          "width": 1.75
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -334,7 +334,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "horizon-choc.kicad_pro",
+    "filename": "horizon-mx.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -433,7 +433,7 @@
   },
   "sheets": [
     [
-      "ef1b4b98-541b-4673-a04f-2043250fc40a",
+      "77257261-5047-4726-8bb9-c51a3d9690d5",
       ""
     ]
   ],

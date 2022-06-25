@@ -77,7 +77,7 @@ Part | Purpose | Quantity | Notes | Vendor URL
 ---- | ------- | -------- | --------- | ----------
 Main PCB  | circuit board | 1 | | Send Gerber zip files to [JLCPCB](https://jlcpcb.com/).
 Top plate PCB  | protects microcontroller | 1 | 
-Bottom plate PCB  | protects bottom pins and components | 1 | **NOTE: For Rev2, JLCPCB charged me $15.20 USD extra due to the number of small holes. For  Rev2.2, I made Gerber file preparation changes to hopefully avoid this cost.**
+Bottom plate PCB  | protects bottom pins and components | 1 |
 Arduino Pro Micro | Microcontroller board | 1 | Or use another Pro Micro compatible board with same dimensions (confirmed Elite-C V4, nice!nano 2.0, and Adafruit KB2040 fit) | [AliExpress - Micro USB 3-18V](https://www.aliexpress.com/item/32849563958.html)
 6x6mm DIP 4-pin tactile switch | Reset button | 1 | | [AliExpress - 6x6x10mm](https://www.aliexpress.com/item/32912263133.html)
 1N4148 SOD-123 | Diodes for keyboard row-column matrix | 52 | | [AliExpress - 1N4148 SOD-123](https://www.aliexpress.com/item/4000331408283.html)

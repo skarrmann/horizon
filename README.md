@@ -78,12 +78,12 @@ Part | Purpose | Quantity | Notes | Vendor URL
 Main PCB  | circuit board | 1 | | Send Gerber zip files to [JLCPCB](https://jlcpcb.com/).
 Top plate PCB  | protects microcontroller | 1 | 
 Bottom plate PCB  | protects bottom pins and components | 1 |
-Arduino Pro Micro | Microcontroller board | 1 | Or use another Pro Micro compatible board with same dimensions (confirmed Elite-C V4, nice!nano 2.0, and Adafruit KB2040 fit) | [AliExpress - Micro USB 3-18V](https://www.aliexpress.com/item/32849563958.html)
-6x6mm DIP 4-pin tactile switch | Reset button | 1 | | [AliExpress - 6x6x10mm](https://www.aliexpress.com/item/32912263133.html)
-1N4148 SOD-123 | Diodes for keyboard row-column matrix | 52 | | [AliExpress - 1N4148 SOD-123](https://www.aliexpress.com/item/4000331408283.html)
-Keyswitches |  | 52 | PCB mount (5 pin) switches recommended | MX: [KBDFans - Gateron Clear Linear Switches - 5 Pin](https://kbdfans.com/products/gateron-clear-switches?variant=40091987345547), Choc: [MKUltra Corporation - Kailh Low Profile Choc Switches](https://mkultra.click/choc-switches)
-Keycaps |  | 52 | | MX: [AliExpress - DSA 1U Keycaps](https://www.aliexpress.com/item/2251832643863132.html), Choc: [MKUltra Corporation - MBK Choc Keycaps](https://mkultra.click/mbk-choc-keycaps)
-M2 6mm screws | Secure main PCB and plate PCBs | 8 | | [AliExpress - 200PCS-M2 Mix - Black](https://www.aliexpress.com/item/32862529967.html)
+Arduino Pro Micro | Microcontroller board | 1 | Or use another Pro Micro compatible board with same dimensions (confirmed Elite-C V4, nice!nano 2.0, and Adafruit KB2040 fit) | [AliExpress (TENSTAR ROBOT) - Micro USB 3-18V](https://www.aliexpress.com/item/32849563958.html)
+6x6mm DIP 4-pin tactile switch | Reset button | 1 | | [AliExpress (xin cheng electronic)- 6x6x10mm](https://www.aliexpress.com/item/32912263133.html)
+1N4148 SOD-123 | Diodes for keyboard row-column matrix | 52 | | [AliExpress (DSSRQI) - 1N4148 SOD-123](https://www.aliexpress.com/item/4000331408283.html)
+Keyswitches |  | 52 | PCB mount (5 pin) switches recommended | MX: [AliExpress (KPrepublic) - Gateron Switch RGB 5pin Clear](https://www.aliexpress.com/item/3256801798608641.html), Choc: [MKUltra Corporation - Kailh Low Profile Choc Switches](https://mkultra.click/choc-switches)
+Keycaps |  | 52 | | MX: [AliExpress (Cool Jazz)- DSA 1U Keycaps](https://www.aliexpress.com/item/2251832643863132.html), Choc: [MKUltra Corporation - MBK Choc Keycaps](https://mkultra.click/mbk-choc-keycaps)
+M2 6mm screws | Secure main PCB and plate PCBs | 8 | | [AliExpress (wuhushiyu) - 200PCS-M2 Mix - Black](https://www.aliexpress.com/item/32862529967.html)
 M2 nuts | Secure main PCB and plate PCBs | 8 | | See M2 set above
 M2 8mm male-female standoffs | Raise top plate PCB above microcontroller | 4 | | See M2 set above
 2mm tall rubber bumpons | Raise board above desk surface and provide skid resitance | 6 | Shop around - you can get cheaper alternatives if you don't need 96 of them! | [Amazon - 3M SJ5302 Clear Bumpon Blister Pack (96 Bumpons)](https://www.amazon.com/SJ5302-Clear-Bumpon-Blister-Bumpons/dp/B01ACPT2LU)

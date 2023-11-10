@@ -29,7 +29,7 @@ The bottom plate is a cutout of all the components exposed through the bottom of
 
 ## KiCad project notes
 
-The bottom and top plates are generated via a custom KiCad 6 Python SWIG plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
+The bottom and top plates are generated via a custom KiCad 7 Python SWIG plugin [Horizon Board Producer](kicad-plugins/horizon-board-producer-plugin.py).
 
 For the plugin to generate these plate boards, the PCB and its footprints use the following layer convention:
 
@@ -60,6 +60,8 @@ Please note the board producer plugin expects the following folder structure:
     * Each time the board producer runs, any existing files in this temporary folder are deleted.
 
 **IMPORTANT:** If you would like to use this plugin and plate edge cuts convention for you own project, please make sure you carefully examine the output Gerber files! The plugin ultimately worked well for my case, but you might need to make adjustments to the plugin to suit your project. And to reduce the chance of being charged extra money by PCB manufacturers, use footprint plate holes instead of edge cuts whenever reasonable to do so.
+
+**IMPORTANT:** This plugin uses `pcbnew.LoadBoard()` to load copies of the PCB, which is [not safely supported in a running instance of KiCad](https://forum.kicad.info/t/the-loadboard-function-is-invalid/31238/9). To avoid project integrity problems this may cause to the running KiCad instance, the plugin forcefully exits KiCad upon execution completion.
 
 ## Keyboard firmware
 
@@ -140,3 +142,6 @@ These are the manufacturing settings I used when ordering from JLCPCB:
 * **Rev2.3** (2022-03-21)
     * Horizon Board Producer plugin: Upgrade to KiCad 6
     * PCB, Schematic: No physical changes. Files upgraded to KiCad 6, and Gerber files regenerated using updated files.
+* **Rev2.4** (2023-11-09)
+    * Horizon Board Producer plugin: Upgrade to KiCad 7
+    * PCB, Schematic: No physical changes. Files upgraded to KiCad 7, and Gerber files regenerated using updated files.

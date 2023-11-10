@@ -1,4 +1,4 @@
-# Copyright (c) 2022 Steven Karrmann
+# Copyright (c) 2023 Steven Karrmann
 # SPDX-License-Identifier: MIT
 
 # Horizon Board Producer Plugin Usage:
@@ -12,7 +12,7 @@ import pcbnew, wx, os, shutil, re
 
 class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
   def defaults(self):
-    self.name = "Horizon Board Producer Rev2.3 (KiCad 6)"
+    self.name = "Horizon Board Producer Rev2.4 (KiCad 7)"
     self.category = "Gerbers, plates, generator"
     self.description = "Generates top plate and bottom plate PCBs, and then creates gerber files for the main, top plate, and bottom plate PCBs"
 
@@ -38,13 +38,13 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     plot_options.SetPlotValue(True)
     plot_options.SetPlotReference(True)
     plot_options.SetPlotInvisibleText(False)
-    plot_options.SetExcludeEdgeLayer(True)
+    plot_options.SetPlotOnAllLayersSelection(pcbnew.LSET())
     plot_options.SetSketchPadsOnFabLayers(False)
     plot_options.SetPlotViaOnMaskLayer(False) # "do not tent vias"
     
-    plot_options.SetDrillMarksType(pcbnew.PCB_PLOT_PARAMS.NO_DRILL_SHAPE)
+    plot_options.SetDrillMarksType(pcbnew.DRILL_MARKS_NO_DRILL_SHAPE)
     plot_options.SetScale(1.0)
-    plot_options.SetPlotMode(1) # Filled
+    plot_options.SetPlotMode(pcbnew.FILLED) # Filled
     plot_options.SetUseAuxOrigin(False)
     plot_options.SetMirror(False)
     plot_options.SetNegative(False)
@@ -93,14 +93,14 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     options = {
       'mirror_y_axis': False,
       'minimal_header': False,
-      'offset': pcbnew.wxPoint(0,0),
+      'offset': pcbnew.VECTOR2I(0,0),
       'pth_npth_single_file': False
     }
 
     drill_writer = pcbnew.EXCELLON_WRITER(board)
     drill_writer.SetFormat(format['metric'], format['zero_format'], format['left_digits'], format['right_digits'])
     drill_writer.SetOptions(options['mirror_y_axis'], options['minimal_header'], options['offset'], options['pth_npth_single_file'])
-    drill_writer.SetRouteModeForOvalHoles(False) # JLCPCB requests (Oval Holes Drill Mode -> use alternate drill mode https://support.jlcpcb.com/article/149-how-to-generate-gerber-and-drill-files-in-kicad)
+    drill_writer.SetRouteModeForOvalHoles(False)
     drill_writer.CreateDrillandMapFilesSet(path, True, False)
 
   @staticmethod
@@ -142,7 +142,7 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
       if drawing.IsOnLayer(board.GetLayerID(layer_name)) and drawing.GetClass() == 'PCB_SHAPE':
         # Preserve graphic lines on target layer, and move them to layer edge cuts
         drawing.SetLayer(board.GetLayerID('Edge.Cuts'))
-      elif (drawing.IsOnLayer(board.GetLayerID('F.Silkscreen')) or drawing.IsOnLayer(board.GetLayerID('B.Silkscreen'))) and drawing.GetClass() == 'PTEXT':
+      elif (drawing.IsOnLayer(board.GetLayerID('F.Silkscreen')) or drawing.IsOnLayer(board.GetLayerID('B.Silkscreen'))) and drawing.GetClass() == 'PCB_TEXT':
         # Preserve graphics text on silkscreen
         continue
       else:
@@ -208,6 +208,31 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
     """
     shutil.copy(board_source_path, board_destination_path)
     return pcbnew.LoadBoard(board_destination_path)
+  
+  @staticmethod
+  def __generate_board_fabrication_files(board, temp_path, output_path):
+    """
+    Generates the board's fabrication .zip file, containing gerber, drill, and drill map files
+
+    Args:
+        board (pcbnew.BOARD): The board
+        temp_path (str): Path to the temporary location of generated files
+        output_path (str): Path to the output fabrication .zip file
+
+    Returns:
+        str: Generated file name if successful
+    """
+    if board.GetBoardEdgesBoundingBox().GetArea() > 0:
+      (board_folder, board_filename) = os.path.split(board.GetFileName())
+      (board_name, _) = os.path.splitext(board_filename)
+      gerber_output_path = os.path.join(temp_path, board_name)
+      archive_file_path = os.path.join(output_path, board_name)
+      HorizonBoardProducerPlugin.__create_gerbers(board, gerber_output_path)
+      HorizonBoardProducerPlugin.__create_drill_file(board, gerber_output_path)
+      generated_file = HorizonBoardProducerPlugin.__create_zip(archive_file_path, gerber_output_path)
+      return generated_file
+    else:
+      return None
 
   @staticmethod
   def produce():
@@ -232,36 +257,31 @@ class HorizonBoardProducerPlugin(pcbnew.ActionPlugin):
         os.makedirs(output_path)
 
       main_board = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename))
+      main_board_output_file = HorizonBoardProducerPlugin.__generate_board_fabrication_files(main_board, temp_path, output_path)
+      
       bottom_plate = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename.replace('.kicad_pcb', '-bottom-plate.kicad_pcb')))
       HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(bottom_plate, 'B.Adhesive')
+      bottom_plate_output_file = HorizonBoardProducerPlugin.__generate_board_fabrication_files(bottom_plate, temp_path, output_path)
+
       top_plate = HorizonBoardProducerPlugin.__copy_board(current_board_path, os.path.join(temp_path, board_filename.replace('.kicad_pcb', '-top-plate.kicad_pcb')))
       HorizonBoardProducerPlugin.__create_plate_pcb_from_layer(top_plate, 'F.Adhesive')
+      top_plate_output_file = HorizonBoardProducerPlugin.__generate_board_fabrication_files(top_plate, temp_path, output_path)
 
-      generated_file_list = []
+            # Reload the current board and its project
+      pcbnew.LoadBoard(current_board_path)
+      settings_manager = pcbnew.GetSettingsManager()
+      settings_manager.LoadProject(current_board_path.replace('.kicab_pcb', '.kicad_pro'), False)
 
-      for pcb in [main_board, bottom_plate, top_plate]:
-        if pcb.GetBoardEdgesBoundingBox().GetArea() > 0:
-          (board_folder, board_filename) = os.path.split(pcb.GetFileName())
-          (board_name, _) = os.path.splitext(board_filename)
-          gerber_output_path = os.path.join(temp_path, board_name)
-          archive_file_path = os.path.join(output_path, board_name)
-          HorizonBoardProducerPlugin.__create_gerbers(pcb, gerber_output_path)
-          HorizonBoardProducerPlugin.__create_drill_file(pcb, gerber_output_path)
-          generated_file = HorizonBoardProducerPlugin.__create_zip(archive_file_path, gerber_output_path)
-          generated_file_list.append(generated_file)
-
+      generated_file_list = filter(lambda f: f is not None, [main_board_output_file, bottom_plate_output_file, top_plate_output_file])
       complete_dialog = wx.MessageDialog(
         None,
-        "Boards produced successfully.\n\nGenerated files:\n" + '\n'.join(generated_file_list),
-        "Horizon Board Producer - Complete",
+        'Boards produced successfully.\n\nGenerated files:\n' + '\n'.join(generated_file_list) + '\n\nIMPORTANT: KiCad may be in a bad application state since this plugin uses unsupported board loading functionality.\n\nTO BE SAFE, KICAD WILL NOW FORCEFULLY EXIT. GOODBYE!',
+        'Horizon Board Producer - Complete',
         wx.OK
       )
       complete_dialog.ShowModal()
       complete_dialog.Destroy()
     finally:
-      # HACK: In KiCad 6 (as of 6.0.4), calling method `pcbnew.LoadBoard` on a board other than the one belonging to the current project
-      # undesirably mutates the application's current project context. To work around this, attempt to reload the current project.
-      settings_manager = pcbnew.GetSettingsManager()
-      settings_manager.LoadProject(current_board_path.replace('.kicab_pcb', '.kicad_pro'), False)
+      wx.Abort() # Kill the application to ensure users do not accidentally lose their work by interacting with bad application state.
 
 HorizonBoardProducerPlugin().register()

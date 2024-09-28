@@ -92,9 +92,11 @@ I recommend using sockets for the Pro Micro. For socketing options, refer to [40
 
 M2 standoff height requirements are dependent on the seated microcontroller height. An M2 spacer set should give you enough options. I recommend getting a reset button ~2mm taller than the M2 standoffs so the button is level with the top plate.
 
-If using a bluetooth Pro Micro compatible dev board, then power it with battery size 301230. On the dev board, use sockets which provide at least 3mm clearance for the battery to fit underneath. Cut the battery wires so they are just long enough to poke through the B-/B+ pins from the underside of the dev board. Solder the battery's black wire to the B- pin, and the red wire to B+. Use a piece of Kapton or electrical tape to secure the battery to the dev board. When done, the dev board should look something like this:
+If using a bluetooth Pro Micro compatible dev board, then power it with battery size 301230. On the dev board, use sockets which provide at least 3mm clearance for the battery to fit underneath. Cut the battery wires so they are just long enough to poke through the B-/B+ pins from the underside of the dev board. Solder the battery's black wire to the B- pin, and the red wire to the B+ pin. Use a piece of Kapton or electrical tape to secure the battery to the dev board. When done, the dev board should look something like this:
 
 ![nice!nano with 301230 battery underneath, soldered to the B+/B- pins](images/horizon-nice-nano-301230-battery.jpg)
+
+Horizon does not use a power switch or battery connector, so no other parts are needed when using a bluetooth Pro Micro compatible board. Since there is no physical power switch, refer to [ZMK's power management configuration](https://zmk.dev/docs/config/power) to manage power through firmware features.
 
 ## PCB manufacturing settings
 

@@ -78,7 +78,7 @@ Part | Purpose | Quantity | Notes
 Main PCB  | circuit board | 1 | Send Gerber zip files to [JLCPCB](https://jlcpcb.com/).
 Top plate PCB  | protects microcontroller | 1 |
 Bottom plate PCB  | protects bottom pins and components | 1 |
-Arduino Pro Micro | Microcontroller board | 1 | Or use another Pro Micro compatible board with same dimensions (confirmed Elite-C V4, nice!nano 2.0, and Adafruit KB2040 fit)
+Arduino Pro Micro | Microcontroller board | 1 | Or use another Pro Micro compatible dev board with same dimensions (confirmed Elite-C V4, nice!nano 2.0, SuperMini nRF52840, and Adafruit KB2040 fit)
 6x6mm DIP 4-pin tactile switch | Reset button | 1 |
 1N4148 SOD-123 | Diodes for keyboard row-column matrix | 52 |
 Keyswitches |  | 52 | PCB mount (5 pin) switches recommended. For MX, any switches should work. For Choc, get Choc V1 switches.
@@ -92,7 +92,9 @@ I recommend using sockets for the Pro Micro. For socketing options, refer to [40
 
 M2 standoff height requirements are dependent on the seated microcontroller height. An M2 spacer set should give you enough options. I recommend getting a reset button ~2mm taller than the M2 standoffs so the button is level with the top plate.
 
-If using a LiPo battery and a bluetooth Pro Micro compatible board, then use battery size 301230. Just make sure the microcontroller socket height provides clearance for the battery to fit underneath (standard SIP sockets are a common choice).
+If using a bluetooth Pro Micro compatible dev board, then power it with battery size 301230. On the dev board, use sockets which provide at least 3mm clearance for the battery to fit underneath. Cut the battery wires so they are just long enough to poke through the B-/B+ pins from the underside of the dev board. Solder the battery's black wire to the B- pin, and the red wire to B+. Use a piece of Kapton or electrical tape to secure the battery to the dev board. When done, the dev board should look something like this:
+
+![nice!nano with 301230 battery underneath, soldered to the B+/B- pins](images/horizon-nice-nano-301230-battery.jpg)
 
 ## PCB manufacturing settings
 
